@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.unitedbustech.eld.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        eld:title="@string/ifta_create_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_driver_name"
+                    eld:fontType="medium" />
+
+                <com.unitedbustech.eld.view.FontEditView
+                    android:id="@+id/driver_name_input"
+                    style="@style/ifta_update_input"
+                    android:focusable="false"
+                    android:hint="@string/ifta_update_driver_name_hit"
+                    eld:fontType="medium" />
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_vehicle_id"
+                    eld:fontType="medium" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.unitedbustech.eld.view.FontEditView
+                        android:id="@+id/vehicle_id_input"
+                        style="@style/ifta_update_input"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/ifta_update_vehicle_id_hint"
+                        eld:fontType="medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:padding="7dp"
+                        android:src="@drawable/ic_input_right" />
+
+                </FrameLayout>
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    android:id="@+id/vehicle_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_empty"
+                    android:textColor="#FF3B30"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_purchase_date"
+                    eld:fontType="medium" />
+
+                <com.unitedbustech.eld.view.FontEditView
+                    android:id="@+id/purchase_date_input"
+                    style="@style/ifta_update_input"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/ifta_update_purchase_date_hint"
+                    eld:fontType="medium" />
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_state"
+                    eld:fontType="medium" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.unitedbustech.eld.view.FontEditView
+                        android:id="@+id/state_input"
+                        style="@style/ifta_update_input"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/ifta_update_state_hint"
+                        eld:fontType="medium" />
+
+                    <ImageView
+                        android:id="@+id/load_state_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:clickable="true"
+                        android:padding="7dp"
+                        android:src="@drawable/ic_location_gps" />
+
+                </FrameLayout>
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    android:id="@+id/state_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ifta_state_empty"
+                    android:textColor="#FF3B30"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_fuel_type"
+                    eld:fontType="medium" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.unitedbustech.eld.view.FontEditView
+                        android:id="@+id/fuel_type_input"
+                        style="@style/ifta_update_input"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/ifta_update_fuel_type_hint"
+                        eld:fontType="medium" />
+
+                    <ImageView
+                        android:id="@+id/fuel_type_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:padding="7dp"
+                        android:src="@drawable/ic_input_right" />
+
+                </FrameLayout>
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    android:id="@+id/fuel_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ifta_fuel_empty"
+                    android:textColor="#FF3B30"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.unitedbustech.eld.view.FontTextView
+                            style="@style/ifta_update_input_title"
+                            android:text="@string/ifta_update_unit_price"
+                            eld:fontType="medium" />
+
+                        <com.unitedbustech.eld.view.FontEditView
+                            android:id="@+id/unit_price_input"
+                            style="@style/ifta_update_input"
+                            android:hint="@string/ifta_update_unit_price_hint"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:nextFocusForward="@id/purchased_gallonst_input"
+                            eld:fontType="medium" />
+
+                        <com.unitedbustech.eld.view.FontTextView
+                            android:id="@+id/unit_warning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ifta_unit_price_empty"
+                            android:textColor="#FF3B30"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.unitedbustech.eld.view.FontTextView
+                            style="@style/ifta_update_input_title"
+                            android:text="@string/ifta_update_purchased_gallonst"
+                            eld:fontType="medium" />
+
+                        <com.unitedbustech.eld.view.FontEditView
+                            android:id="@+id/purchased_gallonst_input"
+                            style="@style/ifta_update_input"
+                            android:hint="@string/ifta_update_purchased_gallonst_hint"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:nextFocusForward="@id/total_price_input"
+                            eld:fontType="medium" />
+
+                        <com.unitedbustech.eld.view.FontTextView
+                            android:id="@+id/gallons_warning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ifta_gallons_empty"
+                            android:textColor="#FF3B30"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_total_price"
+                    eld:fontType="medium" />
+
+                <com.unitedbustech.eld.view.FontEditView
+                    android:id="@+id/total_price_input"
+                    style="@style/ifta_update_input"
+                    android:hint="@string/ifta_update_total_price_hint"
+                    android:inputType="number|numberDecimal"
+                    eld:fontType="medium" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    android:id="@+id/total_price_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ifta_total_price"
+                    android:textColor="#FF3B30"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <View style="@style/ifta_update_line" />
+
+                <com.unitedbustech.eld.view.FontTextView
+                    style="@style/ifta_update_input_title"
+                    android:text="@string/ifta_update_receipt"
+                    eld:fontType="medium" />
+
+                <com.unitedbustech.eld.view.ThumbnailContainerView
+                    android:id="@+id/add_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp" />
+
+            </LinearLayout>
+
+            <View style="@style/ifta_update_line" />
+
+            <com.unitedbustech.eld.view.FontButton
+                android:id="@+id/save_btn"
+                style="@style/font_btn"
+                android:layout_width="match_parent"
+                android:layout_gravity="center|bottom"
+                android:layout_margin="15dp"
+                android:text="@string/save"
+                eld:fontType="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

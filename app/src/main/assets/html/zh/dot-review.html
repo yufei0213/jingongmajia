@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+    <link rel="stylesheet" href="../../css/swiper-4.1.6.min.css">
+</head>
+<body>
+<div id="page" class="pages">
+    <div class="page">
+
+        <div sid="dateSwitchBox" class="dateBar">
+            <div sid="preBtn" class="iprev"></div>
+            <span sid="dateLabel"></span>
+            <div sid="nextBtn" class="inext swiper-button-disabled"></div>
+        </div>
+
+        <div class="container">
+            <div id="swiper_container_view" sid="swiperContainerView"
+                 class="swiper-container swiper_container_view enlarged">
+                <div sid="reviewList" class="swiper-wrapper">
+
+                </div>
+            </div>
+            <div id="swiper_container_control" sid="swiperContainerControl"
+                 class="swiper-container swiper_container_control">
+                <div sid="controlList" class="swiper-wrapper">
+                </div>
+            </div>
+        </div>
+        <div class="scale_btns">
+            <div sid="zoomInBtn" class="zoomin"><i class="izoomin"></i></div>
+            <div sid="zoomOutBtn" class="zoomout"><i class="izoomout"></i></div>
+        </div>
+        <div sid="loadingView" class="partial_loading dot"><em>loading</em></div>
+    </div>
+</div>
+</body>
+
+<!-- swiper container item template -->
+<div id="swiper_container_view_item_template" class="dn">
+    <div class="dotshow swiper-slide swiper-no-swiping">
+        <div sid="scaleBox" class="scale_panel">
+            <!-- Head -->
+            <table class="form">
+                <thead>
+                <tr>
+                    <th>DOT#</th>
+                    <th>Carrier</th>
+                    <th>Driver Name</th>
+                    <th>Driver ID</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td sid="reviewHeadUsdot"></td>
+                    <td sid="reviewHeadCarrier"></td>
+                    <td sid="reviewHeadDriverName"></td>
+                    <td sid="reviewHeadDriverID"></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>Vehicle VIN</th>
+                    <th>License Number</th>
+                    <th>License State</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td sid="reviewHeadTruckTractorID"></td>
+                    <td sid="reviewHeadTruckTractorVIN"></td>
+                    <td sid="reviewHeadDriverLicenseNumber"></td>
+                    <td sid="reviewHeadDriverLicenseState"></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Time Zone</th>
+                    <th>24-Period Starting Time</th>
+                    <th>ELD Manufacturer</th>
+                    <th>ELD ID</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td sid="reviewHeadTimeZone"></td>
+                    <td sid="reviewHeadPeriodStartingTime"></td>
+                    <td sid="reviewHeadELDManufacturer"></td>
+                    <td sid="reviewHeadELDID"></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Co-Driver Name</th>
+                    <th>Co-Driver ID</th>
+                    <th>Travel Distance</th>
+                    <th>Engine Hours</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td sid="reviewHeadCoDriverName"></td>
+                    <td sid="reviewHeadCoDriverID"></td>
+                    <td sid="reviewHeadStartEndOdometer"></td>
+                    <td sid="reviewHeadStartEndEngineHours"></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Shipping ID</th>
+                    <th>Data Diagnostic Indicators</th>
+                    <th>ELD Malfunction Indicators</th>
+                    <th>Unidentified Driver Records</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td sid="reviewHeadShippingID"></td>
+                    <td sid="reviewHeadDataDiagnosticIndicators"></td>
+                    <td sid="reviewHeadELDMalfunctionIndicators"></td>
+                    <td sid="reviewHeadUnidentifiedDriverRecords"></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th>Exempt Driver Status</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td sid="reviewHeadExemptDriverStatus"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- Grid -->
+            <div class="grid">
+                <div class="chartBox">
+                    <canvas id="grid"></canvas>
+                </div>
+            </div>
+
+            <!-- Event-->
+            <table sid="eventTable" class="event">
+                <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Odometer</th>
+                    <th>Eng Hours</th>
+                    <th>Event Type/Status</th>
+                    <th>Origin</th>
+                    <th>Remark</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="swiper_container_control_item_template" class="dn">
+    <div class="swiper-slide"></div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+<script src="../../js/utils/swiper-4.1.6.min.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/dot-interface.js"></script>
+
+<script src="../../js/widgets/dot/driver-grid-dot.js"></script>
+<script src="../../js/widgets/dot/date-review.js"></script>
+
+<script src="../../js/pages/dot-review.js"></script>
+
+</html>

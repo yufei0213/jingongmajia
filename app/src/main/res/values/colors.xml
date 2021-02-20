@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#243B53</color>
+    <color name="colorPrimaryDark">#243B53</color>
+    <color name="colorAccent">#111111</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="theme">#327ccc</color>
+    <color name="page_bg">#F5F6F7</color>
+    <color name="tab_menu_num_bg">#f11818</color>
+
+    <color name="driving_bg">#1c3147</color>
+
+    <color name="login_welcome">#545454</color>
+    <color name="login_input_bg">#f4f4f4</color>
+    <color name="login_input_stroke">#bababa</color>
+    <color name="login_input_font">#080e15</color>
+    <color name="login_input_font_hint">#cccccc</color>
+    <color name="login_btn_bg">@color/theme</color>
+    <color name="login_btn_pressed_bg">#3253cc</color>
+    <color name="login_account_tip">#888888</color>
+
+    <color name="tab_menu_text">#b0b0b0</color>
+    <color name="tab_menu_text_selected">#243b53</color>
+
+    <color name="title_bar_bg">@color/colorPrimary</color>
+    <color name="title_bar_text">@color/white</color>
+
+    <color name="split_line">#e8e8e9</color>
+    <color name="success_dialog">#99080808</color>
+    <color name="loading_dialog">#56080808</color>
+
+    <color name="dvir_dialog_shadow">#20000000</color>
+    <color name="dailog_edit_text_line">#d6d6d6</color>
+    <color name="date_alert_line">#979797</color><!--时间和日期弹出的线-->
+    <color name="dialog_edit_waring">#FF3B30</color><!--弹出窗口的提示颜色-->
+    <color name="dialog_edit_focus">#9FCDFF</color><!--弹出窗口的提示颜色-->
+    <color name="dialog_input_font">@color/login_input_font</color><!--弹出窗口的提示颜色-->
+
+    <color name="password_waring">#FF3B30</color>
+    <color name="password_input_font">@color/login_input_font</color>
+
+    <color name="launcher_background">#8EDDFF</color>
+
+</resources>

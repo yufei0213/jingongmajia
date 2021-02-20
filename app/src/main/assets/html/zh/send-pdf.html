@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="list noac mgt5">
+                <ul>
+                    <li id="startDateBox">
+                        <div class="flex">
+                            <div class="subtitle">开始日期</div>
+                            <div sid="startDateInput" class="text pld">选择开始日期</div>
+                        </div>
+                        <div class="igogrey"></div>
+                        <div sid="startDateTipLabel" class="tips">开始日期不能为空</div>
+                    </li>
+                    <li id="endDateBox">
+                        <div class="flex">
+                            <div class="subtitle">结束日期</div>
+                            <div sid="endDateInput" class="text pld">选择结束日期</div>
+                        </div>
+                        <div class="igogrey"></div>
+                        <div sid="endDateTipLabel" class="tips">结束日期不能为空</div>
+                    </li>
+                    <li id="emailBox">
+                        <div class="flex">
+                            <div class="subtitle">发送到</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="emailInput" type="text" placeholder="输入邮箱" maxlength="60"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div sid="emailTipLabel" class="tips"></div>
+                    </li>
+                    <li id="commentBox" class="noac">
+                        <div class="flex">
+                            <div class="subtitle">备注</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="commentInput" type="text" placeholder="备注" maxlength="60"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div sid="commentTipLabel" class="tips"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div id="saveBtn" class="button">发送</div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dot-interface.js"></script>
+
+<script src="../../js/pages/send-pdf.js"></script>
+
+</body>
+</html>

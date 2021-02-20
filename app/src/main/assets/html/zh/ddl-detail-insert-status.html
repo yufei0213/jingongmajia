@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="chartBox">
+                <canvas id="grid"/>
+            </div>
+            <div class="bgh20"></div>
+            <div class="list noac mgb20">
+                <ul>
+                    <li class="" id="timeLi"><!-- warning+left 左侧--><!-- warning+right 右侧 -->
+                        <!-- warning+leftRight 两个同时出现 -->
+                        <div class="flex" id="startTime">
+                            <div class="subtitle">开始时间</div>
+                            <div class="text pld" id="startTimeText">选择时间</div>
+                        </div>
+                        <div class="tips">请选择开始时间。</div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">时长</div>
+                            <div class="text pld" id="duration">--</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="statusCon">
+                            <div class="con on" id="offBtn">
+                                <div class="box">OFF</div>
+                                <span>Off duty</span>
+                            </div>
+
+                            <div class="midCon">
+                                <div class="con" id="odndBtn">
+                                    <div class="box">ODND</div>
+                                    <span>On Duty</span>
+                                </div>
+                                <div class="con" id="dBtn">
+                                    <div class="box">D</div>
+                                    <span>Driving</span>
+                                </div>
+                            </div>
+
+                            <div class="con" id="sbBtn">
+                                <div class="box">SB</div>
+                                <span>Sleeper</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="locationLi">
+                        <div class="flex">
+                            <div class="subtitle">位置</div>
+                            <div class="input">
+                                <input id="locationInput" type="text" placeholder="位置"
+                                       value="">
+                            </div>
+                        </div>
+                        <div id="getLocationBtn" class="ilocation"></div>
+                        <div id="getLocationLoading" class="iloading dn"></div>
+                        <div class="tips" id="locationLiText"></div>
+                    </li>
+                    <li id="selectVidLi">
+                        <div class="flex" id="vidBtn">
+                            <div class="subtitle">车号</div>
+                            <div class="text pld" id="vid">选择车辆</div><!-- pld 未选中字体颜色 -->
+                        </div>
+                        <div class="igogrey"></div>
+                        <div class="tips">请选择车辆。</div>
+                    </li>
+                    <li id="odometerLi"><!-- warning+left 左侧--><!-- warning+right 右侧 -->
+                        <!-- warning+leftRight 两个同时出现 -->
+                        <div class="flex">
+                            <div class="subtitle">里程（英里）</div>
+                            <div class="text input"><input placeholder="开始里程" value=""
+                                                           id="odometer"></div>
+                        </div>
+                        <div class="tips" id="odometerLiText">里程不能超过7位数。</div>
+                    </li>
+                    <li id="remarkLi">
+                        <div class="flex">
+                            <div class="subtitle">备注</div>
+                            <div class="textarea">
+                                <textarea id="remarkInputView" placeholder="备注"></textarea>
+                            </div>
+                        </div>
+                        <ul id="remarkOptionView" class="auto-complete"></ul>
+                        <div class="tips" id="remarkLiText"></div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div class="button" id="saveBtn"><em>保存</em></div><!-- btnloading 加载样式-->
+            <!-- disabled 不可用状态 -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/textarea.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+<script src="../../js/pages/ddl-detail-insert-status.js"></script>
+

@@ -1,0 +1,1 @@
+[{"id":"1","name":"Diesel"},{"id":"2","name":"Gasoline"},{"id":"3","name":"Propane"},{"id":"4","name":"LNG"},{"id":"5","name":"CNG"},{"id":"6","name":"EthanolMethanol"},{"id":"7","name":"E-85"},{"id":"8","name":"M-85"},{"id":"9","name":"A55"},{"id":"10","name":"Biodiesel"}]

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/break_dialog_common_container"
+    android:orientation="vertical">
+
+    <com.unitedbustech.eld.view.FontTextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/trailer_dialog_title"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.unitedbustech.eld.view.FontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/trailer_dialog_shipping_title"
+                        android:textColor="#6591C1"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.unitedbustech.eld.view.FontEditView
+                            android:id="@+id/shipping_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:hint="@string/trailer_dialog_shipping_title"
+                            android:singleLine="true" />
+
+                        <View
+                            android:id="@+id/shipping_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignBottom="@id/shipping_edit_text"
+                            android:background="@color/dailog_edit_text_line" />
+
+                    </RelativeLayout>
+
+                    <com.unitedbustech.eld.view.FontTextView
+                        android:id="@+id/shipping_warning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_break_remark_empty"
+                        android:textColor="@color/dialog_edit_waring"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/trailer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="40dp">
+
+        <LinearLayout
+            android:id="@+id/btn_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.unitedbustech.eld.view.FontButton
+                android:id="@+id/negative_btn"
+                style="@style/dialog_horizontal_negative_btn"
+                android:text="@string/skip"
+                eld:fontType="bold" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <com.unitedbustech.eld.view.FontButton
+                android:id="@+id/neutral_btn"
+                style="@style/dialog_horizontal_neutral_btn"
+                android:text="@string/save"
+                eld:fontType="bold" />
+
+        </LinearLayout>
+
+        <com.unitedbustech.eld.view.FontButton
+            android:id="@+id/positive_btn"
+            style="@style/dialog_common_positive_btn"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            eld:fontType="bold"
+            tools:text="Setting" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

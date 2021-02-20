@@ -1,0 +1,25 @@
+<resources>
+
+    <attr name="title" format="string" />
+
+    <declare-styleable name="tab_menu_item">
+        <attr name="itemText" format="string" />
+        <attr name="itemTextColor" format="reference" />
+        <attr name="itemIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="title_bar">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="tab_item_title_bar">
+        <attr name="title" />
+        <attr name="isShowIcon" format="boolean" />
+        <attr name="rightText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="text_font">
+        <attr name="fontType" format="string" />
+    </declare-styleable>
+
+</resources>

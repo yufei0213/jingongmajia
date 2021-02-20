@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div id="page" class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="list noac mgb20">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Vehicle NO.</div>
+                            <div sid="vehicleNoLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">State</div>
+                            <div sid="stateLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Time</div>
+                            <div sid="timeLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Location</div>
+                            <div sid="locationLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Odometer (mi)</div>
+                            <div sid="odometerLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">EngineHour (h)</div>
+                            <div sid="engineHourLabel" class="text"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div sid="rejectBtn" class="button"><em>Reject</em></div>
+            <div sid="acceptBtn" class="button"><em>Accept</em></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../js/utils/jquery.js"></script>
+<script src="../../js/utils/signature_pad.min.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/time-util.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/alerts-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+
+<script src="../../js/pages/unidentified-engine-log-detail.js"></script>
+</html>

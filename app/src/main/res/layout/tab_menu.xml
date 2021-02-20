@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tab_menu_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.unitedbustech.eld.view.TabMenuItem
+            android:id="@+id/dashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            eld:itemIcon="@drawable/tab_menu_dashboard"
+            eld:itemText="@string/tab_menu_item_dashboard"
+            eld:itemTextColor="@drawable/tab_menu_text" />
+
+        <com.unitedbustech.eld.view.TabMenuItem
+            android:id="@+id/dailylog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            eld:itemIcon="@drawable/tab_menu_dailylog"
+            eld:itemText="@string/tab_menu_item_dailylog"
+            eld:itemTextColor="@drawable/tab_menu_text" />
+
+        <com.unitedbustech.eld.view.TabMenuItem
+            android:id="@+id/dvir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            eld:itemIcon="@drawable/tab_menu_dvir"
+            eld:itemText="@string/tab_menu_item_dvir"
+            eld:itemTextColor="@drawable/tab_menu_text" />
+
+        <com.unitedbustech.eld.view.TabMenuItem
+            android:id="@+id/dot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            eld:itemIcon="@drawable/tab_menu_dot"
+            eld:itemText="@string/tab_menu_item_dot"
+            eld:itemTextColor="@drawable/tab_menu_text" />
+
+        <com.unitedbustech.eld.view.RedDotTabMenuItem
+            android:id="@+id/more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            eld:itemIcon="@drawable/tab_menu_more"
+            eld:itemText="@string/tab_menu_item_more"
+            eld:itemTextColor="@drawable/tab_menu_text" />
+
+    </LinearLayout>
+
+</LinearLayout>

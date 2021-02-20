@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tab_menu_height"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:id="@+id/tab_menu_text"
+            style="@style/tab_menu_text"
+            android:drawablePadding="2dp"
+            tools:drawableTop="@drawable/ic_tab_menu_dashboard"
+            tools:text="DOSHBOARD" />
+
+    </RelativeLayout>
+
+</LinearLayout>

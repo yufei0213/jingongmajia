@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="list noac">
+                <ul>
+                    <li id="currentOdometerLi">
+                        <div class="flex">
+                            <div class="subtitle">Current Odometer</div>
+                            <div class="input"><input type="number" min="0" max="999999999" step="1" placeholder="Enter" id="currentOdometer"></div>
+                        </div>
+                        <div class="iclose mgb-20" id="textCancel"></div>
+                        <div class="tips" sid="odometerTips">Odometer can't be empty.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cntit"></div>
+            <div class="detailsInfo">This function helps you correct the total odometer read by the device. In order to ensure the accuracy of the travel distance in the daily log, the changes will take effect in the next 24-hour period.</div>
+        </div>
+        <div class="btnBar">
+            <div class="button" id="saveBtn">Save</div> <!-- disabled -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/vehicle-interface.js"></script>
+
+<script src="../../js/pages/ecminfo-edit-odometer.js"></script>

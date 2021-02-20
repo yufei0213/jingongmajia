@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply from: '../config/quality/quality.gradle'
+
+android {
+
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+
+        applicationId "com.unitedbustech.eld"
+
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs{
+        release{
+
+            storeFile file("../config/sign/eld.jks")
+            storePassword "ilikebus"
+            keyAlias "eld"
+            keyPassword "ilikebus"
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    buildTypes {
+
+        release {
+
+            signingConfig signingConfigs.release
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+
+        main {
+
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+}
+
+repositories {
+
+    flatDir {
+
+        dirs 'libs'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation(name: 'pt-sdk-release', ext: 'aar')
+
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+
+    implementation "com.google.firebase:firebase-core:$rootProject.firebaseVersion"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.firebaseVersion"
+    implementation "com.google.firebase:firebase-invites:$rootProject.firebaseVersion"
+    implementation('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+
+    implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+    androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
+    debugCompile "com.amitshekhar.android:debug-db:$rootProject.debugDbVersion"
+
+    implementation "com.alibaba:fastjson:$rootProject.fastjsonVersion"
+    implementation "org.greenrobot:eventbus:$rootProject.eventbusVersion"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+    implementation "pl.droidsonroids.gif:android-gif-drawable:$rootProject.gifVersion"
+    implementation "com.elvishew:xlog:$rootProject.xlog"
+
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+}
+
+apply plugin: 'com.google.gms.google-services'

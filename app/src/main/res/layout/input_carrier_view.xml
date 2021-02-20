@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/login_input_container">
+
+    <com.unitedbustech.eld.view.FontEditView
+        android:id="@+id/carrier_input"
+        style="@style/carrier_input" />
+
+    <ImageButton
+        android:id="@+id/clear_btn"
+        style="@style/login_clear_icon_btn"
+        android:visibility="invisible" />
+
+</LinearLayout>

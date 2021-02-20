@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialog_common_container"
+    android:orientation="vertical">
+
+    <com.unitedbustech.eld.view.FontTextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:text="@string/expire_dialog_title"
+        android:textSize="22sp"/>
+
+    <com.unitedbustech.eld.view.FontTextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/content_text_days_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/theme"
+        android:text="0"
+        eld:fontType="bold"
+        android:textSize="34sp"/>
+
+    <com.unitedbustech.eld.view.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/theme"
+        android:text="@string/expire_dialog_days"
+        android:textSize="18sp"/>
+
+    <com.unitedbustech.eld.view.FontTextView
+        android:id="@+id/content_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/expire_dialog_content_text" />
+
+    <com.unitedbustech.eld.view.FontTextView
+        android:id="@+id/content_text_view_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/theme"
+        android:text="@string/expire_dialog_phone_number"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="35dp">
+
+        <LinearLayout
+            android:id="@+id/btn_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <com.unitedbustech.eld.view.FontButton
+                android:id="@+id/neutral_btn"
+                style="@style/dialog_horizontal_neutral_btn"
+                eld:fontType="bold"
+                android:textSize="18sp"
+                android:text="@string/expire_dialog_got" />
+
+        </LinearLayout>
+
+        <com.unitedbustech.eld.view.FontButton
+            android:id="@+id/positive_btn"
+            style="@style/dialog_common_positive_btn"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            eld:fontType="bold"
+            tools:text="Setting" />
+
+    </LinearLayout>
+
+</LinearLayout>

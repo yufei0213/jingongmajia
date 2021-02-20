@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div id="page" class="page">
+
+        <div sid="container" class="container df bov">
+
+            <div sid="malfunctionBox" class="dn">
+                <div class="cntit">Malfunction</div>
+                <div class="list noac lastli">
+                    <ul sid="malfunctionList">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div sid="diagnosticBox" class="dn">
+                <div class="cntit">Diagnostic</div>
+                <div class="list noac">
+                    <ul sid="diagnosticList">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div sid="emptyView" class="empty dn"></div>
+            <div sid="loadingView" class="partial_loading"><em>loading</em></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 列表template -->
+<div id="malfunction_template" class="dn">
+    <li>
+        <div class="flex">
+            <div sid="title" class="f16 lh20"></div>
+            <div sid="time" class="f12 h lh14 pdt2"></div>
+        </div>
+        <div class="f12 lh14 red">Detected</div>
+    </li>
+</div>
+
+</body>
+</html>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/vehicle-interface.js"></script>
+
+<script src="../../js/pages/malfunction.js"></script>

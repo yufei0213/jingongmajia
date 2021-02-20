@@ -1,0 +1,388 @@
+<resources>
+
+    <string name="app_name">SHIELD</string>
+
+    <string name="ok">确定</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="reject">拒绝</string>
+    <string name="accept">接受</string>
+    <string name="setting">设置</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="update">更新</string>
+    <string name="done">完成</string>
+    <string name="confirm">确认</string>
+    <string name="retry">重试</string>
+    <string name="exit">退出</string>
+    <string name="manual_mode">手动模式</string>
+    <string name="version">版本 #version#</string>
+    <string name="skip">跳过</string>
+    <string name="back">返回</string>
+    <string name="location">位置</string>
+    <string name="remark">备注</string>
+    <string name="downloading">下载中...</string>
+
+    <string name="ifta_create_title">加油</string>
+    <string name="ifta_detail_title">加油详情</string>
+    <string name="ifta_edit_title">编辑</string>
+    <string name="ifta_update_driver_name">司机姓名</string>
+    <string name="ifta_update_driver_name_hit">司机姓名</string>
+    <string name="ifta_update_vehicle_id">车辆ID</string>
+    <string name="ifta_update_vehicle_id_hint">车辆ID</string>
+    <string name="ifta_update_purchase_date">加油日期</string>
+    <string name="ifta_update_purchase_date_hint">加油日期</string>
+    <string name="ifta_update_state">州</string>
+    <string name="ifta_update_state_hint">州</string>
+    <string name="ifta_update_fuel_type">加油类型</string>
+    <string name="ifta_update_fuel_type_hint">请选择加油类型</string>
+    <string name="ifta_update_unit_price">单位价格</string>
+    <string name="ifta_update_unit_price_hint">单位价格</string>
+    <string name="ifta_update_purchased_gallonst">购买数量</string>
+    <string name="ifta_update_purchased_gallonst_hint">购买数量</string>
+    <string name="ifta_update_total_price">总价</string>
+    <string name="ifta_update_total_price_hint">总价</string>
+    <string name="ifta_update_receipt">收据</string>
+    <string name="ifta_fuel_type_title">加油类型</string>
+    <string name="ifta_vehicle_title">选择车辆</string>
+    <string name="ifta_state_title">选择州</string>
+    <string name="ifta_delete_tip">你确定要删除吗？</string>
+    <string name="ifta_delete_offline">离线模式不能使用删除功能，请恢复网络后再试。</string>
+
+    <string name="version_install_apk">SHIELD已更新到最新版本，下载最新版本体验最新功能和更好的性能优化。</string>
+    <string name="version_install_apk_force">我们进行了主要功能升级，为了保证功能完整使用，请更新。</string>
+    <string name="version_download_failed">下载失败，请检查网络后重试。</string>
+
+    <string name="unidentified_page_title">未认领日志</string>
+
+    <string name="permission_tips">请打开所有权限</string>
+    <string name="location_service_tip">请打开GPS服务</string>
+
+    <string name="dialog_prompt_success">成功</string>
+    <string name="dialog_prompt_failed">失败</string>
+    <string name="dialog_loading_save">保存中</string>
+    <string name="dialog_loading_loading">加载中</string>
+    <string name="dialog_progress_download">下载</string>
+    <string name="dialog_post_trip_off_tip">开始进入Off Duty 状态，祝你生活愉快，预计明天可用的开车时间为#hour#小时#minute#分钟。</string>
+    <string name="dialog_driving_count_down_yes">是(#number#)</string>
+    <string name="dialog_driving_count_down_tip">检测到你的车辆已经静止，是否需要切换为On Duty Not Driving？</string>
+    <string name="dialog_personal_use_tip">你是否要继续使用Personal Use?</string>
+    <string name="dialog_yard_move_tip">车辆启动，Yard Move切换为On Duty Not Driving。</string>
+    <string name="dialog_update_tip">SHIELD已更新到#version_code#版本，下载最新版本体验最新功能和更好的性能优化。</string>
+
+    <string name="tab_menu_item_dashboard">首页</string>
+    <string name="tab_menu_item_dailylog">行车日志</string>
+    <string name="tab_menu_item_dvir">车辆检查</string>
+    <string name="tab_menu_item_dot">路检模式</string>
+    <string name="tab_menu_item_more">更多</string>
+
+    <string name="tab_menu_dot_item_review">START REVIEW</string>
+    <string name="tab_menu_dot_item_send">SEND LOGS</string>
+
+    <string name="daily_log_top_tab_menu_item_log">日志</string>
+    <string name="daily_log_top_tab_menu_item_profile">基本信息</string>
+    <string name="daily_log_top_tab_menu_item_sign">签名</string>
+
+    <string name="title_dailylog">行车日志</string>
+    <string name="title_dvir">车辆检查</string>
+    <string name="title_dot">路检模式</string>
+    <string name="title_dot_inside">Roadside Inspection</string>
+    <string name="dot_exit">Exit</string>
+    <string name="title_more">更多</string>
+
+    <string name="login_welcome">WELCOME</string>
+    <string name="login_carrier_hint">公司DOT#</string>
+    <string name="login_driver">用户名</string>
+    <string name="login_password">密码</string>
+    <string name="login_btn">登录</string>
+    <string name="login_again">你的账户已过期，请重新登录！</string>
+    <string name="login_account_tip">还没有SHIELD账号？</string>
+    <string name="login_trial_account_tip">马上申请免费试用账号</string>
+    <string name="login_phone_number">202-800-6565</string>
+    <string name="login_account_url">https://www.ubtshield.com/demo/</string>
+
+    <string name="welcome_tip">祝你一路平安！</string>
+    <string name="welcome_carrier_name">（#carrierName#）</string>
+    <string name="welcome_confirm_btn">开始旅程</string>
+    <string name="welcome_reject_btn">不是我的账号</string>
+
+    <string name="exemption_tip">检测到你的账户处于豁免模式，请选择豁免类型。</string>
+    <string name="exemption_miles_btn">100 Air Mile Exemption</string>
+    <string name="exemption_days_btn">Drive less than 8 days in rolling 30 days period</string>
+
+    <string name="prepare_text">Operating a commercial motor vehicle while tired, ill, or in any condition unsuitable for driving is forbidden per federal law (49 CFR § 392.3). Keep the road safe by making sure that you are well-rested and in good health before driving.</string>
+
+    <string name="prepare_failure">连接失败</string>
+    <string name="prepare_failure_tip">你的网络好像出了点问题，请再次尝试。</string>
+    <string name="prepare_try_btn">再次尝试</string>
+
+    <string name="bluetooth_open_tip">打开蓝牙连接车辆。</string>
+    <string name="vehicle_connect_dialog_title">正在连接#vehicle#</string>
+    <string name="vehicle_connect_dialog_text">请确保你选择了正确的车辆。</string>
+    <string name="vehicle_connect_dialog_failed_title">连接失败</string>
+    <string name="vehicle_connect_dialog_failed_text">你可以再次尝试连接，也可以启用手动模式来工作。</string>
+
+    <string name="disconnect_vehicle_tip">你想与车辆断开连接吗?</string>
+    <string name="disconnect_vehicle_neutral_btn">我不想</string>
+    <string name="disconnect_vehicle_negative_btn">断开连接</string>
+
+    <!--daily log 日志的显示的字符串-->
+    <string name="ddl_unknown">未知日志</string>
+    <string name="ddl_off_duty">Off Duty</string>
+    <string name="ddl_sleeper_berth">Sleeper Berth</string>
+    <string name="ddl_driving">Driving</string>
+    <string name="ddl_on_duty_not_driving">On Duty Not Driving</string>
+    <string name="ddl_yard_move">Yard Move</string>
+    <string name="ddl_personal_use">Personal Use</string>
+    <string name="ddl_clear_special">状态清除</string>
+    <string name="ddl_login">登录</string>
+    <string name="ddl_log_out">退出</string>
+    <string name="ddl_engine_on">打火</string>
+    <string name="ddl_engine_off">熄火</string>
+    <string name="ddl_sign">签名</string>
+    <string name="ddl_login_dot">Log In</string>
+    <string name="ddl_log_out_dot">Log Out</string>
+    <string name="ddl_engine_on_dot">Power Up</string>
+    <string name="ddl_engine_off_dot">Shut Down</string>
+    <string name="ddl_sign_dot">Cert</string>
+    <string name="ddl_adverse_driving">不利条件驾驶</string>
+    <string name="ddl_adverse_driving_dot">Adverse Driving</string>
+    <string name="ddl_intermediate">中间日志</string>
+    <string name="ddl_intermediate_dot">Intermediate</string>
+    <string name="ddl_rule_change_usa_70hours">Change to USA 70 hour / 8 day</string>
+    <string name="ddl_rule_change_usa_70hours_dot">Change to USA 70 hour / 8 day</string>
+    <string name="ddl_rule_change_usa_60hours">Change to USA 60 hour / 7 day</string>
+    <string name="ddl_rule_change_usa_60hours_dot">Change to USA 60 hour / 7 day</string>
+    <string name="ddl_rule_change_canada_70hours">Change to Canada 70 hour / 7 day</string>
+    <string name="ddl_rule_change_canada_70hours_dot">Change to Canada 70 hour / 7 day</string>
+    <string name="ddl_rule_change_canada_120hours">Change to Canada 120 hour / 14 day</string>
+    <string name="ddl_rule_change_canada_120hours_dot">Change to Canada 120 hour / 14 day</string>
+
+    <!--所有的诊断数据-->
+    <string name="ddl_diag_log_p">检测到电力合规故障(P)</string>
+    <string name="ddl_diag_log_p_c">电力合规故障(P)已清除</string>
+    <string name="ddl_diag_log_e">检测到发动机同步故障(E)</string>
+    <string name="ddl_diag_log_e_c">发动机同步故障(E)已清除</string>
+    <string name="ddl_diag_log_t">检测到时间合规故障(T)</string>
+    <string name="ddl_diag_log_t_c">时间合规故障(T)已清除</string>
+    <string name="ddl_diag_log_l">检测到位置合规故障(L)</string>
+    <string name="ddl_diag_log_l_c">位置合规故障(L)已清除</string>
+    <string name="ddl_diag_log_r">检测到数据记录合规故障(R)</string>
+    <string name="ddl_diag_log_r_c">数据记录合规故障(R)已清除</string>
+    <string name="ddl_diag_log_s">检测到数据传输合规故障(S)</string>
+    <string name="ddl_diag_log_s_c">数据传输合规故障(S)已清除</string>
+    <string name="ddl_diag_log_o">检测到其他故障(O)</string>
+    <string name="ddl_diag_log_o_c">其他故障(O)已清除</string>
+    <string name="ddl_diag_log_1">检测到电力异常(1)</string>
+    <string name="ddl_diag_log_1_c">电力异常诊断(1)已清除</string>
+    <string name="ddl_diag_log_2">检测到发动机同步异常(2)</string>
+    <string name="ddl_diag_log_2_c">发动机同步异常诊断(2)已清除</string>
+    <string name="ddl_diag_log_3">检测到数据元素缺失异常(3)</string>
+    <string name="ddl_diag_log_3_c">数据元素缺失异常诊断(3)已清除</string>
+    <string name="ddl_diag_log_4">检测到数据传输异常(4)</string>
+    <string name="ddl_diag_log_4_c">数据传输异常诊断(4)已清除</string>
+    <string name="ddl_diag_log_5">检测到不明身份的司机日志(5)</string>
+    <string name="ddl_diag_log_5_c">不明身份的司机日志异常诊断(5)已清除</string>
+    <string name="ddl_diag_log_6">检测到其他数据异常诊断(6)</string>
+    <string name="ddl_diag_log_6_c">其他数据异常诊断已清除</string>
+
+    <!--dot的所有的诊断数据-->
+    <string name="dot_diag_log_p">Power Malfunction(P) Detected</string>
+    <string name="dot_diag_log_p_c">Power Malfunction(P) Cleared</string>
+    <string name="dot_diag_log_e">Engine Sync Mal.(E) Detected</string>
+    <string name="dot_diag_log_e_c">Engine Sync Mal.(E) Cleared</string>
+    <string name="dot_diag_log_t">Time Malfunction(T) Detected</string>
+    <string name="dot_diag_log_t_c">Time Malfunction(T) Cleared</string>
+    <string name="dot_diag_log_l">Position Malfunction(L) Detected</string>
+    <string name="dot_diag_log_l_c">Position Malfunction(L) Cleared</string>
+    <string name="dot_diag_log_r">Data Rec. Malfunction(R) Detected</string>
+    <string name="dot_diag_log_r_c">Data Rec. Malfunction(R) Cleared</string>
+    <string name="dot_diag_log_s">Data Trans Malfunction(S) Detected</string>
+    <string name="dot_diag_log_s_c">Data Trans Malfunction(S) Cleared</string>
+    <string name="dot_diag_log_o">Other Malfunction(O) Detected</string>
+    <string name="dot_diag_log_o_c">Other Malfunction(O) Cleared</string>
+    <string name="dot_diag_log_1">Power Diagnostic(1) Detected</string>
+    <string name="dot_diag_log_1_c">Power Diagnostic(1) Cleared</string>
+    <string name="dot_diag_log_2">Engine Sync Diag(2) Detected</string>
+    <string name="dot_diag_log_2_c">Engine Sync Diag(2) Cleared</string>
+    <string name="dot_diag_log_3">Data Rec. Diag(3) Detected</string>
+    <string name="dot_diag_log_3_c">Data Rec. Diag(3) Cleared</string>
+    <string name="dot_diag_log_4">Data Trans Diag(4) Detected</string>
+    <string name="dot_diag_log_4_c">Data Trans Diag(4) Cleared</string>
+    <string name="dot_diag_log_5">Unidentified Record(5) Detected</string>
+    <string name="dot_diag_log_5_c">Unidentified Record(5) Cleared</string>
+    <string name="dot_diag_log_6">Other Diagnostic(6) Detected</string>
+    <string name="dot_diag_log_6_c">Other Diagnostic(6) Cleared</string>
+
+    <string name="dvir_pre_trip">Pre-Trip Inspection</string>
+    <string name="dvir_interim">Interim Inspection</string>
+    <string name="dvir_post_trip">Post-Trip Inspection</string>
+
+    <string name="mal_power_name">电力合规故障(P)</string>
+    <string name="mal_engine_sync_name">动机同步故障(E)</string>
+    <string name="mal_time_name">时间合规故障(T)</string>
+    <string name="mal_position_name">位置合规故障(L)</string>
+    <string name="mal_data_rec_name">数据记录合规故障(R)</string>
+    <string name="mal_data_trans_mal">数据传输合规故障(S)</string>
+    <string name="mal_other_name">其他故障(O)</string>
+    <string name="diag_power_name">电力数据异常诊断(1)</string>
+    <string name="diag_engine_sync_name">发动机同步数据异常诊断(2)</string>
+    <string name="diag_data_rec_name">数据元素缺失异常诊断(3)</string>
+    <string name="diag_data_trans_name">数据传输异常诊断(4)</string>
+    <string name="diag_unidentified_name">不明身份的司机日志异常诊断(5)</string>
+    <string name="diag_other_name">其他数据异常诊断(6)</string>
+
+    <string name="diag_page_log_start">start using paper log mode</string>
+    <string name="diag_page_log_end">stop using paper log mode</string>
+
+    <!--startbreak内部提示-->
+    <string name="start_break_title">开始休息</string>
+    <string name="stop_break_title">结束休息</string>
+    <string name="start_break_remark_tip">Start Break</string>
+    <string name="stop_break_remark_tip">Stop Break</string>
+    <string name="start_break_remark_empty">备注不能为空</string>
+
+    <!--adverse driving内部提示-->
+    <string name="adverse_driving_title">特殊情况</string>
+
+    <string name="location_min_wrong">Location must be at least 5 characters.</string>
+    <string name="location_max_wrong">Location must be less than 60 characters.</string>
+    <string name="location_regexp_wrong">DOT官方不支持中文和特殊字符。</string>
+    <string name="remark_min_wrong">备注至少为4个字符。</string>
+    <string name="remark_max_wrong">备注最多为60个字符。</string>
+    <string name="remark_regexp_wrong">DOT官方不支持中文和特殊字符。</string>
+    <string name="vehicle_empty">车辆不能为空。</string>
+    <string name="ifta_state_empty">州不能为空。</string>
+    <string name="ifta_fuel_empty">燃油类型不能为空。</string>
+    <string name="ifta_unit_price_empty">单价不能为空。</string>
+    <string name="ifta_unit_price_number">单价必须是数字。</string>
+    <string name="ifta_gallons_empty">数量不能为空。</string>
+    <string name="ifta_gallons_number">数量必须是数字。</string>
+    <string name="ifta_total_empty">总价不能为空。</string>
+    <string name="ifta_total_price">总价不能超过1000美元。</string>
+    <string name="ifta_total_number">总价必须是数字。</string>
+
+    <!--dot review内部提示-->
+    <string name="dot_exit_tip">请输入密码</string>
+    <string name="dot_loading">Loading</string>
+    <string name="dot_succeed">Succeed</string>
+    <string name="dot_failed">Failed</string>
+    <string name="dot_invalid_email">Invalid email</string>
+    <string name="dot_invalid_comment">Invalid comment</string>
+    <string name="dot_request_send_email_success">Send logs to email success</string>
+    <string name="dot_request_web_service_success">Upload logs to web service success</string>
+    <string name="dot_get_review_data_list_fail">Failed to collect report data, please check your network</string>
+    <string name="dot_request_send_email_fail">Failed to send email, please try again</string>
+    <string name="dot_request_web_service_fail">Failed to request web service, please try again</string>
+    <string name="dot_request_vehicle_id">Please select a vehicle</string>
+
+    <!--alert内部提示-->
+    <string name="alert_edit_by_fleet_manager">后台管理员编辑请求</string>
+    <string name="alert_team_work_adjustment_by_driver">团队驾驶纠错</string>
+
+    <string name="request_status_success">成功</string>
+    <string name="request_status_system_error">系统错误</string>
+    <string name="request_status_api_not_found">API请求失败</string>
+    <string name="request_status_illegal_request">非法请求</string>
+    <string name="request_status_authentication_fail">认证失败</string>
+    <string name="request_status_api_not_implement">API not implemented</string>
+    <string name="request_status_parse_parameters_error">Parse parameters error</string>
+    <string name="request_status_validate_parameters_error">Validate parameters error</string>
+    <string name="request_status_invalid_carrier_id">公司DOT#错误，请重试。</string>
+    <string name="request_status_invalid_driver_id">用户名错误，请重试。</string>
+    <string name="request_status_invalid_password">密码错误，请重试。</string>
+    <string name="request_status_pilot_has_cancel_teamwork">主驾驶已经取消了团队邀请。</string>
+    <string name="request_status_teamwork_not_exist">团队不存在。</string>
+    <string name="request_status_pilot_has_cancel_switch">主驾驶已经取消了切换团队角色请求。</string>
+    <string name="request_status_request_timeout">请求超时</string>
+    <string name="request_status_parse_result_error">解析结果失败</string>
+    <string name="request_status_network_connect_error">连接失败</string>
+    <string name="request_status_sign_error">签名失败</string>
+    <string name="request_status_unknown_error">Unknown error</string>
+    <string name="request_status_untreated_error">Untreated error</string>
+
+    <string name="login_on_other">有其他设备登录了你的账号，如果非本人操作，请联系管理员或者修改你的密码。</string>
+    <string name="login_on_other_offline">在离线模式期间有人登录了你的账号。在这段时间内产生的行车日志数据将会被丢弃，如果有你任何疑问，请联系车队管理员。</string>
+    <string name="login_other_driving">有其他设备登录了你的账号并且处于Driving状态，你无法继续登录，请联系管理员。</string>
+    <string name="login_other_not_driving">有其他设备登录了你的账号，你确定要继续登录吗？</string>
+    <string name="account_invalid">你的账号是卡车账号，请使用客车账号登录。</string>
+    <string name="ifta_deleted">Ifta has deleted.</string>
+    <string name="login_on_norenewals">你的账号已过期，请联系你的车队管理员。</string>
+
+    <string name="network_error">没有网络连接，请检查网络设置。</string>
+
+    <!--password提示-->
+    <string name="passport_wrong">密码错误</string>
+
+    <string name="team_work_resume">你现在处于团队当中，是否需要恢复？</string>
+    <string name="teamwork_pilot_invite_copilot">#pilot# 邀请你成为他的副驾驶。是否接受？</string>
+    <string name="teamwork_pilot_request_switch">#pilot# 邀请你成为主驾驶。是否接受？</string>
+    <string name="teamwork_pilot_has_cancel">该邀请已过期。</string>
+
+    <string name="not_found_mail">未发现邮件APP。</string>
+
+    <!--违规提示-->
+    <string name="hos_alert_cycle">违反了#pilot#小时周期规则。</string>
+    <string name="hos_alert_shift">违反了#pilot#小时轮班规则。</string>
+    <string name="hos_alert_drive">违反了#pilot#小时驾驶规则。</string>
+    <string name="shift_13_limit">违反了轮班内13小时驾驶规则。</string>
+    <string name="shift_14_limit">违反了轮班内14小时工作规则。</string>
+    <string name="shift_16_limit">违反了轮班开始16小时后不能驾驶规则。</string>
+    <string name="day_13_limit">违反了每天13小时驾驶规则。</string>
+    <string name="day_14_limit">违反了每天14小时工作规则。</string>
+    <string name="day_10_limit">违反了每天休息10小时规则。</string>
+    <string name="day_20_limit">违反了两天休息20小时规则。</string>
+    <string name="cycle_70_limit">违反了70小时周期规则。</string>
+    <string name="cycle_120_limit">违反了120小时周期规则。</string>
+    <string name="cycle_24_limit">违反了累计工作70小时前需要连续休息24小时规则。</string>
+    <string name="off_24_limit">违反了每14天必须连续休息24小时规则。</string>
+
+    <!--trailer-->
+    <string name="trailer_dialog_title">运输编号</string>
+    <string name="trailer_dialog_shipping_title">运输编号</string>
+    <string name="trailer_dialog_add_btn">Add Trailers</string>
+    <string name="trailer_dialog_trailer_title">Trailers #</string>
+    <string name="trailer_dialog_shipping_max">备注最多为10个字符。</string>
+    <string name="trailer_dialog_shipping_regexp_wrong">备注错误。</string>
+
+    <string name="inspection_trailer_dialog_title">输入拖车编号</string>
+    <string name="inspection_trailer_regexp_wrong">备注错误。</string>
+
+    <string name="shiping_instruction">跳过将不会保存已经填写的信息，是否跳过？</string>
+
+    <string name="break_half_hour_tip">快要违规了，请在30分钟内停车并休息至少半个小时。</string>
+    <string name="change_off_duty">修改为OFF Duty</string>
+    <string name="change_sleep_bearth">修改为Sleeper Bearth</string>
+    <string name="keep_current_status">保持当前状态</string>
+
+    <string name="expire_dialog_title">快要过期了</string>
+    <string name="expire_dialog_days">剩余天数</string>
+    <string name="expire_dialog_content_text">你的SHIELD账号有效期剩余%1$s天，请联系管理员在SHIELD 后台进行续费。如果有任何问题，请拨打</string>
+    <string name="expire_dialog_phone_number">(202) 800-6565</string>
+    <string name="expire_dialog_got">知道了</string>
+
+    <!--小时分钟-->
+    <string name="time_h">小时</string>
+    <string name="time_m">分钟</string>
+
+    <string-array name="month_array">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+
+    <string-array name="am_pm">
+        <item>上午</item>
+        <item>下午</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div sid="fuel" class="container df bov">
+            <div class="list noac">
+                <ul sid="fuelBox"></ul>
+            </div>
+            <div sid="emptyBox" class="empty dn"></div>
+            <div sid="loadingView" class="partial_loading"><em>Loading</em></div>
+        </div>
+    </div>
+</div>
+
+<!--模板--->
+<div id="fuel_template" class="dn">
+    <li>
+        <div class="flex">
+            <div class="mainTit"><em sid="state"></em>, <em class="mgl5" sid="fuelType"></em>, <em
+                    class="m2 mgl5">$</em><em
+                    class="m2" sid="price"></em></div>
+            <div class="mInfob"><span>Vehicle: <em sid="vehicleID"></em></span> <span class="mgl10">Date: <em
+                    sid="date"></em></span></div>
+        </div>
+        <div class="igogrey"></div>
+    </li>
+</div>
+
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/ifta-interface.js"></script>
+
+<script src="../../js/pages/ifta-history.js"></script>

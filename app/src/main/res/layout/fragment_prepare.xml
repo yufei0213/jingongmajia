@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_emoji_awkward" />
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/prepare_failure"
+            android:textColor="@color/theme"
+            android:textSize="26sp"
+            eld:fontType="bold" />
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/prepare_failure_tip"
+            android:textColor="@color/theme"
+            android:textSize="20sp" />
+
+        <com.unitedbustech.eld.view.FontButton
+            android:id="@+id/try_btn"
+            style="@style/prepare_try"
+            android:layout_marginTop="80dp"
+            eld:fontType="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/bg_login_logo" />
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/welcome_tip"
+            android:textColor="@color/theme"
+            android:textSize="18sp" />
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:id="@+id/driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme"
+            android:textSize="26sp"
+            eld:fontType="bold"
+            tools:text="TOM Green" />
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:id="@+id/carrier_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/theme"
+            android:textSize="20sp"
+            eld:fontType="bold"
+            tools:text="(TOM Green)" />
+
+        <ImageView
+            android:id="@+id/loading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_prepare_loading" />
+
+        <ScrollView style="@style/prepare_text_container">
+
+            <com.unitedbustech.eld.view.FontTextView style="@style/prepare_text" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

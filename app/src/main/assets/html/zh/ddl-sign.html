@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+    <style>
+        .signCon .con .box {
+            margin: 0 15px;
+            height: 0;
+            padding-bottom: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container df bov">
+            <div class="signCon">
+                <div class="detailsInfo">I hereby certify that my data entries and my record of duty status for this
+                    24-hour period are true and correct.
+                </div>
+                <div class="con">
+                    <div id="signCanvasBox" class="box">
+                        <canvas id="signCanvas"></canvas>
+                        <img class="dn" id="signImg"/>
+                    </div>
+                    <div class="clear dn" id="clear">清除</div>
+                </div>
+                <div class="btnBar">
+                    <div class="button dn" id="save">保存</div><!-- disabled -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+<script src="../../js/utils/signature_pad.min.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+
+<script src="../../js/pages/ddl-sign.js"></script>
+</body>
+</html>
+
+

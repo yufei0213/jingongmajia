@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div id="page" class="page">
+        <div id="uploadView" class="topcentered">
+            <div class="icon icode"></div>
+            <div class="text1">
+                在使用UBTSHIELD中如发生功能异常或闪退等问题，请上传日志帮助我们更好的定位问题和解决问题。
+            </div>
+            <div sid="uploadBtn" class="button"><em>上传</em></div>
+            <div class="text2">日志中包含UBTSHIELD的故障记录、技术数据以及其他必要的系统信息，不包含你的隐私信息。
+            </div>
+        </div>
+        <div id="uploadingView" class="topcentered dn">
+            <div class="icon icode"></div>
+            <div class="text1">正在上传日志。</div>
+            <div class="bar">
+                <div sid="progressView" class="loaded"></div>
+            </div>
+        </div>
+        <div id="successView" class="topcentered dn">
+            <div class="icon itip_ok"></div>
+            <div class="text3">上传成功</div>
+            <div sid="okBtn" class="button"><em>确定</em></div>
+        </div>
+        <div id="failedView" class="topcentered dn">
+            <div class="icon itip_error"></div>
+            <div class="text3">上传失败</div>
+            <div sid="tryAgainBtn" class="button"><em>重试</em></div>
+            <div sid="cancelBtn" class="button line"><em>取消</em></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/pages/upload-logs.js"></script>

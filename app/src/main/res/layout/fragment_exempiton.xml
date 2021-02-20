@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_emoji_hi" />
+
+    <com.unitedbustech.eld.view.CenterTextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/exemption_tip"
+        android:textColor="@color/theme"
+        android:textSize="18sp" />
+
+    <com.unitedbustech.eld.view.FontButton
+        android:id="@+id/exemption_miles_btn"
+        style="@style/font_btn"
+        android:layout_marginTop="45dp"
+        android:text="@string/exemption_miles_btn"
+        eld:fontType="bold" />
+
+    <com.unitedbustech.eld.view.FontButton
+        android:id="@+id/exemption_days_btn"
+        style="@style/font_btn"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/exemption_days_btn"
+        eld:fontType="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

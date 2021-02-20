@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="stroke_radius">4dp</dimen>
+
+    <dimen name="font_input_w">300dp</dimen>
+    <dimen name="font_input_h">50dp</dimen>
+    <dimen name="font_line_h">1dp</dimen>
+
+    <dimen name="login_content_h">430dp</dimen>
+
+    <dimen name="login_icon_w">30dp</dimen>
+    <dimen name="login_icon_h">30dp</dimen>
+    <dimen name="login_icon_mg">5dp</dimen>
+
+    <dimen name="login_input_pd">15dp</dimen>
+    <dimen name="login_input_font">16sp</dimen>
+
+    <dimen name="login_btn_font">20sp</dimen>
+    <dimen name="login_btn_mgt">35dp</dimen>
+
+    <dimen name="password_input_rpd">55dp</dimen>
+    <dimen name="password_input_clear_state_d">5dp</dimen>
+
+    <dimen name="login_welcome_mgb">20dp</dimen>
+
+    <dimen name="welcome_btn_mgt">20dp</dimen>
+
+    <dimen name="dialog_prompt_w">120dp</dimen>
+    <dimen name="dialog_prompt_h">100dp</dimen>
+
+    <dimen name="tab_menu_height">49dp</dimen>
+
+    <dimen name="title_bar_height">45dp</dimen>
+    <dimen name="title_bar_horizontal_pd">20dp</dimen>
+    <dimen name="title_bar_btn_t">16sp</dimen>
+    <dimen name="title_bar_title_t">16sp</dimen>
+
+    <dimen name="list_item_lpd">15dp</dimen>
+    <dimen name="list_item_rpd">15dp</dimen>
+    <dimen name="list_item_line_h">1dp</dimen>
+
+</resources>

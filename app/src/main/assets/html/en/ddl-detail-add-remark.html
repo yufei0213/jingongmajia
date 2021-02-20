@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="chartBox">
+                <canvas id="grid"></canvas>
+            </div>
+            <div class="bgh20"></div>
+            <div class="list noac">
+                <ul>
+                    <li class="" id="timeLi">
+                        <div class="flex" id="startTime">
+                            <div class="subtitle">Start Time</div>
+                            <div class="text pld" id="startTimeText">Select Time</div>
+                        </div>
+                        <div class="tips">Please select the start time.</div>
+                    </li>
+
+                    <li class="" id="remarkLi">
+                        <div class="flex">
+                            <div class="subtitle">Remark</div>
+                            <div class="textarea">
+                                <textarea placeholder="Remark" id="remark"></textarea>
+                            </div>
+                        </div>
+                        <div class="tips" id="remarkLiText"></div>
+                        <ul id="remarkOptionView" class="auto-complete"></ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div class="button" id="saveBtn"><em>Save</em></div><!-- btnloading 加载样式--><!-- disabled 不可用状态 -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/textarea.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+<script src="../../js/pages/ddl-detail-add-remark.js"></script>

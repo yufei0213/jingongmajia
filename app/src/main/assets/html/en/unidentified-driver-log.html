@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div id="page" class="pages">
+    <div class="page">
+
+        <div sid="containerBox" class="container df bov">
+            <div class="detailsInfo warning"><span>Please carefully review the unidentified driver log(s), and accept the one(s) belong to you, reject the other(s) that not belong to you.</span>
+            </div>
+            <div sid="itemTotalCountBox" class="cntit dn"><em sid="itemTotalCountTopView">3</em> Items</div>
+            <div sid="logItemListBox" class="list noac dn">
+                <ul sid="logItemListView">
+                </ul>
+            </div>
+            <div sid="emptyView" class="empty dn"></div>
+            <div sid="loadingView" class="partial_loading"><em>loading</em></div>
+        </div>
+
+        <div sid="bottomBarBox" class="btnBar selected dn">
+            <div class="con">
+                <div sid="allCheckView" class="icheckbox"></div>
+                <div class="flex">Select all <i sid="itemSelectedCountView">0</i>/<i sid="itemTotalCountView">5</i></div>
+            </div>
+            <div sid="rejectBtn" class="button disabled">Reject</div>
+            <div sid="acceptBtn" class="button disabled">Accept</div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- container template-->
+<div id="log_item_template" class="dn">
+    <li>
+        <div sid="checkBox" class="icheckbox"></div>
+        <div sid="contentBox" class="flex">
+            <div class="mainTit">Vehicle NO.<span sid="vehicleNoLabel"></span></div>
+            <div sid="intervalTimeLabel" class="mInfoa"></div>
+            <div sid="intervalTimeStrLabel" class="mInfoa"></div>
+            <div class="mInfoa" sid="odometerLabel">Travel Distance:<span sid="intervalOdometerLabel"></span>(mi)</div>
+            <div sid="startLocationLabel" class="mInfoa"></div>
+        </div>
+    </li>
+</div>
+
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/time-util.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/alerts-interface.js"></script>
+
+<script src="../../js/pages/unidentified-driver-log.js"></script>

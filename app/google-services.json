@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1052007985237",
+    "firebase_url": "https://shield-723d8.firebaseio.com",
+    "project_id": "shield-723d8",
+    "storage_bucket": "shield-723d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052007985237:android:3b182418d91c2623",
+        "android_client_info": {
+          "package_name": "com.unitedbustech.eld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052007985237-kcomgt00kg71r3im1j68bf8kcdmsfu0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuTDUiDgjTi27rx2XPkfiX_iCPtZmwZDc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div sid="containerBox" class="container">
+            <div class="list noac mgt5">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">类型</div>
+                            <div sid="typeLabel" class="text h3"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">日期</div>
+                            <div sid="dateLabel" class="text h3">&nbsp;</div>
+                        </div>
+                    </li>
+                    <li sid="vehicleNoBox">
+                        <div class="flex">
+                            <div sid="vehicleTitleLabel" class="subtitle">车辆</div>
+                            <div sid="vehicleNoLabel" class="text h3"></div>
+                        </div>
+                        <div sid="arrowImg" class="igogrey dn"></div>
+                        <div sid="tipLabel" class="tips"></div>
+                    </li>
+                    <li sid="odometerBox">
+                        <div class="flex">
+                            <div class="subtitle necessary">里程数 (英里)</div>
+                            <div class="input">
+                                <input sid="odometerInput" placeholder="里程数" >
+                            </div>
+                        </div>
+                        <div sid="tipLabel" class="tips"></div>
+                    </li>
+                    <li sid="locationBox">
+                        <div class="flex">
+                            <div class="subtitle necessary">位置</div>
+                            <div class="input h3">
+                                <input sid="locationInput" type="text" placeholder="位置">
+                            </div>
+                        </div>
+                        <div sid="locationImg" class="ilocation mgb-20"></div>
+                        <div sid="tipLabel" class="tips"></div>
+                    </li>
+                    <li sid="defectBox">
+                        <div class="flex">
+                            <div class="subtitle">故障</div>
+                            <div class="text pld">没有故障</div>
+                            <div sid="defectList"></div>
+                        </div>
+                        <div sid="defectAddBtn" class="addbtn" style="z-index: 2;"></div>
+                    </li>
+                    <li sid="remarkBox" class="">
+                        <div class="flex">
+                            <div class="subtitle">备注</div>
+                            <div class="textarea h3">
+                                <textarea sid="remarkInput" placeholder="备注"></textarea>
+                            </div>
+                        </div>
+                        <div sid="tipLabel" class="tips"></div>
+                        <ul sid="tipBox" class="auto-complete"></ul>
+                    </li>
+                </ul>
+            </div>
+            <div sid="saveBtn" class="button mglr15 mgt30 mgb15">下一步</div>
+        </div>
+    </div>
+</div>
+
+<div id="defect_template" class="dn">
+    <div class="defectsBox">
+        <div sid="deleteBtn" class="idelete"></div>
+        <h2 sid="titleLabel"></h2>
+        <p sid="remarkLabel"></p>
+    </div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/textarea.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/vehicle-interface.js"></script>
+
+<script src="../../js/widgets/remark.js"></script>
+
+<script src="../../js/pages/inspection-new.js"></script>
+
+</body>
+</html>

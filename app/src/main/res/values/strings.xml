@@ -1,0 +1,391 @@
+<resources>
+
+    <string name="app_name">SHIELD</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="setting">Setting</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="update">Update</string>
+    <string name="done">Done</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Retry</string>
+    <string name="exit">Exit</string>
+    <string name="manual_mode">Manual Mode</string>
+    <string name="version">Version #version#</string>
+    <string name="skip">Skip</string>
+    <string name="back">Back</string>
+    <string name="location">Location</string>
+    <string name="remark">Remark</string>
+    <string name="downloading">Downloading...</string>
+
+    <string name="ifta_create_title">Fueling</string>
+    <string name="ifta_detail_title">Fuel Detail</string>
+    <string name="ifta_edit_title">Fuel Edit</string>
+    <string name="ifta_update_driver_name">Driver Name</string>
+    <string name="ifta_update_driver_name_hit">Driver Name</string>
+    <string name="ifta_update_vehicle_id">Vehicle ID</string>
+    <string name="ifta_update_vehicle_id_hint">Vehicle ID</string>
+    <string name="ifta_update_purchase_date">Purchase Date</string>
+    <string name="ifta_update_purchase_date_hint">Purchase Date</string>
+    <string name="ifta_update_state">State</string>
+    <string name="ifta_update_state_hint">State</string>
+    <string name="ifta_update_fuel_type">Fuel Type</string>
+    <string name="ifta_update_fuel_type_hint">Select the fuel type</string>
+    <string name="ifta_update_unit_price">Unit Price</string>
+    <string name="ifta_update_unit_price_hint">Unit Price</string>
+    <string name="ifta_update_purchased_gallonst">Purchased Gallons</string>
+    <string name="ifta_update_purchased_gallonst_hint">Purchased Gallons</string>
+    <string name="ifta_update_total_price">Total Price</string>
+    <string name="ifta_update_total_price_hint">Total Price</string>
+    <string name="ifta_update_receipt">Receipt</string>
+    <string name="ifta_fuel_type_title">Fuel Type</string>
+    <string name="ifta_vehicle_title">Select Vehicle</string>
+    <string name="ifta_state_title">Choose State</string>
+    <string name="ifta_delete_tip">Are you sure to delete it?</string>
+    <string name="ifta_delete_offline">The delete function can\'t be used in offline mode. Please try again after restoring the network.</string>
+
+    <string name="version_install_apk">There\'s a new version of SHIELD available. Update now to get the latest features and improvements.</string>
+    <string name="version_install_apk_force">We have upgraded the main features and updated them to ensure full functionality.</string>
+    <string name="version_download_failed">Download failed, Please check the network and try again.</string>
+
+    <string name="unidentified_page_title">Unidentified Driver Log</string>
+
+    <string name="permission_tips">Please allow ‘SHIELD’ to access all permissions.</string>
+    <string name="location_service_tip">Please open location service.</string>
+
+    <string name="dialog_prompt_success">Success</string>
+    <string name="dialog_prompt_failed">Failed</string>
+    <string name="dialog_loading_save">Saving</string>
+    <string name="dialog_loading_loading">Loading</string>
+    <string name="dialog_progress_download">DownLoad</string>
+    <string name="dialog_post_trip_off_tip">Off Duty from the work. Have a great day! The estimated available driving time for your next day is #hour# h #minute# m.</string>
+    <string name="dialog_driving_count_down_yes">Yes(#number#)</string>
+    <string name="dialog_driving_count_down_tip">Your vehicle is as Stationary for more than 5 min, do you want to change the status to On Duty Not Driving?</string>
+    <string name="dialog_personal_use_tip">Do you want to continue using the Personal Use status?</string>
+    <string name="dialog_yard_move_tip">Vehicle restart, switch status from Yard Move to On Duty Not Driving.</string>
+    <string name="dialog_update_tip">Update #version_code# is available to download. Downloading the latest update you will get the latest features and improvements of SHIELD.</string>
+
+    <string name="tab_menu_item_dashboard">DASHBOARD</string>
+    <string name="tab_menu_item_dailylog">DAILY LOG</string>
+    <string name="tab_menu_item_dvir">DVIR</string>
+    <string name="tab_menu_item_dot">DOT</string>
+    <string name="tab_menu_item_more">MORE</string>
+
+    <string name="tab_menu_dot_item_review">START REVIEW</string>
+    <string name="tab_menu_dot_item_send">SEND LOGS</string>
+
+    <string name="daily_log_top_tab_menu_item_log">Log</string>
+    <string name="daily_log_top_tab_menu_item_profile">Header</string>
+    <string name="daily_log_top_tab_menu_item_sign">Sign</string>
+
+    <string name="title_dailylog">Daily Log</string>
+    <string name="title_dvir">DVIR</string>
+    <string name="title_dot">Roadside Inspection</string>
+    <string name="title_dot_inside">Roadside Inspection</string>
+    <string name="dot_exit">Exit</string>
+    <string name="title_more">More</string>
+
+    <string name="login_welcome">WELCOME</string>
+    <string name="login_carrier_hint">Carrier\'s DOT#</string>
+    <string name="login_driver">Driver ID</string>
+    <string name="login_password">Password</string>
+    <string name="login_btn">Login</string>
+    <string name="login_again">Your session has expired, please login again.</string>
+    <string name="login_info_error">Your login info error,please login again.</string>
+    <string name="login_account_tip">Don’t have a SHIELD yet?</string>
+    <string name="login_trial_account_tip">Request a Free Trial Account</string>
+    <string name="login_phone_number">202-800-6565</string>
+    <string name="login_account_url">https://www.ubtshield.com/demo/</string>
+
+    <string name="welcome_tip">HAVE A SAFE TRIP!</string>
+    <string name="welcome_carrier_name">(#carrierName#)</string>
+    <string name="welcome_confirm_btn">Thank you! Start the trip.</string>
+    <string name="welcome_reject_btn">Not me</string>
+
+    <string name="exemption_tip">We detected that your account is in exemption mode. Please select exemption types.</string>
+    <string name="exemption_miles_btn">100 Air Mile Exemption</string>
+    <string name="exemption_days_btn">Drive less than 8 days in rolling 30 days period</string>
+
+    <string name="prepare_text">Operating a commercial motor vehicle while tired, ill, or in any condition unsuitable for driving is forbidden per federal law (49 CFR § 392.3). Keep the road safe by making sure that you are well-rested and in good health before driving.</string>
+
+    <string name="prepare_failure">CONNECT FAILED</string>
+    <string name="prepare_failure_tip">Your network seems to have a\n problem, Please try again.</string>
+    <string name="prepare_try_btn">Try Again</string>
+
+    <string name="bluetooth_open_tip">Turn on Bluetooth to connect the vehicle.</string>
+    <string name="vehicle_connect_dialog_title">Connecting to #vehicle#</string>
+    <string name="vehicle_connect_dialog_text">Make sure you select the correct vehicle.</string>
+    <string name="vehicle_connect_dialog_failed_title">Connection failed.</string>
+    <string name="vehicle_connect_dialog_failed_text">You can try again or keep working by enabling Manual Mode.</string>
+
+    <string name="disconnect_vehicle_tip">Do you want to disconnect from vehicle?</string>
+    <string name="disconnect_vehicle_neutral_btn">No, I don\'t need it</string>
+    <string name="disconnect_vehicle_negative_btn">Disconnect from vehicle</string>
+
+    <!--daily log 日志的显示的字符串-->
+    <string name="ddl_unknown">Unknown Log</string>
+    <string name="ddl_off_duty">Off Duty</string>
+    <string name="ddl_sleeper_berth">Sleeper Berth</string>
+    <string name="ddl_driving">Driving</string>
+    <string name="ddl_on_duty_not_driving">On Duty Not Driving</string>
+    <string name="ddl_yard_move">Yard Move</string>
+    <string name="ddl_personal_use">Personal Use</string>
+    <string name="ddl_clear_special">Status Cleared</string>
+    <string name="ddl_login">Log In</string>
+    <string name="ddl_log_out">Log Out</string>
+    <string name="ddl_engine_on">Power Up</string>
+    <string name="ddl_engine_off">Shut Down</string>
+    <string name="ddl_sign">Cert</string>
+    <string name="ddl_login_dot">Log In</string>
+    <string name="ddl_log_out_dot">Log Out</string>
+    <string name="ddl_engine_on_dot">Power Up</string>
+    <string name="ddl_engine_off_dot">Shut Down</string>
+    <string name="ddl_sign_dot">Cert</string>
+    <string name="ddl_adverse_driving">Adverse Driving</string>
+    <string name="ddl_adverse_driving_dot">Adverse Driving</string>
+    <string name="ddl_intermediate">Intermediate</string>
+    <string name="ddl_intermediate_dot">Intermediate</string>
+    <string name="ddl_rule_change_usa_70hours">Change to USA 70 hour / 8 day</string>
+    <string name="ddl_rule_change_usa_70hours_dot">Change to USA 70 hour / 8 day</string>
+    <string name="ddl_rule_change_usa_60hours">Change to USA 60 hour / 7 day</string>
+    <string name="ddl_rule_change_usa_60hours_dot">Change to USA 60 hour / 7 day</string>
+    <string name="ddl_rule_change_canada_70hours">Change to Canada 70 hour / 7 day</string>
+    <string name="ddl_rule_change_canada_70hours_dot">Change to Canada 70 hour / 7 day</string>
+    <string name="ddl_rule_change_canada_120hours">Change to Canada 120 hour / 14 day</string>
+    <string name="ddl_rule_change_canada_120hours_dot">Change to Canada 120 hour / 14 day</string>
+
+    <!--所有的诊断数据-->
+    <string name="ddl_diag_log_p">Power Malfunction(P) Detected</string>
+    <string name="ddl_diag_log_p_c">Power Malfunction(P) Cleared</string>
+    <string name="ddl_diag_log_e">Engine Sync Mal.(E) Detected</string>
+    <string name="ddl_diag_log_e_c">Engine Sync Mal.(E) Cleared</string>
+    <string name="ddl_diag_log_t">Time Malfunction(T) Detected</string>
+    <string name="ddl_diag_log_t_c">Time Malfunction(T) Cleared</string>
+    <string name="ddl_diag_log_l">Position Malfunction(L) Detected</string>
+    <string name="ddl_diag_log_l_c">Position Malfunction(L) Cleared</string>
+    <string name="ddl_diag_log_r">Data Rec. Malfunction(R) Detected</string>
+    <string name="ddl_diag_log_r_c">Data Rec. Malfunction(R) Cleared</string>
+    <string name="ddl_diag_log_s">Data Trans Malfunction(S) Detected</string>
+    <string name="ddl_diag_log_s_c">Data Trans Malfunction(S) Cleared</string>
+    <string name="ddl_diag_log_o">Other Malfunction(O) Detected</string>
+    <string name="ddl_diag_log_o_c">Other Malfunction(O) Cleared</string>
+    <string name="ddl_diag_log_1">Power Diagnostic(1) Detected</string>
+    <string name="ddl_diag_log_1_c">Power Diagnostic(1) Cleared</string>
+    <string name="ddl_diag_log_2">Engine Sync Diag(2) Detected</string>
+    <string name="ddl_diag_log_2_c">Engine Sync Diag(2) Cleared</string>
+    <string name="ddl_diag_log_3">Data Rec. Diag(3) Detected</string>
+    <string name="ddl_diag_log_3_c">Data Rec. Diag(3) Cleared</string>
+    <string name="ddl_diag_log_4">Data Trans Diag(4) Detected</string>
+    <string name="ddl_diag_log_4_c">Data Trans Diag(4) Cleared</string>
+    <string name="ddl_diag_log_5">Unidentified Record(5) Detected</string>
+    <string name="ddl_diag_log_5_c">Unidentified Record(5) Cleared</string>
+    <string name="ddl_diag_log_6">Other Diagnostic(6) Detected</string>
+    <string name="ddl_diag_log_6_c">Other Diagnostic(6) Cleared</string>
+
+    <!--dot的所有的诊断数据-->
+    <string name="dot_diag_log_p">Power Malfunction(P) Detected</string>
+    <string name="dot_diag_log_p_c">Power Malfunction(P) Cleared</string>
+    <string name="dot_diag_log_e">Engine Sync Mal.(E) Detected</string>
+    <string name="dot_diag_log_e_c">Engine Sync Mal.(E) Cleared</string>
+    <string name="dot_diag_log_t">Time Malfunction(T) Detected</string>
+    <string name="dot_diag_log_t_c">Time Malfunction(T) Cleared</string>
+    <string name="dot_diag_log_l">Position Malfunction(L) Detected</string>
+    <string name="dot_diag_log_l_c">Position Malfunction(L) Cleared</string>
+    <string name="dot_diag_log_r">Data Rec. Malfunction(R) Detected</string>
+    <string name="dot_diag_log_r_c">Data Rec. Malfunction(R) Cleared</string>
+    <string name="dot_diag_log_s">Data Trans Malfunction(S) Detected</string>
+    <string name="dot_diag_log_s_c">Data Trans Malfunction(S) Cleared</string>
+    <string name="dot_diag_log_o">Other Malfunction(O) Detected</string>
+    <string name="dot_diag_log_o_c">Other Malfunction(O) Cleared</string>
+    <string name="dot_diag_log_1">Power Diagnostic(1) Detected</string>
+    <string name="dot_diag_log_1_c">Power Diagnostic(1) Cleared</string>
+    <string name="dot_diag_log_2">Engine Sync Diag(2) Detected</string>
+    <string name="dot_diag_log_2_c">Engine Sync Diag(2) Cleared</string>
+    <string name="dot_diag_log_3">Data Rec. Diag(3) Detected</string>
+    <string name="dot_diag_log_3_c">Data Rec. Diag(3) Cleared</string>
+    <string name="dot_diag_log_4">Data Trans Diag(4) Detected</string>
+    <string name="dot_diag_log_4_c">Data Trans Diag(4) Cleared</string>
+    <string name="dot_diag_log_5">Unidentified Record(5) Detected</string>
+    <string name="dot_diag_log_5_c">Unidentified Record(5) Cleared</string>
+    <string name="dot_diag_log_6">Other Diagnostic(6) Detected</string>
+    <string name="dot_diag_log_6_c">Other Diagnostic(6) Cleared</string>
+
+    <string name="dvir_pre_trip">Pre-Trip Inspection</string>
+    <string name="dvir_interim">Interim Inspection</string>
+    <string name="dvir_post_trip">Post-Trip Inspection</string>
+
+    <string name="mal_power_name">Power Malfunction(P)</string>
+    <string name="mal_engine_sync_name">Engine Sync Mal.(E)</string>
+    <string name="mal_time_name">Time Malfunction(T)</string>
+    <string name="mal_position_name">Position Malfunction(L)</string>
+    <string name="mal_data_rec_name">Data Rec. Malfunction(R)</string>
+    <string name="mal_data_trans_mal">Data Trans Malfunction(S)</string>
+    <string name="mal_other_name">Other malfunctionType(O)</string>
+    <string name="diag_power_name">Power Diagnostic(1)</string>
+    <string name="diag_engine_sync_name">Engine Sync Diag(2)</string>
+    <string name="diag_data_rec_name">Data Rec. Diag(3)</string>
+    <string name="diag_data_trans_name">Data Trans Diag(4)</string>
+    <string name="diag_unidentified_name">Unidentified Record(5)</string>
+    <string name="diag_other_name">Other Diagnostic(6)</string>
+
+    <string name="diag_page_log_start">start using paper log mode</string>
+    <string name="diag_page_log_end">stop using paper log mode</string>
+
+    <!--startbreak内部提示-->
+    <string name="start_break_title">Start Break</string>
+    <string name="stop_break_title">Stop Break</string>
+    <string name="start_break_remark_tip">Start Break</string>
+    <string name="stop_break_remark_tip">Stop Break</string>
+    <string name="start_break_remark_empty">Remark can\'t be empty.</string>
+
+    <!--adverse driving内部提示-->
+    <string name="adverse_driving_title">Adverse Driving</string>
+
+    <string name="location_min_wrong">Location must be at least 5 characters.</string>
+    <string name="location_max_wrong">Location must be less than 60 characters.</string>
+    <string name="location_regexp_wrong">DOT official doesn\'t support Chinese and Special characters.</string>
+    <string name="remark_min_wrong">Remark must be at least 4 characters.</string>
+    <string name="remark_max_wrong">Remark must be less than 60 characters.</string>
+    <string name="remark_regexp_wrong">DOT official doesn\'t support Chinese and Special characters.</string>
+    <string name="vehicle_empty">Vehicle ID can\'t be empty.</string>
+    <string name="ifta_state_empty">State can\'t be empty.</string>
+    <string name="ifta_fuel_empty">Fuel Type can\'t be empty.</string>
+    <string name="ifta_unit_price_empty">Unit Price can\'t be empty.</string>
+    <string name="ifta_unit_price_number">Unit Price must be number.</string>
+    <string name="ifta_gallons_empty">Gallons can\'t be empty.</string>
+    <string name="ifta_gallons_number">Gallons must be number.</string>
+    <string name="ifta_total_empty">The total price can\'t be empty.</string>
+    <string name="ifta_total_price">The total price no more than $1000.</string>
+    <string name="ifta_total_number">The total price must be number.</string>
+
+    <!--dot review内部提示-->
+    <string name="dot_loading">Loading</string>
+    <string name="dot_succeed">Succeed</string>
+    <string name="dot_failed">Failed</string>
+    <string name="dot_exit_tip">Please enter the user password</string>
+    <string name="dot_invalid_email">Invalid email</string>
+    <string name="dot_invalid_comment">Invalid comment</string>
+    <string name="dot_request_send_email_success">Send logs to email success</string>
+    <string name="dot_request_web_service_success">Upload logs to web service success</string>
+    <string name="dot_get_review_data_list_fail">Failed to collect report data, please check your network</string>
+    <string name="dot_request_send_email_fail">Failed to send email, please try again</string>
+    <string name="dot_request_web_service_fail">Failed to request web service, please try again</string>
+    <string name="dot_request_vehicle_id">Please select a vehicle</string>
+
+    <!--alert内部提示-->
+    <string name="alert_edit_by_fleet_manager">Duty Status Request Edit by Fleet Manager</string>
+    <string name="alert_team_work_adjustment_by_driver">Team Work adjustment by Driver</string>
+
+    <string name="request_status_success">Success</string>
+    <string name="request_status_system_error">System error</string>
+    <string name="request_status_api_not_found">Request api not found</string>
+    <string name="request_status_illegal_request">Illegal request</string>
+    <string name="request_status_authentication_fail">Authentication fail</string>
+    <string name="request_status_api_not_implement">API not implemented</string>
+    <string name="request_status_parse_parameters_error">Parse parameters error</string>
+    <string name="request_status_validate_parameters_error">Validate parameters error</string>
+    <string name="request_status_invalid_carrier_id">Carrier\'s DOT# error. Try again.</string>
+    <string name="request_status_invalid_driver_id">Driver ID error. Try again.</string>
+    <string name="request_status_invalid_password">Password error. Try again.</string>
+    <string name="request_status_pilot_has_cancel_teamwork">The main driver has cancelled the teamwork invitation.</string>
+    <string name="request_status_teamwork_not_exist">Team is not exist.</string>
+    <string name="request_status_pilot_has_cancel_switch">Pilot has cancel switch.</string>
+    <string name="request_status_request_timeout">Request Timeout</string>
+    <string name="request_status_parse_result_error">Parse result error</string>
+    <string name="request_status_network_connect_error">Connection error</string>
+    <string name="request_status_sign_error">Sign error</string>
+    <string name="request_status_unknown_error">Unknown error</string>
+    <string name="request_status_untreated_error">Untreated error</string>
+
+    <string name="login_on_other">Other devices log in to your account, if not your operation, please contact the Fleet Manager or change your password.</string>
+    <string name="login_on_other_offline">Other devices log in to your account during offline mode. The daily log data generated during this period will be discarded. If you have any questions, please contact your fleet manager.</string>
+    <string name="login_other_driving">Other devices have signed in to your account and are in Driving status. You can\'t log in. Please contact your Fleet Manager.</string>
+    <string name="login_other_not_driving">Other devices have logged in to your account, Are you sure to continue to login?</string>
+    <string name="account_invalid">Your account is a truck driver account. Please login using your bus driver account.</string>
+    <string name="ifta_deleted">Ifta has deleted.</string>
+    <string name="login_on_norenewals">Your account has expired, please contact your fleet manager.</string>
+
+    <string name="network_error">No network connection. Check your network settings.</string>
+
+    <!--password提示-->
+    <string name="passport_wrong">Invalid password.</string>
+
+    <string name="team_work_resume">You are now in a team, Do you want to recover it?</string>
+    <string name="teamwork_pilot_invite_copilot">#pilot# invited you to be his co-driver. Do you want to accept it?</string>
+    <string name="teamwork_pilot_request_switch">#pilot# invited you to be the main-driver. Do you want to accept it?</string>
+    <string name="teamwork_pilot_has_cancel">The invitation has expired.</string>
+
+    <string name="not_found_mail">No mail application found.</string>
+
+    <!--违规提示-->
+    <string name="hos_alert_cycle">#pilot# hours cycle limit.</string>
+    <string name="hos_alert_shift">#pilot# hours shift limit.</string>
+    <string name="hos_alert_drive">#pilot# hours driving limit.</string>
+    <string name="shift_13_limit">13 hours shift driving limit.</string>
+    <string name="shift_14_limit">14 hours on-duty shift limit.</string>
+    <string name="shift_16_limit">16 hours working window.</string>
+    <string name="day_13_limit">13 hours day driving limit.</string>
+    <string name="day_14_limit">14 hours day on-duty limit.</string>
+    <string name="day_10_limit">10 hours daily off break rule.</string>
+    <string name="day_20_limit">20 hours off duty rule.</string>
+    <string name="cycle_70_limit">70/7 cycle limit.</string>
+    <string name="cycle_120_limit">120/14 cycle limit.</string>
+    <string name="cycle_24_limit">24 hours before 70 hours on-duty.</string>
+    <string name="off_24_limit">24 hours for every 14 day.</string>
+
+    <!--trailer-->
+    <string name="trailer_dialog_title">Charter/Shipping #</string>
+    <string name="trailer_dialog_shipping_title">Charter/Shipping #</string>
+    <string name="trailer_dialog_add_btn">Add Trailers</string>
+    <string name="trailer_dialog_trailer_title">Trailers #</string>
+    <string name="trailer_dialog_shipping_max">ShippingID must be less than 10 characters.</string>
+    <string name="trailer_dialog_shipping_regexp_wrong">Shipping is invalid.</string>
+
+    <string name="inspection_trailer_dialog_title">Enter Trailer ID</string>
+    <string name="inspection_trailer_empty">Trailer can\'t be empty.</string>
+    <string name="inspection_trailer_regexp_wrong">Trailer is invalid.</string>
+
+    <string name="shiping_instruction">If skipped, the content filled in will not be saved. Is it still skipped?</string>
+
+    <string name="break_half_hour_tip">You are close to the violation. Please stop and take a break of at least HALF hour break in 30 min.</string>
+    <string name="change_off_duty">Change to Off Duty</string>
+    <string name="change_sleep_bearth">Change to Sleeper Bearth</string>
+    <string name="keep_current_status">Keep current status</string>
+
+    <string name="expire_dialog_title">Expire Soon</string>
+    <string name="expire_dialog_days">days left</string>
+    <string name="expire_dialog_content_text">Your SHIELD subscription will expire in %1$s days. Please contact your manager to renew your ELD subscription in the SHIELD backend system. If you have any questions, please contact us at </string>
+    <string name="expire_dialog_phone_number">(202) 800-6565</string>
+    <string name="expire_dialog_got">Got it</string>
+
+
+    <!--小时分钟-->
+    <string name="time_h">h&#160;</string>
+    <string name="time_m">m</string>
+
+    <string-array name="month_array">
+        <item>JAN</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>APR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AUG</item>
+        <item>SEP</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DEC</item>
+    </string-array>
+
+    <string-array name="am_pm">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div sid="resultLabel" class="detailsAlert red"></div>
+            <div class="list noac lastli">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Date</div>
+                            <div sid="dateLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Type</div>
+                            <div sid="typeLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Driver Name</div>
+                            <div sid="driverNameLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Vehicle NO.</div>
+                            <div sid="vehicleNoLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Odometer (mi)</div>
+                            <div sid="odometerLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Location</div>
+                            <div sid="locationLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li><!-- ondft -->
+                        <div sid="defectBox" class="flex">
+                            <div class="subtitle">Defects</div>
+                            <div sid="emptyLabel" class="input h3 dn">
+                                <input disabled="disabled" type="text" placeholder="Empty">
+                            </div>
+                            <!-- 模板 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Remark</div>
+                            <div sid="remarkLabel" class="text"></div>
+                            <div sid="remarkEmptyLabel" class="input h3 dn">
+                                <input disabled="disabled" type="text" placeholder="Empty">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><!-- ondft -->
+                        <div class="flex">
+                            <div class="signBox">
+                                <img sid="signImg" src="" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- defect 模板 -->
+<div id="defect_template" class="dn">
+    <div class="defectsBox on">
+        <h2 sid="nameLabel"></h2>
+        <p sid="commentLabel"></p>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/pages/inspection-history-detail.js"></script>

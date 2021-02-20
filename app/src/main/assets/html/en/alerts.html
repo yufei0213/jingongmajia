@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div id="page" class="pages">
+    <div class="page">
+        <div class="tabBar">
+            <div sid="notCertifiedTab" class="tab on">Not Certified
+                <span sid="notCertifiedAlertTip"></span>
+            </div>
+            <div sid="editTab" class="tab">Edits
+                <span sid="editAlertTip" ></span>
+            </div>
+            <div sid="assignedTab" class="tab">Assigned
+                <span sid="assignedAlertTip"></span>
+            </div>
+        </div>
+
+        <div sid="containerBox" class="container df bov">
+            <div class="list noac">
+                <ul sid="alertItemList">
+                </ul>
+            </div>
+            <div sid="emptyView" class="empty dn"></div>
+            <div sid="loadingView" class="partial_loading"><em>loading</em></div>
+        </div>
+
+        <div sid="bottomBarBox" class="btnBar selected">
+            <div class="con">
+                <div sid="allCheckView" class="icheckbox"></div>
+                <div class="flex">Select all <i sid="itemSelectedCountView">0</i>/<i sid="itemTotalCountView">5</i></div>
+            </div>
+            <div sid="signBtn" class="button disabled">Sign</div><!-- disabled -->
+            <div sid="rejectBtn" class="button disabled dn">Reject</div>
+            <div sid="acceptBtn" class="button disabled dn">Accept</div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- container emppty template-->
+
+
+<div id="notCertifiedItemTemplate" class="dn">
+    <li>
+        <div sid="checkBox" class="icheckbox"></div>
+        <div sid="dateBox" class="flex">
+            <div sid="dateLabel" class="f16 lh20"></div>
+            <div class="f12 h lh14 pdt2">On Duty: <em sid="timeLabel"></em></div>
+        </div>
+    </li>
+</div>
+
+<div id="editItemTemplate" class="dn">
+    <li>
+        <div class="flex">
+            <div sid="createDateLabel" class="f16 lh20"></div>
+            <div class="f12 h lh14 pdt2">From：<em sid="editorLabel"></em></div>
+        </div>
+        <div sid="editDateLabel" class="f12 lh14 h2"></div>
+    </li>
+</div>
+
+<div id="assignedItemTemplate" class="dn">
+    <li>
+        <div sid="checkBox" class="icheckbox"></div>
+        <div sid="contentBox" class="flex">
+            <div class="mainTit">Vehicle NO.<span sid="vehicleNoLabel"></span></div>
+            <div sid="intervalTimeLabel" class="mInfoa"></div>
+            <div sid="intervalTimeStrLabel" class="mInfoa"></div>
+            <div class="mInfoa" sid="odometerLabel">Travel Distance:<span sid="intervalOdometerLabel"></span>(mi)</div>
+            <div sid="startLocationLabel" class="mInfoa"></div>
+        </div>
+    </li>
+</div>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/click-proxy.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/alerts-interface.js"></script>
+
+<script src="../../js/pages/alerts.js"></script>

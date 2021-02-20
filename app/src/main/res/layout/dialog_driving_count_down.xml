@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialog_common_container"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/icon_img"
+            android:layout_width="150dp"
+            android:layout_height="101dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_emoji_msg" />
+
+        <com.unitedbustech.eld.view.FontTextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="@string/dialog_driving_count_down_tip"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="40dp">
+
+        <com.unitedbustech.eld.view.FontButton
+            android:id="@+id/negative_btn"
+            style="@style/dialog_horizontal_negative_btn"
+            android:text="@string/no"
+            eld:fontType="bold" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <com.unitedbustech.eld.view.FontButton
+            android:id="@+id/neutral_btn"
+            style="@style/dialog_horizontal_neutral_btn"
+            eld:fontType="bold"
+            tools:text="Yes(60)" />
+
+    </LinearLayout>
+
+</LinearLayout>

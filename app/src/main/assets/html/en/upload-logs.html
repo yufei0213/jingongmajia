@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div id="page" class="page">
+        <div id="uploadView" class="topcentered">
+            <div class="icon icode"></div>
+            <div class="text1">
+                If UBTSHIELD keeps crashing or you encounter a problem with a feature, upload the log to help us
+                identify and resolve the problem.
+            </div>
+            <div sid="uploadBtn" class="button"><em>Upload</em></div>
+            <div class="text2">The log only contains a UBTSHIELD error history, technical data and other necessary
+                system information. It does contain your privacy information.
+            </div>
+        </div>
+        <div id="uploadingView" class="topcentered dn">
+            <div class="icon icode"></div>
+            <div class="text1">The log is being uploaded.</div>
+            <div class="bar">
+                <div sid="progressView" class="loaded"></div>
+            </div>
+        </div>
+        <div id="successView" class="topcentered dn">
+            <div class="icon itip_ok"></div>
+            <div class="text3">Upload Successfully</div>
+            <div sid="okBtn" class="button"><em>OK</em></div>
+        </div>
+        <div id="failedView" class="topcentered dn">
+            <div class="icon itip_error"></div>
+            <div class="text3">Upload Failed</div>
+            <div sid="tryAgainBtn" class="button"><em>Try again</em></div>
+            <div sid="cancelBtn" class="button line"><em>Cancel</em></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/pages/upload-logs.js"></script>
