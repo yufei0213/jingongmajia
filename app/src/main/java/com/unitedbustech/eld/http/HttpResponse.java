@@ -2,10 +2,6 @@ package com.unitedbustech.eld.http;
 
 import android.text.TextUtils;
 
-import com.unitedbustech.eld.logs.Logger;
-import com.unitedbustech.eld.logs.Tags;
-import com.unitedbustech.eld.system.SystemHelper;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -44,8 +40,8 @@ public class HttpResponse {
 
             if (this.code == RequestStatus.AUTHENTICATION_FAIL.getCode()) {
 
-                Logger.w(Tags.SYSTEM, "token authentication failed, token=" + SystemHelper.getUser().getAccessToken());
-                SystemHelper.sessionTimeout();
+//                Logger.w(Tags.SYSTEM, "token authentication failed, token=" + SystemHelper.getUser().getAccessToken());
+//                SystemHelper.sessionTimeout();
             }
         }
     }

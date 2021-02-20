@@ -5,12 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -18,15 +16,9 @@ import android.view.KeyEvent;
 
 import com.unitedbustech.eld.R;
 import com.unitedbustech.eld.activity.BaseFragmentActivity;
-import com.unitedbustech.eld.common.User;
-import com.unitedbustech.eld.location.LocationHandler;
-import com.unitedbustech.eld.login.LoginActivity;
 import com.unitedbustech.eld.mvp.BasePresenter;
-import com.unitedbustech.eld.system.AppStatusManager;
-import com.unitedbustech.eld.system.SystemHelper;
 import com.unitedbustech.eld.system.UUIDS;
 import com.unitedbustech.eld.view.HorizontalDialog;
-import com.unitedbustech.eld.welcome.WelcomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,23 +31,16 @@ import java.util.List;
 public class LauncherActivity extends BaseFragmentActivity {
 
     private final String[] permissions = {
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.CAMERA
+            Manifest.permission.READ_EXTERNAL_STORAGE
     };
 
     public static final int PERMISSION_REQUEST_CODE = 1;
     public static final int APP_SETTING_REQUEST_CODE = 2;
-    public static final int GPS_SETTING_REQUEST_CODE = 3;
 
     private boolean isNeedCheck = true;
 
     private static final int MSG_CODE = 1;
-
-    private LauncherFragment launcherFragment;
 
     private Handler handler = new Handler(Looper.getMainLooper()) {
         @Override
@@ -63,17 +48,17 @@ public class LauncherActivity extends BaseFragmentActivity {
 
             if (msg.what == MSG_CODE) {
 
-                Intent intent = null;
-                User user = SystemHelper.getUser();
-                if (!SystemHelper.hasLogout() && user != null) {
-
-                    intent = WelcomeActivity.newIntent(LauncherActivity.this);
-                } else {
-
-                    intent = LoginActivity.newIntent(LauncherActivity.this);
-                }
-
-                startActivity(intent);
+//                Intent intent = null;
+//                User user = SystemHelper.getUser();
+//                if (!SystemHelper.hasLogout() && user != null) {
+//
+//                    intent = WelcomeActivity.newIntent(LauncherActivity.this);
+//                } else {
+//
+//                    intent = LoginActivity.newIntent(LauncherActivity.this);
+//                }
+//
+//                startActivity(intent);
 
                 UUIDS.init();
 
@@ -100,26 +85,7 @@ public class LauncherActivity extends BaseFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
-
-        if (!isTaskRoot()) {
-
-            if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
-
-                finish();
-                return null;
-            }
-        }
-
-        launcherFragment = LauncherFragment.newInstance();
-        return launcherFragment;
-    }
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-
-        AppStatusManager.getInstance().setAppStatus(AppStatusManager.NORMAL);
-
-        super.onCreate(savedInstanceState);
+        return LauncherFragment.newInstance();
     }
 
     @Override
@@ -142,9 +108,6 @@ public class LauncherActivity extends BaseFragmentActivity {
 
                 showPermissionTips();
                 isNeedCheck = false;
-            } else {
-
-                checkGps();
             }
         }
     }
@@ -157,9 +120,6 @@ public class LauncherActivity extends BaseFragmentActivity {
         if (requestCode == APP_SETTING_REQUEST_CODE) {
 
             checkPermissions(permissions);
-        } else if (requestCode == GPS_SETTING_REQUEST_CODE) {
-
-            checkGps();
         }
     }
 
@@ -186,31 +146,6 @@ public class LauncherActivity extends BaseFragmentActivity {
         this.overridePendingTransition(R.anim.fade_out, R.anim.fade_in);
     }
 
-    public void openAnimation() {
-
-        launcherFragment.showAnimation();
-    }
-
-    public void closeAnimation() {
-
-        handler.sendEmptyMessage(MSG_CODE);
-    }
-
-    /**
-     * 检查GPS开关是否打开
-     */
-    private void checkGps() {
-
-        if (LocationHandler.getInstance().isAvailable()) {
-
-            LocationHandler.getInstance().init();
-            launcherFragment.loadAnimation();
-        } else {
-
-            showLocationServiceTips();
-        }
-    }
-
     /**
      * 检查权限
      *
@@ -226,7 +161,7 @@ public class LauncherActivity extends BaseFragmentActivity {
                     PERMISSION_REQUEST_CODE);
         } else {
 
-            checkGps();
+            handler.sendEmptyMessage(MSG_CODE);
         }
     }
 
@@ -285,29 +220,6 @@ public class LauncherActivity extends BaseFragmentActivity {
                                 Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                         intent.setData(Uri.parse("package:" + getPackageName()));
                         startActivityForResult(intent, APP_SETTING_REQUEST_CODE);
-
-                        dialog.dismiss();
-                    }
-                })
-                .setCancelable(false)
-                .build()
-                .show();
-    }
-
-    /**
-     * 提示用户打开gps服务
-     */
-    public void showLocationServiceTips() {
-
-        new HorizontalDialog.Builder(LauncherActivity.this)
-                .setIcon(R.drawable.ic_emoji_msg)
-                .setText(getString(R.string.location_service_tip))
-                .setPositiveBtn(R.string.setting, new HorizontalDialog.OnClickListener() {
-                    @Override
-                    public void onClick(HorizontalDialog dialog, int which) {
-
-                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        startActivityForResult(intent, GPS_SETTING_REQUEST_CODE);
 
                         dialog.dismiss();
                     }

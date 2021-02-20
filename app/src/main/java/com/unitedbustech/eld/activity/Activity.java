@@ -1,6 +1,5 @@
 package com.unitedbustech.eld.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -13,9 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
 import com.unitedbustech.eld.R;
-import com.unitedbustech.eld.system.AppStatusManager;
 import com.unitedbustech.eld.util.AppUtil;
-import com.unitedbustech.eld.util.LanguageUtil;
 
 /**
  * @author yufei0213
@@ -73,46 +70,20 @@ public class Activity extends AppCompatActivity {
      */
     protected boolean isOpen;
 
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(LanguageUtil.getInstance().setConfiguration(newBase));
-    }
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
-        ActivityStack.getInstance().addActivity(this);
-
-        switch (AppStatusManager.getInstance().getAppStatus()) {
-
-            case AppStatusManager.FORCE_KILLED:
-
-                protectApp();
-
-                isOpen = false;
-                break;
-            case AppStatusManager.NORMAL:
-
-                //初始化动画资源
-                initAnimate();
-                //加载进入动画
-                animateIn();
-
-                isOpen = true;
-                break;
-            default:
-                break;
-        }
+        //初始化动画资源
+        initAnimate();
+        //加载进入动画
+        animateIn();
     }
 
     @Override
     protected void onStart() {
 
         super.onStart();
-
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
@@ -120,7 +91,6 @@ public class Activity extends AppCompatActivity {
     protected void onPause() {
 
         super.onPause();
-
         //离开动画
         animateOut();
     }
@@ -129,16 +99,7 @@ public class Activity extends AppCompatActivity {
     protected void onStop() {
 
         super.onStop();
-
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    }
-
-    @Override
-    protected void onDestroy() {
-
-        super.onDestroy();
-
-        ActivityStack.getInstance().removeActivity(this);
     }
 
     @Override
@@ -239,14 +200,5 @@ public class Activity extends AppCompatActivity {
     protected void animateOut() {
 
         this.overridePendingTransition(animOutInId, animOutOutId);
-    }
-
-    /**
-     * App被强制杀死时调用此方法
-     */
-    protected void protectApp() {
-
-        Intent intent = MainActivity.newIntent(Activity.this, MainActivity.ACTION_RESTART);
-        startActivity(intent);
     }
 }

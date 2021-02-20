@@ -55,7 +55,7 @@
 
     <string name="unidentified_page_title">Unidentified Driver Log</string>
 
-    <string name="permission_tips">Please allow ‘SHIELD’ to access all permissions.</string>
+    <string name="permission_tips">Please allow App to access all permissions.</string>
     <string name="location_service_tip">Please open location service.</string>
 
     <string name="dialog_prompt_success">Success</string>

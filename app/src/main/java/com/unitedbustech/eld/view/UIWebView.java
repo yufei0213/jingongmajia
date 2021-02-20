@@ -15,37 +15,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.unitedbustech.eld.common.Constants;
-import com.unitedbustech.eld.common.VehicleConnectType;
-import com.unitedbustech.eld.common.vo.VehicleVo;
-import com.unitedbustech.eld.domain.DataBaseHelper;
-import com.unitedbustech.eld.domain.entry.Vehicle;
-import com.unitedbustech.eld.eventbus.AlertsRefreshViewEvent;
-import com.unitedbustech.eld.eventbus.DashBoardMalFunctionEvent;
-import com.unitedbustech.eld.eventbus.HosModelChangeEvent;
-import com.unitedbustech.eld.eventbus.NetworkChangeEvent;
-import com.unitedbustech.eld.eventbus.TeamWorkDashBoardChangeEvent;
-import com.unitedbustech.eld.eventbus.VehicleConnectEvent;
-import com.unitedbustech.eld.eventbus.VehicleSelectEvent;
-import com.unitedbustech.eld.jsinterface.AlertJsInterface;
-import com.unitedbustech.eld.jsinterface.DailylogJsInterface;
-import com.unitedbustech.eld.jsinterface.DashboardJsInterface;
-import com.unitedbustech.eld.jsinterface.DotJsInterface;
-import com.unitedbustech.eld.jsinterface.DrivingJsInterface;
-import com.unitedbustech.eld.jsinterface.DvirJsInterface;
-import com.unitedbustech.eld.jsinterface.IftaJsInterface;
 import com.unitedbustech.eld.jsinterface.SDKJsInterface;
-import com.unitedbustech.eld.jsinterface.TeamWorkJsInterface;
-import com.unitedbustech.eld.jsinterface.UserJsInterface;
-import com.unitedbustech.eld.jsinterface.VehicleJsInterface;
-import com.unitedbustech.eld.system.SystemHelper;
-import com.unitedbustech.eld.util.JsonUtil;
-import com.unitedbustech.eld.util.LanguageUtil;
-import com.unitedbustech.eld.util.ThreadUtil;
 import com.unitedbustech.eld.web.JsInterface;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -62,37 +33,7 @@ public class UIWebView extends WebView {
     public static final String EXTRA_PARAMS = "com.unitedbustech.eld.view.UIWebView.params";
     public static final String EXTRA_RESULT = "com.unitedbustech.eld.view.UIWebView.result";
 
-    private static final String HOS_CHANGE = "Global.hosModelChangeMessage";
-    private static final String VEHICLE_SELECT_CHANGE = "Global.vehicleSelectChange";
-    private static final String VEHICLE_CONNECT_STATE_CHANGE = "Global.vehicleConnectStateChange";
-    private static final String TEAM_WORK_CHANGE = "Global.teamWorkDashBoardChange";
-    private static final String MALFUNCTION_CHANGE = "Global.malFunctionRefresh";
-    private static final String ALERTS_CHANGE = "Global.alertsRefresh";
-    private static final String NETWORK_STATE_CHANGE = "Global.networkStateChange";
-
-    private static final int MALFUNCTION_SHOW = 1;
-    private static final int MALFUNCTION_HIDE = 0;
-
-    public static final int NETWORK_CONNECTED = 1;
-    public static final int NETWORK_DISCONNECTED = 0;
-
-    private boolean hosHasChange;
-    private boolean vehicleSelectChange;
-    private boolean vehicleConnectStateChange;
-    private boolean teamWorkDashBoardChange;
-    private boolean dashBoardMalFunctionChange;
-    private boolean alertsChange;
-    private boolean isNetworkChanged;
-
-    private VehicleConnectEvent vehicleConnectEvent;
-    private TeamWorkDashBoardChangeEvent teamWorkDashBoardChangeEvent;
-    private DashBoardMalFunctionEvent dashBoardMalFunctionEvent;
-    private AlertsRefreshViewEvent alertsRefreshViewEvent;
-    private NetworkChangeEvent networkChangeEvent;
-
     private Context context;
-
-    private boolean isAvailable;
 
     public UIWebView(Context context) {
 
@@ -107,17 +48,7 @@ public class UIWebView extends WebView {
 
         initWebViewParams();
 
-        this.addJsInterface(SDKJsInterface.class,
-                UserJsInterface.class,
-                VehicleJsInterface.class,
-                DashboardJsInterface.class,
-                DailylogJsInterface.class,
-                DrivingJsInterface.class,
-                DvirJsInterface.class,
-                DotJsInterface.class,
-                AlertJsInterface.class,
-                TeamWorkJsInterface.class,
-                IftaJsInterface.class);
+        this.addJsInterface(SDKJsInterface.class);
     }
 
     /**
@@ -156,31 +87,9 @@ public class UIWebView extends WebView {
     }
 
     /**
-     * 订阅通知
-     */
-    public void subscribeMsg() {
-
-        if (EventBus.getDefault().isRegistered(this)) {
-
-            EventBus.getDefault().unregister(this);
-        }
-
-        EventBus.getDefault().register(this);
-    }
-
-    /**
-     * 解除订阅通知
-     */
-    public void unSubscribeMsg() {
-
-        EventBus.getDefault().unregister(this);
-    }
-
-    /**
      * 左上角按钮被点击
      */
     public void leftBtnClick() {
-
         this.loadUrl("javascript:Global.onLeftBtnClick();");
     }
 
@@ -188,28 +97,13 @@ public class UIWebView extends WebView {
      * 重新加载
      */
     public void reload() {
-
-        this.isAvailable = true;
-
-        String data = SystemHelper.getWebData();
-        if (TextUtils.isEmpty(data)) {
-
-            this.loadUrl("javascript:Global.onReload();");
-        } else {
-
-            data = data.replaceAll("'", "\\\\'").replaceAll("\"", "\\\\\"");
-            this.loadUrl("javascript:Global.onReload('" + data + "');");
-        }
-
-        notifyChange();
+        this.loadUrl("javascript:Global.onReload();");
     }
 
     /**
      * 页面暂停
      */
     public void pause() {
-
-        this.isAvailable = false;
         this.loadUrl("javascript:Global.onPause();");
     }
 
@@ -217,8 +111,6 @@ public class UIWebView extends WebView {
      * 销毁
      */
     public void destroy() {
-
-        this.isAvailable = false;
         this.loadUrl("javascript:Global.onDestroy();");
     }
 
@@ -231,236 +123,16 @@ public class UIWebView extends WebView {
      */
     public void loadFile(String fileName) {
 
-        String url;
-        if (LanguageUtil.getInstance().getLanguageType() == LanguageUtil.LANGUAGE_ZH) {
-
-            url = Constants.WEB_PATH_ZH + fileName;
-        } else {
-
-            url = Constants.WEB_PATH_EN + fileName;
-        }
-
-        this.loadUrl(url);
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onHosChangeEvent(HosModelChangeEvent hosModelChangeEvent) {
-
-        if (isAvailable) {
-
-            notifyJsHosChange();
-        } else {
-
-            hosHasChange = true;
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onVehicleSelectEvent(VehicleSelectEvent vehicleSelectEvent) {
-
-        if (isAvailable) {
-
-            notifyVehicleSelectChange();
-        } else {
-
-            vehicleSelectChange = true;
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onVehicleConnectStateEvent(VehicleConnectEvent vehicleConnectEvent) {
-
-        if (!SystemHelper.hasVehicle()) {
-
-            return;
-        }
-        this.vehicleConnectEvent = vehicleConnectEvent;
-        if (isAvailable) {
-
-            notifyVehicleConnectStateChange();
-        } else {
-
-            vehicleConnectStateChange = true;
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onTeamWorkDashBoardChangeEvent(TeamWorkDashBoardChangeEvent teamWorkDashBoardChangeEvent) {
-
-        this.teamWorkDashBoardChangeEvent = teamWorkDashBoardChangeEvent;
-        if (isAvailable) {
-
-            notifyTeamWorkChange();
-        } else {
-
-            teamWorkDashBoardChange = true;
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onDashBoardMalFunctionEvent(DashBoardMalFunctionEvent dashBoardMalFunctionEvent) {
-
-        this.dashBoardMalFunctionEvent = dashBoardMalFunctionEvent;
-        if (isAvailable) {
-
-            notifyMalFunctionChange();
-        } else {
-
-            dashBoardMalFunctionChange = true;
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onAlertsRefreshViewEvent(AlertsRefreshViewEvent alertsRefreshViewEvent) {
-
-        this.alertsRefreshViewEvent = alertsRefreshViewEvent;
-        if (isAvailable) {
-
-            notifyAlertsChange();
-        } else {
-
-            alertsChange = true;
-        }
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onNetworkStateChange(NetworkChangeEvent networkChangeEvent) {
-
-        this.networkChangeEvent = networkChangeEvent;
-        if (isAvailable) {
-
-            notifyNetworkStateChange();
-        } else {
-
-            isNetworkChanged = true;
-        }
-    }
-
-    private void notifyChange() {
-
-        if (hosHasChange) {
-
-            notifyJsHosChange();
-        }
-        if (vehicleSelectChange) {
-
-            notifyVehicleSelectChange();
-        }
-        if (vehicleConnectStateChange) {
-
-            notifyVehicleConnectStateChange();
-        }
-        if (teamWorkDashBoardChange) {
-
-            notifyTeamWorkChange();
-        }
-        if (dashBoardMalFunctionChange) {
-
-            notifyMalFunctionChange();
-        }
-        if (alertsChange) {
-
-            notifyAlertsChange();
-        }
-        if (isNetworkChanged) {
-
-            notifyNetworkStateChange();
-        }
-    }
-
-    private void notifyJsHosChange() {
-
-        loadUrl("javascript:" + HOS_CHANGE + "();");
-        hosHasChange = false;
-    }
-
-    private void notifyVehicleSelectChange() {
-
-        ThreadUtil.getInstance().execute(new Runnable() {
-            @Override
-            public void run() {
-
-                int vehicleId = SystemHelper.getUser().getVehicleId();
-                if (vehicleId != 0) {
-
-                    Vehicle vehicle = DataBaseHelper.getDataBase().vehicleDao().getVehicle(vehicleId);
-                    VehicleVo vehicleVo = new VehicleVo(vehicle);
-                    final String vehicleStr = JsonUtil.toJsJSONString(vehicleVo);
-
-                    UIWebView.this.post(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            loadUrl("javascript:" + VEHICLE_SELECT_CHANGE + "('" + vehicleStr + "');");
-                        }
-                    });
-                } else {
-                    UIWebView.this.vehicleConnectEvent = new VehicleConnectEvent(VehicleConnectType.CLEAR);
-                    UIWebView.this.post(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            loadUrl("javascript:" + VEHICLE_SELECT_CHANGE + "();");
-                        }
-                    });
-                }
-            }
-        });
-
-        vehicleSelectChange = false;
-    }
-
-    private void notifyVehicleConnectStateChange() {
-
-        loadUrl("javascript:" + VEHICLE_CONNECT_STATE_CHANGE + "('" + vehicleConnectEvent.getType() + "');");
-        vehicleConnectStateChange = false;
-    }
-
-    private void notifyTeamWorkChange() {
-
-        loadUrl("javascript:" + TEAM_WORK_CHANGE + "('" + JsonUtil.toJsJSONString(teamWorkDashBoardChangeEvent) + "');");
-        teamWorkDashBoardChange = false;
-    }
-
-    private void notifyMalFunctionChange() {
-
-        if (dashBoardMalFunctionEvent.isShow()) {
-
-            loadUrl("javascript:" + MALFUNCTION_CHANGE + "('" + MALFUNCTION_SHOW + "');");
-        } else {
-
-            loadUrl("javascript:" + MALFUNCTION_CHANGE + "('" + MALFUNCTION_HIDE + "');");
-        }
-
-        dashBoardMalFunctionChange = false;
-    }
-
-    private void notifyAlertsChange() {
-
-        loadUrl("javascript:" + ALERTS_CHANGE + "('" + JsonUtil.toJsJSONString(alertsRefreshViewEvent) + "');");
-        alertsChange = false;
-    }
-
-    private void notifyNetworkStateChange() {
-
-        if (networkChangeEvent.isConnected()) {
-
-            loadUrl("javascript:" + NETWORK_STATE_CHANGE + "('" + NETWORK_CONNECTED + "');");
-        } else {
-
-            loadUrl("javascript:" + NETWORK_STATE_CHANGE + "('" + NETWORK_DISCONNECTED + "');");
-        }
-
-        isNetworkChanged = false;
-    }
-
-    /**
-     * 交给外界主动调用离线。
-     * 为了初始化时的调用
-     */
-    public void notifyOffline() {
-
-        loadUrl("javascript:" + NETWORK_STATE_CHANGE + "('" + NETWORK_DISCONNECTED + "');");
+//        String url;
+//        if (LanguageUtil.getInstance().getLanguageType() == LanguageUtil.LANGUAGE_ZH) {
+//
+//            url = Constants.WEB_PATH_ZH + fileName;
+//        } else {
+//
+//            url = Constants.WEB_PATH_EN + fileName;
+//        }
+//
+//        this.loadUrl(url);
     }
 
     /**
@@ -508,8 +180,6 @@ public class UIWebView extends WebView {
 
         @Override
         public void onPageFinished(WebView view, String url) {
-
-            isAvailable = true;
 
             String param = ((Activity) context).getIntent().getStringExtra(EXTRA_PARAMS);
             if (!TextUtils.isEmpty(param)) {

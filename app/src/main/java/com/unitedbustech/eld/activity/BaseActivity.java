@@ -81,14 +81,4 @@ public abstract class BaseActivity extends Activity {
 
         setContentView(contentView);
     }
-
-    /**
-     * 返回首页
-     */
-    public void openMainPage(int tabIndex) {
-
-        Intent intent = MainActivity.newIntent(BaseActivity.this);
-        intent.putExtra(TabMenu.TAB_INDEX, tabIndex);
-        startActivity(intent);
-    }
 }

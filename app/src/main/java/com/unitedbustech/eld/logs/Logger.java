@@ -13,7 +13,6 @@ import com.unitedbustech.eld.BuildConfig;
 import com.unitedbustech.eld.common.Constants;
 import com.unitedbustech.eld.logs.config.DateFileNameGenerator;
 import com.unitedbustech.eld.logs.config.FileLogFlattener;
-import com.unitedbustech.eld.logs.util.LogUtils;
 
 /**
  * @author yufei0213
@@ -41,13 +40,13 @@ public final class Logger {
      */
     public static void init() {
 
-        try {
-
-            LogUtils.checkValid();
-        } catch (Exception e) {
-
-            e.printStackTrace();
-        }
+//        try {
+//
+//            LogUtils.checkValid();
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//        }
 
         LogConfiguration.Builder configBuilder = new LogConfiguration.Builder()
                 .tag(Constants.LOG_DEFAULT_TAG)

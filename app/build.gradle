@@ -75,9 +75,9 @@ repositories {
 
 dependencies {
 
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation(name: 'pt-sdk-release', ext: 'aar')
+//    implementation(name: 'pt-sdk-release', ext: 'aar')
 
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
 
@@ -91,7 +91,7 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
     annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
     androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
-    debugCompile "com.amitshekhar.android:debug-db:$rootProject.debugDbVersion"
+//    debugCompile "com.amitshekhar.android:debug-db:$rootProject.debugDbVersion"
 
     implementation "com.alibaba:fastjson:$rootProject.fastjsonVersion"
     implementation "org.greenrobot:eventbus:$rootProject.eventbusVersion"

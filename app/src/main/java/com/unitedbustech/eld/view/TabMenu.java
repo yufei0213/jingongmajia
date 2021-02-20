@@ -8,11 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.unitedbustech.eld.R;
-import com.unitedbustech.eld.eventbus.AlertsRefreshViewEvent;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * @author yufei0213
@@ -132,16 +129,6 @@ public class TabMenu extends LinearLayout {
             EventBus.getDefault().unregister(this);
         }
         EventBus.getDefault().register(this);
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onAlertsRefreshViewEvent(AlertsRefreshViewEvent alertsRefreshViewEvent) {
-
-        int count = alertsRefreshViewEvent.getNotCertifiedLogsCnt() +
-                alertsRefreshViewEvent.getRequestedEditsCnt() +
-                alertsRefreshViewEvent.getAssignedCnt();
-
-        moreItem.setMoreTabRedDotVisible(count > 0);
     }
 
     public void setListener(TabMenuSelectedListener listener) {
