@@ -13,7 +13,7 @@ public enum RequestStatus {
     /**
      * 成功
      */
-    SUCCESS(0, R.string.request_status_success),
+    SUCCESS(200, R.string.request_status_success),
     /**
      * 未知异常
      */
