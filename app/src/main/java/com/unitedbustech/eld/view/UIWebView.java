@@ -3,8 +3,9 @@ package com.unitedbustech.eld.view;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -14,9 +15,9 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.unitedbustech.eld.common.Constants;
-import com.unitedbustech.eld.jsinterface.SDKJsInterface;
 import com.unitedbustech.eld.web.JsInterface;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -33,7 +34,37 @@ public class UIWebView extends WebView {
     public static final String EXTRA_PARAMS = "com.unitedbustech.eld.view.UIWebView.params";
     public static final String EXTRA_RESULT = "com.unitedbustech.eld.view.UIWebView.result";
 
+    private static final String HOS_CHANGE = "Global.hosModelChangeMessage";
+    private static final String VEHICLE_SELECT_CHANGE = "Global.vehicleSelectChange";
+    private static final String VEHICLE_CONNECT_STATE_CHANGE = "Global.vehicleConnectStateChange";
+    private static final String TEAM_WORK_CHANGE = "Global.teamWorkDashBoardChange";
+    private static final String MALFUNCTION_CHANGE = "Global.malFunctionRefresh";
+    private static final String ALERTS_CHANGE = "Global.alertsRefresh";
+    private static final String NETWORK_STATE_CHANGE = "Global.networkStateChange";
+
+    private static final int MALFUNCTION_SHOW = 1;
+    private static final int MALFUNCTION_HIDE = 0;
+
+    public static final int NETWORK_CONNECTED = 1;
+    public static final int NETWORK_DISCONNECTED = 0;
+
+    private boolean hosHasChange;
+    private boolean vehicleSelectChange;
+    private boolean vehicleConnectStateChange;
+    private boolean teamWorkDashBoardChange;
+    private boolean dashBoardMalFunctionChange;
+    private boolean alertsChange;
+    private boolean isNetworkChanged;
+
+//    private VehicleConnectEvent vehicleConnectEvent;
+//    private TeamWorkDashBoardChangeEvent teamWorkDashBoardChangeEvent;
+//    private DashBoardMalFunctionEvent dashBoardMalFunctionEvent;
+//    private AlertsRefreshViewEvent alertsRefreshViewEvent;
+//    private NetworkChangeEvent networkChangeEvent;
+
     private Context context;
+
+    private boolean isAvailable;
 
     public UIWebView(Context context) {
 
@@ -48,7 +79,17 @@ public class UIWebView extends WebView {
 
         initWebViewParams();
 
-        this.addJsInterface(SDKJsInterface.class);
+//        this.addJsInterface(SDKJsInterface.class,
+//                UserJsInterface.class,
+//                VehicleJsInterface.class,
+//                DashboardJsInterface.class,
+//                DailylogJsInterface.class,
+//                DrivingJsInterface.class,
+//                DvirJsInterface.class,
+//                DotJsInterface.class,
+//                AlertJsInterface.class,
+//                TeamWorkJsInterface.class,
+//                IftaJsInterface.class);
     }
 
     /**
@@ -87,9 +128,31 @@ public class UIWebView extends WebView {
     }
 
     /**
+     * 订阅通知
+     */
+    public void subscribeMsg() {
+
+        if (EventBus.getDefault().isRegistered(this)) {
+
+            EventBus.getDefault().unregister(this);
+        }
+
+        EventBus.getDefault().register(this);
+    }
+
+    /**
+     * 解除订阅通知
+     */
+    public void unSubscribeMsg() {
+
+        EventBus.getDefault().unregister(this);
+    }
+
+    /**
      * 左上角按钮被点击
      */
     public void leftBtnClick() {
+
         this.loadUrl("javascript:Global.onLeftBtnClick();");
     }
 
@@ -97,13 +160,28 @@ public class UIWebView extends WebView {
      * 重新加载
      */
     public void reload() {
-        this.loadUrl("javascript:Global.onReload();");
+
+        this.isAvailable = true;
+
+//        String data = SystemHelper.getWebData();
+//        if (TextUtils.isEmpty(data)) {
+//
+//            this.loadUrl("javascript:Global.onReload();");
+//        } else {
+//
+//            data = data.replaceAll("'", "\\\\'").replaceAll("\"", "\\\\\"");
+//            this.loadUrl("javascript:Global.onReload('" + data + "');");
+//        }
+//
+//        notifyChange();
     }
 
     /**
      * 页面暂停
      */
     public void pause() {
+
+        this.isAvailable = false;
         this.loadUrl("javascript:Global.onPause();");
     }
 
@@ -111,6 +189,8 @@ public class UIWebView extends WebView {
      * 销毁
      */
     public void destroy() {
+
+        this.isAvailable = false;
         this.loadUrl("javascript:Global.onDestroy();");
     }
 
@@ -134,6 +214,8 @@ public class UIWebView extends WebView {
 //
 //        this.loadUrl(url);
     }
+
+
 
     /**
      * 初始化webview
@@ -180,6 +262,8 @@ public class UIWebView extends WebView {
 
         @Override
         public void onPageFinished(WebView view, String url) {
+
+            isAvailable = true;
 
             String param = ((Activity) context).getIntent().getStringExtra(EXTRA_PARAMS);
             if (!TextUtils.isEmpty(param)) {

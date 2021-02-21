@@ -1,6 +1,6 @@
 package com.unitedbustech.eld.util;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.unitedbustech.eld.common.Constants;
 

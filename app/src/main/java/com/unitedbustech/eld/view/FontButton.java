@@ -3,7 +3,7 @@ package com.unitedbustech.eld.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.v7.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatButton;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
@@ -23,7 +23,7 @@ public class FontButton extends AppCompatButton {
 
     public FontButton(Context context, AttributeSet attrs) {
 
-        this(context, attrs, android.support.v7.appcompat.R.attr.buttonStyle);
+        this(context, attrs, androidx.appcompat.R.attr.buttonStyle);
     }
 
     public FontButton(Context context, AttributeSet attrs, int defStyleAttr) {

@@ -3,7 +3,7 @@ package com.unitedbustech.eld.view;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.view.Display;
 import android.view.LayoutInflater;

@@ -1,7 +1,7 @@
 package com.unitedbustech.eld.http;
 
-import android.support.annotation.MainThread;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.MainThread;
+import androidx.annotation.WorkerThread;
 
 import com.alibaba.fastjson.JSONObject;
 import com.unitedbustech.eld.http.certs.TrustAllCerts;

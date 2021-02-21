@@ -1,5 +1,7 @@
 <resources>
 
+    <string name="android_web_agent">ANDROID_AGENT_NATIVE/2.0&#8194;%1$s</string>
+
     <string name="app_name">SHIELD</string>
 
     <string name="ok">OK</string>

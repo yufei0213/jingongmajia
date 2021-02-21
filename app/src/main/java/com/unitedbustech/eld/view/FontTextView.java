@@ -3,8 +3,9 @@ package com.unitedbustech.eld.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
+
 import android.text.TextUtils;
 import android.util.AttributeSet;
 

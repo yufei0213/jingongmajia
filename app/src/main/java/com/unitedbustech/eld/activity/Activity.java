@@ -1,14 +1,14 @@
 package com.unitedbustech.eld.activity;
 
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.view.WindowManager;
 
 import com.unitedbustech.eld.R;
@@ -64,11 +64,6 @@ public class Activity extends AppCompatActivity {
      * 请求权限失败时，给用户的提示信息
      */
     private String PERMISSION_MSG;
-
-    /**
-     * 当前Activity是否能打开
-     */
-    protected boolean isOpen;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -3,10 +3,11 @@ package com.unitedbustech.eld.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 import com.unitedbustech.eld.R;
 
@@ -24,7 +25,7 @@ public class FontEditView extends AppCompatEditText {
 
     public FontEditView(Context context, AttributeSet attrs) {
 
-        this(context, attrs, android.support.v7.appcompat.R.attr.editTextStyle);
+        this(context, attrs, androidx.appcompat.R.attr.editTextStyle);
     }
 
     public FontEditView(Context context, AttributeSet attrs, int defStyleAttr) {

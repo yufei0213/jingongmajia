@@ -22,7 +22,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_review"
             eld:itemText="@string/tab_menu_dot_item_review"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
         <com.unitedbustech.eld.view.TabMenuItem
             android:id="@+id/tab_send"
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_email"
             eld:itemText="@string/tab_menu_dot_item_send"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
     </LinearLayout>
 

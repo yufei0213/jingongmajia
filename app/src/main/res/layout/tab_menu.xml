@@ -22,7 +22,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_dashboard"
             eld:itemText="@string/tab_menu_item_dashboard"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
         <com.unitedbustech.eld.view.TabMenuItem
             android:id="@+id/dailylog"
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_dailylog"
             eld:itemText="@string/tab_menu_item_dailylog"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
         <com.unitedbustech.eld.view.TabMenuItem
             android:id="@+id/dvir"
@@ -40,7 +40,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_dvir"
             eld:itemText="@string/tab_menu_item_dvir"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
         <com.unitedbustech.eld.view.TabMenuItem
             android:id="@+id/dot"
@@ -49,7 +49,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_dot"
             eld:itemText="@string/tab_menu_item_dot"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
         <com.unitedbustech.eld.view.RedDotTabMenuItem
             android:id="@+id/more"
@@ -58,7 +58,7 @@
             android:layout_weight="1"
             eld:itemIcon="@drawable/tab_menu_more"
             eld:itemText="@string/tab_menu_item_more"
-            eld:itemTextColor="@drawable/tab_menu_text" />
+            eld:itemTextColors="@drawable/tab_menu_text" />
 
     </LinearLayout>
 

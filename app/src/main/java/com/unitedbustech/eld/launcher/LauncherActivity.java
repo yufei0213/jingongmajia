@@ -9,18 +9,27 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
 import android.view.KeyEvent;
 
 import com.unitedbustech.eld.R;
 import com.unitedbustech.eld.activity.BaseFragmentActivity;
+import com.unitedbustech.eld.common.Constants;
+import com.unitedbustech.eld.error.ErrorActivity;
+import com.unitedbustech.eld.http.HttpRequest;
+import com.unitedbustech.eld.http.HttpRequestCallback;
+import com.unitedbustech.eld.http.HttpResponse;
 import com.unitedbustech.eld.mvp.BasePresenter;
 import com.unitedbustech.eld.system.UUIDS;
+import com.unitedbustech.eld.util.AppUtil;
+import com.unitedbustech.eld.vest.VestActivity;
 import com.unitedbustech.eld.view.HorizontalDialog;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -48,19 +57,30 @@ public class LauncherActivity extends BaseFragmentActivity {
 
             if (msg.what == MSG_CODE) {
 
-//                Intent intent = null;
-//                User user = SystemHelper.getUser();
-//                if (!SystemHelper.hasLogout() && user != null) {
-//
-//                    intent = WelcomeActivity.newIntent(LauncherActivity.this);
-//                } else {
-//
-//                    intent = LoginActivity.newIntent(LauncherActivity.this);
-//                }
-//
-//                startActivity(intent);
+                HttpRequest.Builder builder = new HttpRequest.Builder();
+                final HttpRequest request = builder.url(Constants.VEST_SIGN_URL)
+                        .addParam("vestCode", Constants.VEST_CODE)
+                        .addParam("channelCode", "google")
+                        .addParam("version", AppUtil.getVersionName(LauncherActivity.this))
+                        .addParam("deviceId", UUIDS.getUUID())
+                        .addParam("timestamp", String.valueOf(new Date().getTime()))
+                        .build();
 
-                UUIDS.init();
+                request.get(new HttpRequestCallback() {
+                    @Override
+                    public void onRequestFinish(HttpResponse response) {
+
+                        if (response.isSuccess()) {
+
+                            Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
+                            startActivity(intent);
+                        } else {
+
+                            Intent intent = ErrorActivity.newIntent(LauncherActivity.this);
+                            startActivity(intent);
+                        }
+                    }
+                });
 
                 finish();
             }
@@ -128,7 +148,7 @@ public class LauncherActivity extends BaseFragmentActivity {
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-            this.finish();
+//            this.finish();
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -161,7 +181,7 @@ public class LauncherActivity extends BaseFragmentActivity {
                     PERMISSION_REQUEST_CODE);
         } else {
 
-            handler.sendEmptyMessage(MSG_CODE);
+            handler.sendEmptyMessageDelayed(MSG_CODE, 3000);
         }
     }
 

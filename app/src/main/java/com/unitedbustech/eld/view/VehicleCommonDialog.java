@@ -2,10 +2,10 @@ package com.unitedbustech.eld.view;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AppCompatDialog;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatDialog;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;

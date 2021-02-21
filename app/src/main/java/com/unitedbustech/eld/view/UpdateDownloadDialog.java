@@ -2,7 +2,7 @@ package com.unitedbustech.eld.view;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;

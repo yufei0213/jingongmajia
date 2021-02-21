@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;

@@ -3,11 +3,12 @@ package com.unitedbustech.eld.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.unitedbustech.eld.R;
 import com.unitedbustech.eld.view.TitleBar;
@@ -172,11 +173,7 @@ public class WebActivity extends BaseActivity implements TitleBar.TitleBarListen
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
-        if (isOpen) {
-
-            new AssistActivity(this);
-        }
+        new AssistActivity(this);
     }
 
     @Override

@@ -1,9 +1,10 @@
 package com.unitedbustech.eld.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.unitedbustech.eld.R;
 import com.unitedbustech.eld.mvp.BasePresenter;
@@ -22,15 +23,12 @@ public abstract class BaseFragmentActivity extends Activity {
 
         super.onCreate(savedInstanceState);
 
-        if (isOpen) {
+        //初始化变量
+        initVariables();
+        //初始化视图
+        initViews(savedInstanceState);
 
-            //初始化变量
-            initVariables();
-            //初始化视图
-            initViews(savedInstanceState);
-
-            presenter = initPresenter();
-        }
+        presenter = initPresenter();
     }
 
     @Override

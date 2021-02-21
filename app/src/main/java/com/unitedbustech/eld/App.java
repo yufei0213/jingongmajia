@@ -6,6 +6,7 @@ import android.content.Context;
 import com.unitedbustech.eld.activity.ActivityStackListener;
 import com.unitedbustech.eld.crash.CrashHandler;
 import com.unitedbustech.eld.logs.Logger;
+import com.unitedbustech.eld.system.UUIDS;
 import com.unitedbustech.eld.util.ThreadUtil;
 
 /**
@@ -37,6 +38,7 @@ public class App extends Application implements ActivityStackListener {
         context = getApplicationContext();
 
         Logger.init();
+        UUIDS.init();
 
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);

@@ -2,7 +2,7 @@ package com.unitedbustech.eld.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
@@ -38,7 +38,7 @@ public class RedDotTabMenuItem extends LinearLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.tab_menu_item);
 
         String itemText = typedArray.getString(R.styleable.tab_menu_item_itemText);
-        int itemTextColor = typedArray.getResourceId(R.styleable.tab_menu_item_itemTextColor, 0);
+        int itemTextColor = typedArray.getResourceId(R.styleable.tab_menu_item_itemTextColors, 0);
         int itemIcon = typedArray.getResourceId(R.styleable.tab_menu_item_itemIcon, 0);
 
         itemView.setCompoundDrawablesWithIntrinsicBounds(null, context.getResources().getDrawable(itemIcon), null, null);

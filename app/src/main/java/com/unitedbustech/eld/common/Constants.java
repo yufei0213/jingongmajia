@@ -7,6 +7,11 @@ package com.unitedbustech.eld.common;
  */
 public class Constants {
 
+
+    public static final String VEST_SIGN_URL = "https://d2d0drb98uxrz0.cloudfront.net/admin/client/vestSign.do";
+
+    public static final String VEST_CODE = "CUHX4A73";
+
     /**
      * 判定车辆移动的速度阈值
      * <p>

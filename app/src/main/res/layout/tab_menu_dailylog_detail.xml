@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         eld:itemText="@string/daily_log_top_tab_menu_item_log"
-        eld:itemTextColor="@drawable/tab_menu_text" />
+        eld:itemTextColors="@drawable/tab_menu_text" />
 
     <View
         android:layout_width="0.1dp"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         eld:itemText="@string/daily_log_top_tab_menu_item_profile"
-        eld:itemTextColor="@drawable/tab_menu_text" />
+        eld:itemTextColors="@drawable/tab_menu_text" />
 
     <View
         android:layout_width="0.1dp"
@@ -38,6 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         eld:itemText="@string/daily_log_top_tab_menu_item_sign"
-        eld:itemTextColor="@drawable/tab_menu_text" />
+        eld:itemTextColors="@drawable/tab_menu_text" />
 
 </LinearLayout>

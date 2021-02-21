@@ -1,13 +1,12 @@
 package com.unitedbustech.eld.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import com.unitedbustech.eld.view.ContentView;
-import com.unitedbustech.eld.view.TabMenu;
 
 /**
  * @author yufei0213
@@ -26,13 +25,10 @@ public abstract class BaseActivity extends Activity {
 
         super.onCreate(savedInstanceState);
 
-        if (isOpen) {
-
-            //初始化变量
-            initVariables();
-            //初始化视图
-            initViews(savedInstanceState);
-        }
+        //初始化变量
+        initVariables();
+        //初始化视图
+        initViews(savedInstanceState);
     }
 
     /**

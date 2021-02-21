@@ -1,7 +1,7 @@
 package com.unitedbustech.eld.http;
 
-import android.support.annotation.Nullable;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
 
 import com.alibaba.fastjson.JSONObject;
 import com.unitedbustech.eld.common.Constants;

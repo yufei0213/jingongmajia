@@ -3,15 +3,16 @@ package com.unitedbustech.eld.view;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.unitedbustech.eld.R;
 import com.unitedbustech.eld.util.ScreenUtil;
