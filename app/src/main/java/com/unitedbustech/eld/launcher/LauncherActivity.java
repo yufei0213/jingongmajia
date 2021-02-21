@@ -79,10 +79,10 @@ public class LauncherActivity extends BaseFragmentActivity {
                             Intent intent = ErrorActivity.newIntent(LauncherActivity.this);
                             startActivity(intent);
                         }
+
+                        finish();
                     }
                 });
-
-                finish();
             }
         }
     };
