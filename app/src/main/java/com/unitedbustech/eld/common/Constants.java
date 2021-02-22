@@ -48,7 +48,7 @@ public class Constants {
     /**
      * SD卡存储路径
      */
-    public static final String STORAGE_PATH = "/storage/emulated/0/shield/";
+    public static final String STORAGE_PATH = "/storage/emulated/0/Interest_Calculator/";
 
     /**
      * 日志默认TAG

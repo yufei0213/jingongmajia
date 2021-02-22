@@ -1,5 +1,7 @@
 package com.unitedbustech.eld.http;
 
+import android.graphics.Bitmap;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 
@@ -17,7 +19,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ConnectException;
+import java.net.HttpURLConnection;
 import java.net.SocketTimeoutException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -266,13 +271,13 @@ public class HttpFileRequest {
         String fileName = url.substring(url.lastIndexOf("/") + 1);
 
         //创建文件夹
-        File folder = new File(Constants.TEMP_PATH);
+        File folder = new File(Constants.STORAGE_PATH);
         if (!folder.exists()) {
 
             folder.mkdirs();
         }
         //创建文件
-        File file = new File(Constants.TEMP_PATH, fileName);
+        File file = new File(Constants.STORAGE_PATH, fileName);
         if (file.exists()) {
 
             file.delete();
@@ -306,7 +311,7 @@ public class HttpFileRequest {
             }
             outputStream.flush();
 
-            downloadListener.onDownloadSuccess(Constants.TEMP_PATH + "/" + fileName);
+            downloadListener.onDownloadSuccess(Constants.STORAGE_PATH + "/" + fileName);
         } catch (Exception e) {
 
             downloadListener.onDownloadFailed();

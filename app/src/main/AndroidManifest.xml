@@ -25,6 +25,10 @@
             android:name=".error.ErrorActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".vest.VestActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

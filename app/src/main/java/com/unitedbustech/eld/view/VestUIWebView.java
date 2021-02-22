@@ -18,7 +18,8 @@ import android.webkit.WebViewClient;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.unitedbustech.eld.jsinterface.SDKJsInterface;
+import com.unitedbustech.eld.jsinterface.AppJsInterface;
+import com.unitedbustech.eld.jsinterface.AppMethodListener;
 import com.unitedbustech.eld.web.JsInterface;
 
 import java.lang.reflect.Constructor;
@@ -35,6 +36,8 @@ public class VestUIWebView extends WebView {
 
     private UiWebViewClient uiWebViewClient;
 
+    private AppJsInterface appJsInterface;
+
     public VestUIWebView(Context context) {
 
         this(context, null);
@@ -47,12 +50,18 @@ public class VestUIWebView extends WebView {
         this.context = context;
 
         initWebViewParams();
+        appJsInterface = new AppJsInterface(context, this);
+        addJavascriptInterface(appJsInterface, "AppJs");
 
-        this.addJsInterface(SDKJsInterface.class);
+//        this.addJsInterface(AppJsInterface.class);
     }
 
     public void setClient(UiWebViewClient uiWebViewClient) {
         this.uiWebViewClient = uiWebViewClient;
+    }
+
+    public void setAppMethodListener(AppMethodListener listener) {
+        appJsInterface.setAppMethodListener(listener);
     }
 
     /**
@@ -157,8 +166,7 @@ public class VestUIWebView extends WebView {
                 if (result != null) {
                     int type = result.getType();
                     if (type == WebView.HitTestResult.IMAGE_TYPE) {
-                        // TODO 实现长按保存图片
-//                        showSaveImageDialog(result);
+                        uiWebViewClient.onLongClickSavePic(result.getExtra());
                     }
                 }
                 return false;
@@ -180,29 +188,20 @@ public class VestUIWebView extends WebView {
 
             @Override
             public void onPageFinished(WebView view, String url) {
-
                 uiWebViewClient.onPageFinished(view.getTitle());
             }
         });
         setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-
                 return super.onJsAlert(view, url, message, result);
             }
-            // TODO: 2021/2/21 实现选择图片
-//            @Override
-//            public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> valueCallback, FileChooserParams fileChooserParams) {
-//                resetWebSelectImageCallBack();
-//                mValueCallback = valueCallback;
-//                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-//                intent.addCategory(Intent.CATEGORY_OPENABLE);
-//                intent.setType("image/*");
-//                startActivityForResult(Intent.createChooser(intent, "Image Chooser"), SELECT_IMAGE_REQUEST_CODE);
-//
-//                return true;
-//            }
+
+            @Override
+            public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> valueCallback, FileChooserParams fileChooserParams) {
+                uiWebViewClient.onShowFileChooser(webView, valueCallback, fileChooserParams);
+                return true;
+            }
         });
     }
-
 }

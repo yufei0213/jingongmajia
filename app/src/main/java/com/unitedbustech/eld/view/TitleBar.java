@@ -2,6 +2,7 @@ package com.unitedbustech.eld.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ import com.unitedbustech.eld.R;
  */
 public class TitleBar extends RelativeLayout {
 
+    private RelativeLayout containerView;
     private ImageButton backBtn;
     private TextView titleView;
 
@@ -35,6 +37,7 @@ public class TitleBar extends RelativeLayout {
 
         LayoutInflater.from(context).inflate(R.layout.view_title_bar, this, true);
 
+        containerView = this.findViewById(R.id.container);
         backBtn = this.findViewById(R.id.back_btn);
         titleView = this.findViewById(R.id.title);
 
@@ -68,6 +71,25 @@ public class TitleBar extends RelativeLayout {
     public void setListener(TitleBarListener listener) {
 
         this.listener = listener;
+    }
+
+    public void setBackground(String color) {
+
+        containerView.setBackgroundColor(Color.parseColor(color));
+    }
+
+    public void setTitleColor(String color) {
+        switch (color) {
+            case "white":
+                titleView.setTextColor(Color.WHITE);
+                break;
+            case "black":
+                titleView.setTextColor(Color.BLACK);
+                break;
+            default:
+                break;
+
+        }
     }
 
     /**

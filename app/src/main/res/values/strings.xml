@@ -1,8 +1,9 @@
 <resources>
 
     <string name="android_web_agent">ANDROID_AGENT_NATIVE/2.0&#8194;%1$s</string>
+    <string name="long_click_pic">Do you want to download pictures?</string>
 
-    <string name="app_name">SHIELD</string>
+    <string name="app_name">Interest Calculator</string>
 
     <string name="ok">OK</string>
     <string name="yes">Yes</string>

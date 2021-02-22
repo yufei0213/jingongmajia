@@ -3,6 +3,7 @@ package com.unitedbustech.eld.web;
 import android.content.Context;
 
 import com.unitedbustech.eld.view.UIWebView;
+import com.unitedbustech.eld.view.VestUIWebView;
 
 /**
  * @author yufei0213
@@ -22,9 +23,9 @@ public abstract class BaseJsInterface {
     protected static final String CALLBACK_KEY = "callBack";
 
     protected Context context;
-    protected UIWebView uiWebView;
+    protected VestUIWebView uiWebView;
 
-    public BaseJsInterface(Context context, UIWebView uiWebView) {
+    public BaseJsInterface(Context context, VestUIWebView uiWebView) {
 
         this.context = context;
         this.uiWebView = uiWebView;

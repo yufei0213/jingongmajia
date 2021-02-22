@@ -27,7 +27,7 @@ public class HorizontalDialog extends AppCompatDialog {
     private static final int BUTTON_NEGATIVE = -2;
     private static final int BUTTON_NEUTRAL = -3;
 
-    private ImageView iconView;
+//    private ImageView iconView;
     private TextView textView;
     private View btnGroupView;
 
@@ -92,7 +92,7 @@ public class HorizontalDialog extends AppCompatDialog {
 
     private void initView() {
 
-        iconView = this.findViewById(R.id.icon_img);
+//        iconView = this.findViewById(R.id.icon_img);
         textView = this.findViewById(R.id.text_view);
         btnGroupView = this.findViewById(R.id.btn_group);
 
@@ -100,10 +100,10 @@ public class HorizontalDialog extends AppCompatDialog {
         negativeBtn = this.findViewById(R.id.negative_btn);
         neutralBtn = this.findViewById(R.id.neutral_btn);
 
-        if (iconResId != 0) {
-
-            iconView.setImageResource(iconResId);
-        }
+//        if (iconResId != 0) {
+//
+//            iconView.setImageResource(iconResId);
+//        }
 
         if (!TextUtils.isEmpty(text)) {
 

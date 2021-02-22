@@ -44,7 +44,7 @@ public class HttpRequest {
 
     private static final String CODE_KEY = "code";
     private static final String MSG_KEY = "msg";
-    private static final String DATA_KEY = "result";
+    private static final String DATA_KEY = "data";
 
     private static final long CONNECT_TIMEOUT = 10 * 1000L;
     private static final long READ_TIMEOUT = 30 * 1000L;
