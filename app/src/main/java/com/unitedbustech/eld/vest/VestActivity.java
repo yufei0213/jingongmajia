@@ -27,6 +27,8 @@ import com.unitedbustech.eld.http.HttpFileRequest;
 import com.unitedbustech.eld.jsinterface.AppMethodListener;
 import com.unitedbustech.eld.util.FileUtil;
 import com.unitedbustech.eld.util.JsonUtil;
+import com.unitedbustech.eld.view.AdView;
+import com.unitedbustech.eld.view.AdViewListener;
 import com.unitedbustech.eld.view.HorizontalDialog;
 import com.unitedbustech.eld.view.LoadingDialog;
 import com.unitedbustech.eld.view.PromptDialog;
@@ -39,7 +41,7 @@ import com.unitedbustech.eld.view.VestUIWebView;
  * @date 2021/2/21
  * @description TODO
  */
-public class VestActivity extends BaseActivity implements UiWebViewClient, TitleBar.TitleBarListener, AppMethodListener {
+public class VestActivity extends BaseActivity implements UiWebViewClient, TitleBar.TitleBarListener, AppMethodListener, AdViewListener {
 
     public static final String EXTRA_DATA = "com.unitedbustech.eld.vest.data";
 
@@ -53,6 +55,8 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
     private VestUIWebView uiWebView;
 
     private LoadingDialog loadingDialog;
+
+    private AdView adView;
 
     private ValueCallback uploadMessageAboveL;
     private final static int FILE_CHOOSER_RESULT_CODE = 10000;
@@ -95,6 +99,15 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
             uiWebView.loadUrl(vestData.getH5Url());
         else
             uiWebView.loadUrl("https://" + vestData.getH5Url());
+
+        adView = view.findViewById(R.id.ad_view);
+        adView.setAdViewListener(this);
+        if (vestData.getAdvOn() != 1) {
+            adView.setVisibility(View.GONE);
+        } else {
+            adView.setUrl("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=241126516,2813243730&fm=26&gp=0.jpg", "");
+        }
+
         return view;
     }
 
@@ -165,6 +178,17 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
     }
 
     @Override
+    public void onAdSkip() {
+        adView.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onAdClick(String adUrl) {
+        adView.setVisibility(View.GONE);
+        // TODO: 2021/2/22 打开广告
+    }
+
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (forbid == 1) {
@@ -180,6 +204,10 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
             if (uiWebView.canGoBack()) {
                 uiWebView.goBack();
             }
+
+            Intent home = new Intent(Intent.ACTION_MAIN);
+            home.addCategory(Intent.CATEGORY_HOME);
+            startActivity(home);
             return true;
         }
         return super.onKeyDown(keyCode, event);

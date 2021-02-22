@@ -1,7 +1,5 @@
 package com.unitedbustech.eld.http;
 
-import android.graphics.Bitmap;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 
@@ -19,10 +17,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ConnectException;
-import java.net.HttpURLConnection;
 import java.net.SocketTimeoutException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -241,7 +236,6 @@ public class HttpFileRequest {
             public void onFailure(Call call, IOException e) {
 
                 if (downloadListener != null) {
-
                     downloadListener.onDownloadFailed();
                 }
             }
@@ -250,15 +244,12 @@ public class HttpFileRequest {
             public void onResponse(Call call, Response response) throws IOException {
 
                 if (call.isCanceled()) {
-
                     return;
                 }
 
                 if (response.code() == 200) {
-
                     saveFile(response);
                 } else {
-
                     downloadListener.onDownloadFailed();
                 }
             }
