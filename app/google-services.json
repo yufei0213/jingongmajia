@@ -1,39 +1,44 @@
 {
   "project_info": {
-    "project_number": "1052007985237",
-    "firebase_url": "https://shield-723d8.firebaseio.com",
-    "project_id": "shield-723d8",
-    "storage_bucket": "shield-723d8.appspot.com"
+    "project_number": "101754892205",
+    "project_id": "optional-profit-8f546",
+    "storage_bucket": "optional-profit-8f546.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1052007985237:android:3b182418d91c2623",
+        "mobilesdk_app_id": "1:101754892205:android:a79188ae7d8b176864fb24",
         "android_client_info": {
-          "package_name": "com.unitedbustech.eld"
+          "package_name": "com.interest.calculator"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1052007985237-kcomgt00kg71r3im1j68bf8kcdmsfu0i.apps.googleusercontent.com",
+          "client_id": "101754892205-jc2olcbh7hquglii5mas83fsb2kuloj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.interest.calculator",
+            "certificate_hash": "328bf34f8fb46c3b02755a182d1937955a680470"
+          }
+        },
+        {
+          "client_id": "101754892205-brhstn0v7qli2j21hra6040ffv8ku3kb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAuTDUiDgjTi27rx2XPkfiX_iCPtZmwZDc"
+          "current_key": "AIzaSyAihlxVW1ABkomC6NRIFdV2ktyOR7KZBB4"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101754892205-brhstn0v7qli2j21hra6040ffv8ku3kb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

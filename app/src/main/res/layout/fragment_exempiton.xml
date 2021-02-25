@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_emoji_hi" />
 
-    <com.unitedbustech.eld.view.CenterTextView
+    <com.interest.calculator.view.CenterTextView
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -24,14 +24,14 @@
         android:textColor="@color/theme"
         android:textSize="18sp" />
 
-    <com.unitedbustech.eld.view.FontButton
+    <com.interest.calculator.view.FontButton
         android:id="@+id/exemption_miles_btn"
         style="@style/font_btn"
         android:layout_marginTop="45dp"
         android:text="@string/exemption_miles_btn"
         eld:fontType="bold" />
 
-    <com.unitedbustech.eld.view.FontButton
+    <com.interest.calculator.view.FontButton
         android:id="@+id/exemption_days_btn"
         style="@style/font_btn"
         android:layout_height="60dp"

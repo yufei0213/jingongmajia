@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/tab_menu_text"
             style="@style/tab_menu_text"
             android:drawablePadding="2dp"

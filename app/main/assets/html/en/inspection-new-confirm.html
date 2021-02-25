@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+    <style>
+        .signCon .con .box {
+            margin: 0 15px;
+            height: 0;
+            padding-bottom: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container df bov">
+            <div class="signCon">
+                <div class="list noac lastli">
+                    <ul>
+                        <li sid="satisfactoryBox" class="dn">
+                            <div sid="checkBtn" class="radio mgr10 on"></div>
+                            <div class="flex">Conditions Satisfactory</div>
+                        </li>
+                        <li sid="safeBox" class="dn">
+                            <div sid="checkBtn" class="radio mgr10 on"></div>
+                            <div class="flex">Vehicle is safe to drive</div>
+                        </li>
+                        <li sid="notSafeBox" class="dn">
+                            <div sid="checkBtn" class="radio mgr10"></div>
+                            <div class="flex">Vehicle is not safe to drive</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detailsInfo mgt5">Signature</div>
+                <div class="con">
+                    <div id="signCanvasBox" class="box">
+                        <canvas id="signCanvas"></canvas>
+                    </div>
+                    <div id="clearBtn" class="clear">Clear</div>
+                </div>
+                <div class="btnBar">
+                    <div id="saveBtn" class="button">Save</div><!-- disabled -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+<script src="../../js/utils/signature_pad.min.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/driving-interface.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dvir-interface.js"></script>
+<script src="../../js/interface/vehicle-interface.js"></script>
+
+<script src="../../js/pages/inspection-new-confirm.js"></script>
+</body>
+</html>

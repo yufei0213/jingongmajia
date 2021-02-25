@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container df bov">
+            <div id="today">
+                <div class="chartBox nobdb">
+                    <canvas id="grid"></canvas>
+                </div>
+                <div class="list lastli">
+                    <ul>
+                        <li>
+                            <div class="flex">
+                                <div class="mainTit" id="todayDate"></div>
+                                <div class="mInfoc"><em>On Duty</em><i class="itime"></i><em id="todayOneDuty"></em>
+                                </div>
+                            </div>
+                            <div class="igogrey"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cntit"> Recent <em>14</em> days</div>
+            <div class="list flex ov-ya">
+                <ul id="listContent">
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script id="template-list-item" type="text/html">
+    <li>
+        <div class="flex">
+            <div class="mainTit" sid="date"></div>
+            <div class="mInfoc"><em>On Duty</em><i class="itime"></i><em sid="onduty"></em></div>
+        </div>
+        <div class="logbtn dn"><!-- dn -->
+            <div class="button"><em>Edited</em></div>
+            <div class="button vio"><span>Violation</span></div>
+        </div>
+        <div class="igogrey"></div>
+    </li>
+</script>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+
+<script src="../../js/pages/ddl.js"></script>

@@ -24,7 +24,7 @@
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/bg_login_logo" />
 
-            <com.unitedbustech.eld.view.FontTextView
+            <com.interest.calculator.view.FontTextView
                 android:id="@+id/version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -62,7 +62,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <com.unitedbustech.eld.view.CarrierInputView
+                    <com.interest.calculator.view.CarrierInputView
                         android:id="@+id/carrier_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -72,7 +72,7 @@
                         android:layout_height="@dimen/font_line_h"
                         android:background="@color/login_input_stroke" />
 
-                    <com.unitedbustech.eld.view.DriverInputView
+                    <com.interest.calculator.view.DriverInputView
                         android:id="@+id/driver_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -82,14 +82,14 @@
                         android:layout_height="@dimen/font_line_h"
                         android:background="@color/login_input_stroke" />
 
-                    <com.unitedbustech.eld.view.PasswordInputView
+                    <com.interest.calculator.view.PasswordInputView
                         android:id="@+id/password_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
-                <com.unitedbustech.eld.view.FontButton
+                <com.interest.calculator.view.FontButton
                     android:id="@+id/login_btn"
                     style="@style/login_btn"
                     android:enabled="false"
@@ -110,7 +110,7 @@
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.unitedbustech.eld.view.FontTextView
+            <com.interest.calculator.view.FontTextView
                 android:id="@+id/login_trial_accout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

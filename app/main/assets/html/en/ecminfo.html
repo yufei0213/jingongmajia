@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="detailsInfo">The following data are obtained from the engine in real time.</div>
+            <div class="cntit"></div>
+            <div class="list noac">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">RPM(r/min)</div>
+                            <div class="text h2" id="rpm">loading</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Speed(mph)</div>
+                            <div class="text h2" id="speed">loading</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Total Odometer(mi)</div>
+                            <div class="text h2" id="totalOdometer">loading</div>
+                        </div>
+                        <i class="iedit mgb-20" id="editOdometer"></i>
+                        <div class="tips hint" style="display: none;" id="noValidOffOdometerTips">Will be <span
+                                id="noValidOdometer"></span>
+                            in next 24hour period.
+                        </div>
+                        <div class="tips hint" style="display: none;" id="validOffOdometerTips">The mileage from the ECM
+                            is <span
+                                    id="validOdometer"></span>. According to regulations, this will be displayed in the
+                            DOT.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">Total Eng Hour(h)</div>
+                            <div class="text h2" id="totalEngineHours">loading</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dashboard-interface.js"></script>
+
+<script src="../../js/pages/ecm-info.js"></script>

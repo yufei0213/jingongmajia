@@ -1,0 +1,15 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/ic_action_action_search"
+        app:showAsAction="collapseActionView|always"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item android:id="@+id/refresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_action_navigation_refresh"
+        app:showAsAction="always" />
+
+</menu>

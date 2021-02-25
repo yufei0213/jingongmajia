@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div id="statusBox" class="cgStatus">
+                <div id="offBox" class="item" code="1">
+                    <div class="box">
+                        <span>Off Duty</span><em>OFF</em>
+                    </div>
+                </div>
+                <div class="item" code="4">
+                    <div class="box">
+                        <span>On Duty<br>Not Driving</span><em>ODND</em>
+                    </div>
+                </div>
+                <div id="drivingBox" class="item" code="3">
+                    <div class="box">
+                        <span>Driving</span><em>D</em>
+                    </div>
+                </div>
+                <div class="item" code="2">
+                    <div class="box">
+                        <span>Sleeper<br>Berth</span><em>SB</em>
+                    </div>
+                </div>
+                <div id="personalUserBox" class="item dn" code="6">
+                    <div class="box">
+                        <span>Personal<br>Use</span><em>OFF</em>
+                    </div>
+                </div>
+                <div id="yardMoveBox" class="item dn" code="5">
+                    <div class="box">
+                        <span>Yard Move</span><em>ODND</em>
+                    </div>
+                </div>
+            </div>
+            <div class="list noac mgt15">
+                <ul>
+                    <li sid="locationBox">
+                        <div class="flex">
+                            <div class="subtitle">Location</div>
+                            <div class="input">
+                                <input id="locationInput" type="text" placeholder="Location">
+                            </div>
+                        </div>
+                        <div id="getLocationBtn" class="ilocation"></div>
+                        <div id="getLocationLoading" class="iloading dn"></div>
+                        <div sid="tipLabel" class="tips">The data is wrong</div>
+                    </li>
+                    <li sid="remarkBox">
+                        <div class="flex">
+                            <div class="subtitle">Remark</div>
+                            <div class="textarea">
+                                <textarea id="remarkInputView"></textarea>
+                            </div>
+                        </div>
+                        <ul id="remarkOptionView" class="auto-complete"></ul>
+                        <div sid="tipLabel" class="tips">The data is wrong</div>
+                    </li>
+                </ul>
+            </div>
+            <div id="saveBtn" class="button mglr15 mgt40 mgb15 disabled">Save</div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/textarea.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/user-interface.js"></script>
+<script src="../../js/interface/vehicle-interface.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/dvir-interface.js"></script>
+
+<script src="../../js/pages/change-status.js"></script>
+
+</html>

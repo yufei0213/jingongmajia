@@ -6,7 +6,7 @@
     android:background="@drawable/tab_menu_bg"
     android:orientation="horizontal">
 
-    <com.unitedbustech.eld.view.TopTabMenuItem
+    <com.interest.calculator.view.TopTabMenuItem
         android:id="@+id/dailylog_log"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:background="@color/split_line"/>
 
-    <com.unitedbustech.eld.view.TopTabMenuItem
+    <com.interest.calculator.view.TopTabMenuItem
         android:id="@+id/dailylog_profile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:layout_height="match_parent"
         android:background="@color/split_line"/>
 
-    <com.unitedbustech.eld.view.TopTabMenuItem
+    <com.interest.calculator.view.TopTabMenuItem
         android:id="@+id/dailylog_sign"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

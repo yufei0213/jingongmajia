@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>select co-driver</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="searchBar">
+            <div class="search">
+                <div class="isearch"></div>
+                <div class="input">
+                    <input id="searchBarView" type="text" placeholder="Search for driver">
+                </div>
+                <div id="searchBarClearBtn" class="iclose dn"></div>
+            </div>
+        </div>
+        <div id="container" class="container bg df bov">
+            <div id="noResultView" class="noresult dn" style="background-color: transparent;"></div>
+            <div class="list lastli">
+                <ul id="driverListView"></ul>
+            </div>
+            <div id="loadingView" class="partial_loading"><em>loading</em></div>
+        </div>
+    </div>
+</div>
+
+<script id="driver-item-template" type="text/html">
+    <li>
+        <div sid="driverName" class="flex"></div>
+    </li>
+</script>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/teamwork-interface.js"></script>
+
+<script src="../../js/pages/select-copilot.js"></script>
+
+</body>
+</html>

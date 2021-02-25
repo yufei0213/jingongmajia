@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/title_bar_bg"
+    android:orientation="horizontal">
+
+    <com.unitedbustech.calculator.view.FontTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/title_bar_text"
+        android:textSize="17sp"
+        eld:fontType="bold"
+        tools:text="Test" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.unitedbustech.calculator.view.FontTextView
+        android:id="@+id/rightText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/title_bar_text"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="Exit" />
+
+</RelativeLayout>

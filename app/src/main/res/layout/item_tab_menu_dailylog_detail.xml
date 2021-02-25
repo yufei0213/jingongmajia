@@ -10,7 +10,7 @@
         android:layout_height="48dp"
         android:background="@color/white">
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/daily_log_tab_menu_text"
             style="@style/top_tab_menu_text"
             android:layout_width="wrap_content"

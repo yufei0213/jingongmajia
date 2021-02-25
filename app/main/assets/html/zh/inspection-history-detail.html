@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div sid="resultLabel" class="detailsAlert red"></div>
+            <div class="list noac lastli">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">日期</div>
+                            <div sid="dateLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">类型</div>
+                            <div sid="typeLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">司机姓名</div>
+                            <div sid="driverNameLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">车辆</div>
+                            <div sid="vehicleNoLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">里程数 (英里)</div>
+                            <div sid="odometerLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">位置</div>
+                            <div sid="locationLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li><!-- ondft -->
+                        <div sid="defectBox" class="flex">
+                            <div class="subtitle">故障</div>
+                            <div sid="emptyLabel" class="input h3 dn">
+                                <input disabled="disabled" type="text" placeholder="空">
+                            </div>
+                            <!-- 模板 -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">备注</div>
+                            <div sid="remarkLabel" class="text"></div>
+                            <div sid="remarkEmptyLabel" class="input h3 dn">
+                                <input disabled="disabled" type="text" placeholder="空">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><!-- ondft -->
+                        <div class="flex">
+                            <div class="signBox">
+                                <img sid="signImg" src="" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- defect 模板 -->
+<div id="defect_template" class="dn">
+    <div class="defectsBox on">
+        <h2 sid="nameLabel"></h2>
+        <p sid="commentLabel"></p>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/pages/inspection-history-detail.js"></script>

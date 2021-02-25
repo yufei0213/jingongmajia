@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_emoji_hi" />
+
+        <com.unitedbustech.calculator.view.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/welcome_tip"
+            android:textColor="@color/theme"
+            android:textSize="18sp" />
+
+        <com.unitedbustech.calculator.view.FontTextView
+            android:id="@+id/driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/theme"
+            android:textSize="26sp"
+            eld:fontType="bold"
+            tools:text="TOM Green" />
+
+        <com.unitedbustech.calculator.view.FontTextView
+            android:id="@+id/carrier_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/theme"
+            android:textSize="20sp"
+            eld:fontType="bold"
+            tools:text="(TOM Green)" />
+
+        <com.unitedbustech.calculator.view.FontButton
+            android:id="@+id/confirm_btn"
+            style="@style/welcome_confirm_btn"
+            eld:fontType="bold" />
+
+        <com.unitedbustech.calculator.view.FontButton
+            android:id="@+id/reject_btn"
+            style="@style/welcome_reject_btn"
+            eld:fontType="bold" />
+
+    </LinearLayout>
+
+    <com.unitedbustech.calculator.view.FontTextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        tools:text="Version 1.1.0" />
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>select fuel</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="searchBar">
+            <div class="search">
+                <div class="isearch"></div>
+                <div class="input">
+                    <input id="searchBarView" type="text" placeholder="Search for State">
+                </div>
+                <div id="searchBarClearBtn" class="iclose dn"></div>
+            </div>
+        </div>
+        <div class="container df bov bg">
+            <div id="noSearchResultView" class="noresult dn" style="background-color: transparent;">No matching
+                result
+            </div>
+            <div class="list lastli">
+                <ul id="allStateList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="all-state-item-template" type="text/html">
+    <li>
+        <div sid="code" class="flex"></div>
+    </li>
+</script>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/click-proxy.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/ifta-interface.js"></script>
+
+<script src="../../js/pages/select-state.js"></script>
+
+</body>
+</html>

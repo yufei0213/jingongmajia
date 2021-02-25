@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div id="page" class="pages">
+    <div class="page">
+        <div class="tabBar">
+            <div sid="webServiceTab" class="tab on">Web Service</div>
+            <div sid="emailTab" class="tab">Email</div>
+            <div sid="pdfTab" class="tab">PDF</div>
+        </div>
+        <div class="container">
+            <div sid="pdfTips" class="detailsInfo bg dn">Send email with a copy of 8 days' driver HOS data in .pdf
+                format attached.
+            </div>
+            <div sid="webServiceBox" class="list noac mgt5">
+                <ul>
+                    <li sid="webServiceCommentBox" class="">
+                        <div class="flex">
+                            <div class="subtitle">Comment:</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="webServiceCommentInput" type="text" placeholder="Comment"
+                                           maxlength="60">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="igogrey dn"></div>
+                        <div sid="webServiceCommentTip" class="tips"></div>
+                    </li>
+                </ul>
+            </div>
+            <div sid="emailBox" class="list noac mgt5 dn">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">To:</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="emailInput" type="text" readonly="readonly"
+                                           placeholder="Email Address" maxlength="60"
+                                           value="fmcsaeldsub@dot.gov">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li sid="emailCommentBox">
+                        <div class="flex">
+                            <div class="subtitle">Comment:</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="emailCommentInput" type="text" placeholder="Comment"
+                                           maxlength="60">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="igogrey dn"></div>
+                        <div sid="emailCommentTip" class="tips"></div>
+                    </li>
+                </ul>
+            </div>
+            <div sid="pdfBox" class="list noac mgt5 dn">
+                <ul>
+                    <li sid="pdfInputBox">
+                        <div class="flex">
+                            <div class="subtitle">To:</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="pdfInput" type="text" placeholder="Email Address"
+                                           maxlength="60"/>
+                                </div>
+                            </div>
+                            <div sid="tipsLabel" class="tips"></div>
+                        </div>
+                    </li>
+                    <li sid="pdfCommentBox">
+                        <div class="flex">
+                            <div class="subtitle">Comment:</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="pdfCommentInput" type="text" placeholder="Comment"
+                                           maxlength="60">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="igogrey dn"></div>
+                        <div class="tips">Comment must be more than 4 characters.</div>
+                    </li>
+                </ul>
+            </div>
+            <div sid="saveBtn" class="button mglr15 mgt50">Send</div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dot-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+
+<script src="../../js/pages/dot-send-america.js"></script>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>房贷计算器</title>
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/lib/jquery-3.2.1.min.js"></script>
+  <script src="js/main_js.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="side-bar">
+    <ul>
+      <li class="nav-ai nav-active">
+        <p>等额本息</p>
+      </li>
+      <li class="nav-ap">
+        <p>等额本金</p>
+      </li>
+      <li class="nav-compare">
+        <p>等额本息等额本金对比</p>
+      </li>
+      <li class="nav-compare">
+        <a href="https://github.com/xiaogliu/calculator_for_house_loan" target="_blank">Find it on GitHub</a>
+      </li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="input">
+      <p>
+        <span>房屋总价：</span>
+        <input class="totalPrice" type="text" title="totalPrice" value="1260000">元
+      </p>
+      <p>
+        <span>贷款比例：</span>
+        <input class="proportion" type="text" title="proportion" value="7">成
+      </p>
+      <p>
+        <span>期限：</span>
+        <input class="period" type="text" title="period" value="30">年
+      </p>
+      <p>
+        <span>贷款利率：</span>
+        <input class="interest" type="text" title="interest" value="4.9">%
+      </p>
+      <button class="calculate">计算</button>
+    </div>
+
+    <!-- 等额本息 begin -->
+    <div class="average-interest">
+      <div class="output">
+        <p>
+          <span class="category">贷款总额：</span><span class="output-numb total-loan">0</span>元
+        </p>
+        <p>
+          <span class="category">支付利息：</span><span class="output-numb total-interest-ai">0</span>元
+        </p>
+        <p>
+          <span class="category">还款总额：</span><span class="output-numb total-repay-ai">0</span>元
+        </p>
+        <p>
+          <span class="category">月供：</span><span class="output-numb repay-per-mouth-ai">0</span>元
+        </p>
+        <button class="detail-btn">展示明细</button>
+        <button class="hide-detail-btn">隐藏明细</button>
+      </div>
+      <div class="detail">
+        <div class="table-container">
+          <table>
+            <thead class="detail-thead">
+            <tr>
+              <th>月份</th>
+              <th>月供本息</th>
+              <th>月供本金</th>
+              <th>月供利息</th>
+              <th>已还本息</th>
+              <th>待还本金</th>
+            </tr>
+            </thead>
+            <tbody class="detail-tbody detail-tbody-ai"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 等额本息 end -->
+
+    <!-- 等额本金 begin -->
+    <div class="average-principal">
+      <div class="output">
+        <p>
+          <span class="category">贷款总额：</span><span class="output-numb total-loan">0</span>元
+        </p>
+        <p>
+          <span class="category">支付利息：</span><span class="output-numb total-interest-ap">0</span>元
+        </p>
+        <p>
+          <span class="category">还款总额：</span><span class="output-numb total-repay-ap">0</span>元
+        </p>
+        <p>
+          <span class="category">月供：</span>第一个月还款<span class="output-numb repay-per-mouth-ap">0</span>元，后逐月递减<span class="output-numb decrease-per-mouth-ap">0</span>元
+        </p>
+        <button class="detail-btn">展示明细</button>
+        <button class="hide-detail-btn">隐藏明细</button>
+      </div>
+      <div class="detail">
+        <div class="table-container">
+          <table>
+            <thead class="detail-thead">
+            <tr>
+              <th>月份</th>
+              <th>月供本息</th>
+              <th>月供本金</th>
+              <th>月供利息</th>
+              <th>已还本息</th>
+              <th>待还本金</th>
+            </tr>
+            </thead>
+            <tbody class="detail-tbody detail-tbody-ap"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 等额本金 end -->
+
+    <!-- 对比 begin -->
+    <div class="compare">
+      <div class="output">
+        <div class="table-container">
+          <table>
+            <thead class="detail-thead">
+            <tr>
+              <th>月份</th>
+              <th>已还本息<br>等额本息/等额本金</th>
+              <th>待还本金<br>等额本息/等额本金</th>
+              <th>若提前还款实际支付总额<br>等额本息/等额本金</th>
+            </tr>
+            </thead>
+            <tbody class="detail-tbody detail-tbody-comp"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 对比 end -->
+
+  </div>
+  <div class="clear-fix"></div>
+</div>
+</body>
+
+</html>

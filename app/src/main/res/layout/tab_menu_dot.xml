@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.unitedbustech.eld.view.TabMenuItem
+        <com.interest.calculator.view.TabMenuItem
             android:id="@+id/tab_review"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             eld:itemText="@string/tab_menu_dot_item_review"
             eld:itemTextColors="@drawable/tab_menu_text" />
 
-        <com.unitedbustech.eld.view.TabMenuItem
+        <com.interest.calculator.view.TabMenuItem
             android:id="@+id/tab_send"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container df bov">
+            <div class="chartBox">
+                <canvas id="grid"></canvas>
+                <div class="alertBox noEllipsis dn" id="alertBox">
+                    <div class="iprompt"></div>
+                    <div class="text" id="limitAlert"></div>
+                    <div class="igo dn"></div>
+                </div>
+            </div>
+            <div class="alertBox dn" id="alertRequestEdit">
+                <div class="iprompt"></div>
+                <div class="text">该日志有<span id="alertNumber"></span>个编辑请求，请查看。</div>
+                <div class="igo dn"></div>
+            </div>
+            <div class="bgh20"></div>
+            <div class="listit"><!-- on -->
+                <div class="flex">事件</div>
+                <div class="button" id="addRemark">添加备注</div>
+                <div class="button" id="addStatus">插入状态</div>
+            </div>
+            <div class="list flex ov-ya loglist">
+                <ul id="listContent"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script id="template-list-item" type="text/html">
+    <li>
+        <div class="flex">
+            <div class="mainTit" sid="name"></div>
+            <div class="mInfoc"><em sid="time"></em></div>
+        </div>
+        <div class="iedit dn"></div>
+        <div class="logedit">
+            <div class="btn dn" sid="editBtn">编辑</div>
+            <div class="btn detail" sid="detailBtn">详情</div>
+        </div>
+    </li>
+</script>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/alerts-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+
+<script src="../../js/pages/ddl-detail.js"></script>

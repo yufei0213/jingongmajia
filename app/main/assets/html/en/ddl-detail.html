@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container df bov">
+            <div class="chartBox">
+                <canvas id="grid"></canvas>
+                <div class="alertBox noEllipsis dn" id="alertBox">
+                    <div class="iprompt"></div>
+                    <div class="text" id="limitAlert"></div>
+                    <div class="igo dn"></div>
+                </div>
+            </div>
+            <div class="alertBox dn" id="alertRequestEdit">
+                <div class="iprompt"></div>
+                <div class="text">The log has <span id="alertNumber">4</span> request edit, Please check.</div>
+                <div class="igo dn"></div>
+            </div>
+            <div class="bgh20"></div>
+            <div class="listit"><!-- on -->
+                <div class="flex">Events</div>
+                <div class="button" id="addRemark">Add Remark</div>
+                <div class="button" id="addStatus">Insert status</div>
+            </div>
+            <div class="list flex ov-ya loglist">
+                <ul id="listContent">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script id="template-list-item" type="text/html">
+    <li>
+        <div class="flex">
+            <div class="mainTit" sid="name">Login</div>
+            <div class="mInfoc"><em sid="time"></em></div>
+        </div>
+        <div class="iedit dn"></div>
+        <div class="logedit">
+            <div class="btn dn" sid="editBtn">Edit</div>
+            <div class="btn detail" sid="detailBtn">Detail</div>
+        </div>
+    </li>
+</script>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/time-util.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/alerts-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+
+<script src="../../js/pages/ddl-detail.js"></script>

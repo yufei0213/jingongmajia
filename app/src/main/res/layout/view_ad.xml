@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:scaleType="fitCenter" />
 
-    <com.unitedbustech.eld.view.FontButton
+    <com.interest.calculator.view.FontButton
         android:id="@+id/negative_btn"
         style="@style/dialog_horizontal_negative_btn"
         android:layout_alignParentTop="true"

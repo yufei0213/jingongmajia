@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.unitedbustech.eld.view.TitleBar
+    <com.interest.calculator.view.TitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,12 +35,12 @@
                 android:layout_marginRight="15dp"
                 android:orientation="vertical">
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_driver_name"
                     eld:fontType="medium" />
 
-                <com.unitedbustech.eld.view.FontEditView
+                <com.interest.calculator.view.FontEditView
                     android:id="@+id/driver_name_input"
                     style="@style/ifta_update_input"
                     android:focusable="false"
@@ -49,7 +49,7 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_vehicle_id"
                     eld:fontType="medium" />
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.unitedbustech.eld.view.FontEditView
+                    <com.interest.calculator.view.FontEditView
                         android:id="@+id/vehicle_id_input"
                         style="@style/ifta_update_input"
                         android:clickable="true"
@@ -77,7 +77,7 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     android:id="@+id/vehicle_warning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -86,12 +86,12 @@
                     android:visibility="gone"
                     tools:visibility="visible" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_purchase_date"
                     eld:fontType="medium" />
 
-                <com.unitedbustech.eld.view.FontEditView
+                <com.interest.calculator.view.FontEditView
                     android:id="@+id/purchase_date_input"
                     style="@style/ifta_update_input"
                     android:clickable="true"
@@ -101,7 +101,7 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_state"
                     eld:fontType="medium" />
@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.unitedbustech.eld.view.FontEditView
+                    <com.interest.calculator.view.FontEditView
                         android:id="@+id/state_input"
                         style="@style/ifta_update_input"
                         android:layout_gravity="center"
@@ -132,7 +132,7 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     android:id="@+id/state_warning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     android:visibility="gone"
                     tools:visibility="visible" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_fuel_type"
                     eld:fontType="medium" />
@@ -150,7 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.unitedbustech.eld.view.FontEditView
+                    <com.interest.calculator.view.FontEditView
                         android:id="@+id/fuel_type_input"
                         style="@style/ifta_update_input"
                         android:layout_gravity="center"
@@ -171,7 +171,7 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     android:id="@+id/fuel_warning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -191,12 +191,12 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <com.unitedbustech.eld.view.FontTextView
+                        <com.interest.calculator.view.FontTextView
                             style="@style/ifta_update_input_title"
                             android:text="@string/ifta_update_unit_price"
                             eld:fontType="medium" />
 
-                        <com.unitedbustech.eld.view.FontEditView
+                        <com.interest.calculator.view.FontEditView
                             android:id="@+id/unit_price_input"
                             style="@style/ifta_update_input"
                             android:hint="@string/ifta_update_unit_price_hint"
@@ -205,7 +205,7 @@
                             android:nextFocusForward="@id/purchased_gallonst_input"
                             eld:fontType="medium" />
 
-                        <com.unitedbustech.eld.view.FontTextView
+                        <com.interest.calculator.view.FontTextView
                             android:id="@+id/unit_warning"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -222,12 +222,12 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <com.unitedbustech.eld.view.FontTextView
+                        <com.interest.calculator.view.FontTextView
                             style="@style/ifta_update_input_title"
                             android:text="@string/ifta_update_purchased_gallonst"
                             eld:fontType="medium" />
 
-                        <com.unitedbustech.eld.view.FontEditView
+                        <com.interest.calculator.view.FontEditView
                             android:id="@+id/purchased_gallonst_input"
                             style="@style/ifta_update_input"
                             android:hint="@string/ifta_update_purchased_gallonst_hint"
@@ -236,7 +236,7 @@
                             android:nextFocusForward="@id/total_price_input"
                             eld:fontType="medium" />
 
-                        <com.unitedbustech.eld.view.FontTextView
+                        <com.interest.calculator.view.FontTextView
                             android:id="@+id/gallons_warning"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -251,19 +251,19 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_total_price"
                     eld:fontType="medium" />
 
-                <com.unitedbustech.eld.view.FontEditView
+                <com.interest.calculator.view.FontEditView
                     android:id="@+id/total_price_input"
                     style="@style/ifta_update_input"
                     android:hint="@string/ifta_update_total_price_hint"
                     android:inputType="number|numberDecimal"
                     eld:fontType="medium" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     android:id="@+id/total_price_warning"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -274,12 +274,12 @@
 
                 <View style="@style/ifta_update_line" />
 
-                <com.unitedbustech.eld.view.FontTextView
+                <com.interest.calculator.view.FontTextView
                     style="@style/ifta_update_input_title"
                     android:text="@string/ifta_update_receipt"
                     eld:fontType="medium" />
 
-                <com.unitedbustech.eld.view.ThumbnailContainerView
+                <com.interest.calculator.view.ThumbnailContainerView
                     android:id="@+id/add_receipt"
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
@@ -290,7 +290,7 @@
 
             <View style="@style/ifta_update_line" />
 
-            <com.unitedbustech.eld.view.FontButton
+            <com.interest.calculator.view.FontButton
                 android:id="@+id/save_btn"
                 style="@style/font_btn"
                 android:layout_width="match_parent"

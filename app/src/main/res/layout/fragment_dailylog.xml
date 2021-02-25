@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.unitedbustech.eld.view.TabItemTitleBar
+    <com.interest.calculator.view.TabItemTitleBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         eld:title="@string/title_dailylog" />
 
-    <com.unitedbustech.eld.view.UIWebView
+    <com.interest.calculator.view.UIWebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

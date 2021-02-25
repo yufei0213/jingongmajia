@@ -26,7 +26,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="10dp">
 
-            <com.unitedbustech.eld.view.FontTextView
+            <com.interest.calculator.view.FontTextView
                 android:id="@+id/tip_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:orientation="vertical">
 
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/location_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.unitedbustech.eld.view.FontEditView
+            <com.interest.calculator.view.FontEditView
                 android:id="@+id/location_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -88,7 +88,7 @@
 
         </RelativeLayout>
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/location_warning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
             android:text="@string/location_min_wrong"
             android:visibility="gone" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -109,7 +109,7 @@
             android:layout_height="match_parent">
 
 
-            <com.unitedbustech.eld.view.FontEditView
+            <com.interest.calculator.view.FontEditView
                 android:id="@+id/remark_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -126,7 +126,7 @@
 
         </RelativeLayout>
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/remark_warning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
             android:orientation="horizontal"
             android:visibility="visible">
 
-            <com.unitedbustech.eld.view.FontButton
+            <com.interest.calculator.view.FontButton
                 android:id="@+id/negative_btn"
                 style="@style/dialog_horizontal_negative_btn"
                 android:text="@string/cancel"
@@ -159,7 +159,7 @@
                 android:layout_width="20dp"
                 android:layout_height="match_parent" />
 
-            <com.unitedbustech.eld.view.FontButton
+            <com.interest.calculator.view.FontButton
                 android:id="@+id/neutral_btn"
                 style="@style/dialog_horizontal_neutral_btn"
                 android:text="@string/save"
@@ -167,7 +167,7 @@
 
         </LinearLayout>
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/positive_btn"
             style="@style/dialog_common_positive_btn"
             android:layout_gravity="bottom"

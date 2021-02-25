@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="list noac">
+                <ul sid="defectBox"></ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div sid="nextBtn" class="button">确认</div>
+        </div>
+    </div>
+</div>
+
+<div id="defect_template" class="dn">
+    <li class="">
+        <div sid="checkBtn" class="icheckbox"></div>
+        <div class="adddftBox">
+            <div sid="titleLabel" class="title"></div>
+            <div sid="remarkBox" class="dn">
+                <div class="subtitle">备注</div>
+                <div class="textarea">
+                    <textarea sid="remarkInput" placeholder="备注" maxlength="60"></textarea>
+                </div>
+            </div>
+        </div>
+        <div sid="tipLabel" style="bottom: 0px;white-space: normal;" class="tips"></div>
+        <ul sid="tipBox" class="auto-complete bottom"></ul>
+    </li>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/textarea.js"></script>
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+
+<script src="../../js/pages/inspection-new-add-defects.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-en.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="list noac mgt5">
+                <ul>
+                    <li id="startDateBox">
+                        <div class="flex">
+                            <div class="subtitle">Start Date</div>
+                            <div sid="startDateInput" class="text pld">Select Start Date</div>
+                        </div>
+                        <div sid="startDateTipLabel" class="tips">Start Date can't be empty.</div>
+                    </li>
+                    <li id="endDateBox">
+                        <div class="flex">
+                            <div class="subtitle">End Date</div>
+                            <div sid="endDateInput" class="text pld">Select End Date</div>
+                        </div>
+                        <div sid="endDateTipLabel" class="tips">End Date can't be empty.</div>
+                    </li>
+                    <li id="emailBox">
+                        <div class="flex">
+                            <div class="subtitle">To</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="emailInput" type="text" placeholder="Enter Your Email" maxlength="60"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div sid="emailTipLabel" class="tips"></div>
+                    </li>
+                    <li id="commentBox" class="noac">
+                        <div class="flex">
+                            <div class="subtitle">Comment</div>
+                            <div class="text">
+                                <div class="input">
+                                    <input sid="commentInput" type="text" placeholder="Comment" maxlength="60"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div sid="commentTipLabel" class="tips"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div id="saveBtn" class="button">Send</div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-en.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dot-interface.js"></script>
+
+<script src="../../js/pages/send-pdf.js"></script>
+
+</body>
+</html>

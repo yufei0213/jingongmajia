@@ -10,7 +10,7 @@
         android:layout_height="44dp"
         android:background="@drawable/bg_dialog_time_picker_title">
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -23,7 +23,7 @@
             android:textSize="16sp"
             eld:fontType="medium" />
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/done_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -48,7 +48,7 @@
             android:layout_gravity="center"
             android:orientation="horizontal">
 
-            <com.unitedbustech.eld.view.UINumberPicker
+            <com.interest.calculator.view.UINumberPicker
                 android:id="@+id/month_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
@@ -57,7 +57,7 @@
                 android:layout_width="45dp"
                 android:layout_height="match_parent" />
 
-            <com.unitedbustech.eld.view.UINumberPicker
+            <com.interest.calculator.view.UINumberPicker
                 android:id="@+id/day_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
@@ -66,7 +66,7 @@
                 android:layout_width="45dp"
                 android:layout_height="match_parent" />
 
-            <com.unitedbustech.eld.view.UINumberPicker
+            <com.interest.calculator.view.UINumberPicker
                 android:id="@+id/year_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />

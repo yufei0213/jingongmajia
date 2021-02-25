@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.unitedbustech.eld.view.TabMenuItem
+        <com.interest.calculator.view.TabMenuItem
             android:id="@+id/dashboard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             eld:itemText="@string/tab_menu_item_dashboard"
             eld:itemTextColors="@drawable/tab_menu_text" />
 
-        <com.unitedbustech.eld.view.TabMenuItem
+        <com.interest.calculator.view.TabMenuItem
             android:id="@+id/dailylog"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             eld:itemText="@string/tab_menu_item_dailylog"
             eld:itemTextColors="@drawable/tab_menu_text" />
 
-        <com.unitedbustech.eld.view.TabMenuItem
+        <com.interest.calculator.view.TabMenuItem
             android:id="@+id/dvir"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             eld:itemText="@string/tab_menu_item_dvir"
             eld:itemTextColors="@drawable/tab_menu_text" />
 
-        <com.unitedbustech.eld.view.TabMenuItem
+        <com.interest.calculator.view.TabMenuItem
             android:id="@+id/dot"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             eld:itemText="@string/tab_menu_item_dot"
             eld:itemTextColors="@drawable/tab_menu_text" />
 
-        <com.unitedbustech.eld.view.RedDotTabMenuItem
+        <com.interest.calculator.view.RedDotTabMenuItem
             android:id="@+id/more"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

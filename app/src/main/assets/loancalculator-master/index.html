@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app='LoanCalculator'>
+
+<head>
+<!--	<title>房贷计算器</title>-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src='js/lib/angular/angular.js'></script>
+	<script type="text/javascript" src='js/controllers.js'></script>
+</head>
+
+<body ng-controller='LoanCalculatorController'>
+		<h3>Mortgage Calculator</h3>
+		<hr>
+	    <form>
+			<!-- <div class='form-group'>
+				<label for="daikuanbenjin">贷款本金：</label>
+				<input type="text" class="form-control" id="daikuanbenjin" placeholder="请输入贷款本金" ng-model='loan.corpus'>
+			</div> -->
+			<div class='form-group'>
+				<label class="col-sm-2 control-label">Loan principal:</label>
+				<input type="text" placeholder="Please input the loan principal" ng-model='loan.corpus'>
+			</div>
+			<div class='form-group'>
+				<label class="col-sm-2 control-label">Annual interest rate:</label>
+				<input type="text" placeholder="Please enter the annual interest rate" ng-model='loan.mrate'>
+			</div>
+			<div class='form-group'>
+				<label class="col-sm-2 control-label">Loan period (year):</label>
+				<input type="text" placeholder="Please enter the loan period" ng-model='loan.period'>
+			</div>
+		</form>
+
+		<button class="btn btn-success" ng-click="loan.getDetailPerMsByBenxi()">
+			<span class="glyphicon glyphicon-user"></span>Equal principal and interest
+		</button>
+		<button class="btn btn-success" ng-click="loan.getDetailPerMsByBenjin()">
+			<span class="glyphicon glyphicon-user"></span>Equal principal
+		</button>
+
+		<br><hr>
+		<p>Total repayment: {{loan.total | number : 2}}</p>
+		<p>Total interest: {{loan.rateTotal | number : 2}}</p>
+
+		<hr>
+		<h3>Repayment details of each installment:</h3>
+		<table class="table table-striped">
+			<thead>
+				<th>Number of periods</th>
+				<th>Current repayment</th>
+				<th>Current principal</th>
+				<th>Current interest</th>
+				<th>Total principal paid</th>
+				<th>Total interest paid</th>
+				<th>Accumulated repayment</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat='detailPerM in loan.detailPerMs'>
+					<td>{{$index + 1}}</td>
+					<td>{{detailPerM.corpusThisM | number : 2}}</td>
+					<td>{{detailPerM.benjin | number : 2}}</td>
+					<td>{{detailPerM.lixi | number : 2}}</td>
+					<td>{{detailPerM.benjinTotal | number : 2}}</td>
+					<td>{{detailPerM.lixiTotal | number : 2}}</td>
+					<td>{{detailPerM.leiji | number : 2}}</td>
+				</tr>
+			</tbody>
+		</table>
+</body>
+
+</html>

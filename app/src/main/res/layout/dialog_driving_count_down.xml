@@ -17,7 +17,7 @@
             android:scaleType="center"
             android:src="@drawable/ic_emoji_msg" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:paddingRight="20dp"
         android:paddingTop="40dp">
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/negative_btn"
             style="@style/dialog_horizontal_negative_btn"
             android:text="@string/no"
@@ -48,7 +48,7 @@
             android:layout_width="20dp"
             android:layout_height="match_parent" />
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/neutral_btn"
             style="@style/dialog_horizontal_neutral_btn"
             eld:fontType="bold"

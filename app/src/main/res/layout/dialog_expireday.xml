@@ -5,7 +5,7 @@
     style="@style/dialog_common_container"
     android:orientation="vertical">
 
-    <com.unitedbustech.eld.view.FontTextView
+    <com.interest.calculator.view.FontTextView
         android:id="@+id/title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         android:text="@string/expire_dialog_title"
         android:textSize="22sp"/>
 
-    <com.unitedbustech.eld.view.FontTextView
+    <com.interest.calculator.view.FontTextView
         android:layout_marginTop="5dp"
         android:id="@+id/content_text_days_view"
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         eld:fontType="bold"
         android:textSize="34sp"/>
 
-    <com.unitedbustech.eld.view.FontTextView
+    <com.interest.calculator.view.FontTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -33,7 +33,7 @@
         android:text="@string/expire_dialog_days"
         android:textSize="18sp"/>
 
-    <com.unitedbustech.eld.view.FontTextView
+    <com.interest.calculator.view.FontTextView
         android:id="@+id/content_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:textSize="16sp"
         android:text="@string/expire_dialog_content_text" />
 
-    <com.unitedbustech.eld.view.FontTextView
+    <com.interest.calculator.view.FontTextView
         android:id="@+id/content_text_view_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             android:visibility="visible">
 
 
-            <com.unitedbustech.eld.view.FontButton
+            <com.interest.calculator.view.FontButton
                 android:id="@+id/neutral_btn"
                 style="@style/dialog_horizontal_neutral_btn"
                 eld:fontType="bold"
@@ -79,7 +79,7 @@
 
         </LinearLayout>
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/positive_btn"
             style="@style/dialog_common_positive_btn"
             android:layout_gravity="bottom"

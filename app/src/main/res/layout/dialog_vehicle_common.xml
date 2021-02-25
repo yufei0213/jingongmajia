@@ -27,7 +27,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.unitedbustech.eld.view.CenterTextView
+            <com.interest.calculator.view.CenterTextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 eld:fontType="bold"
                 tools:text="Connect Failed" />
 
-            <com.unitedbustech.eld.view.CenterTextView
+            <com.interest.calculator.view.CenterTextView
                 android:id="@+id/text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             android:orientation="horizontal"
             android:visibility="visible">
 
-            <com.unitedbustech.eld.view.FontButton
+            <com.interest.calculator.view.FontButton
                 android:id="@+id/negative_btn"
                 style="@style/dialog_horizontal_negative_btn"
                 eld:fontType="bold"
@@ -72,7 +72,7 @@
                 android:layout_width="20dp"
                 android:layout_height="match_parent" />
 
-            <com.unitedbustech.eld.view.FontButton
+            <com.interest.calculator.view.FontButton
                 android:id="@+id/neutral_btn"
                 style="@style/dialog_horizontal_neutral_btn"
                 eld:fontType="bold"
@@ -80,7 +80,7 @@
 
         </LinearLayout>
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/positive_btn"
             style="@style/dialog_vehicle_positive_btn"
             android:layout_gravity="bottom"

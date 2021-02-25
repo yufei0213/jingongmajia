@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tab_menu_height"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white">
+
+        <com.unitedbustech.calculator.view.FontTextView
+            android:id="@+id/daily_log_tab_menu_text"
+            style="@style/top_tab_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            tools:text="LOG" />
+
+        <TextView
+            android:id="@+id/daily_log_tab_menu_hint"
+            style="@style/tab_menu_hint"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/daily_log_tab_menu_text"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/split_line"/>
+
+    <View
+        android:id="@+id/daily_log_tab_menu_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:background="@color/theme"/>
+
+</LinearLayout>

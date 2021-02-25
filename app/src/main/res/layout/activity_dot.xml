@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.unitedbustech.eld.view.TabItemTitleBar
+        <com.interest.calculator.view.TabItemTitleBar
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
 
     </LinearLayout>
 
-    <com.unitedbustech.eld.view.TabMenuDot
+    <com.interest.calculator.view.TabMenuDot
         android:id="@+id/tab_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

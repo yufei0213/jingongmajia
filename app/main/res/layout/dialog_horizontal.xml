@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eld="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialog_common_container"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/icon_img"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scaleType="center"-->
+<!--            tools:src="@drawable/ic_emoji_msg" />-->
+
+        <com.unitedbustech.calculator.view.FontTextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="@string/dialog_driving_count_down_tip" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="35dp">
+
+        <LinearLayout
+            android:id="@+id/btn_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.unitedbustech.calculator.view.FontButton
+                android:id="@+id/negative_btn"
+                style="@style/dialog_horizontal_negative_btn"
+                eld:fontType="bold"
+                tools:text="Cancel" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <com.unitedbustech.calculator.view.FontButton
+                android:id="@+id/neutral_btn"
+                style="@style/dialog_horizontal_neutral_btn"
+                eld:fontType="bold"
+                tools:text="Confirm" />
+
+        </LinearLayout>
+
+        <com.unitedbustech.calculator.view.FontButton
+            android:id="@+id/positive_btn"
+            style="@style/dialog_common_positive_btn"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            eld:fontType="bold"
+            tools:text="Setting" />
+
+    </LinearLayout>
+
+</LinearLayout>

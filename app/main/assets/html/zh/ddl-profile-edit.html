@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="list noac">
+                <ul>
+                    <li id="vehicleIdLi">
+                        <div class="flex">
+                            <div class="subtitle">车号</div>
+                            <div class="input"><input type="text" placeholder="车号" id="vehicleId"></div>
+                        </div>
+                        <div id="vehicleIdLiText" class="tips"></div>
+                    </li>
+                    <li id="vinLi">
+                        <div class="flex">
+                            <div class="subtitle">VIN</div>
+                            <div class="input"><input type="text" placeholder="VIN" id="vin"></div>
+                        </div>
+                        <div id="vinLiText" class="tips"></div>
+                    </li>
+                    <li id="coDriverNameLi">
+                        <div class="flex">
+                            <div class="subtitle">副驾驶名字</div>
+                            <div class="input"><input type="text" placeholder="副驾驶名字" id="coDriverName"></div>
+                        </div>
+                        <div id="coDriverNameLiText" class="tips"></div>
+                    </li>
+                    <li id="coDriverIdLi">
+                        <div class="flex">
+                            <div class="subtitle">副驾驶ID</div>
+                            <div class="input"><input type="text" placeholder="副驾驶ID" id="coDriverId"></div>
+                        </div>
+                        <div id="coDriverIdLiText" class="tips"></div>
+                    </li>
+                    <li id="shippingIdLi">
+                        <div class="flex">
+                            <div class="subtitle">运输编号</div>
+                            <div class="input"><input type="text" placeholder="Shipping ID" id="shippingId"></div>
+                        </div>
+                        <div id="shippingIdLiText" class="tips"></div>
+                    </li>
+                    <li id="odometerLi">
+                        <div class="flex">
+                            <div class="subtitle">距离（英里）</div>
+                            <div class="input">
+                                <input id="travelDistance" placeholder="距离（英里）">
+                            </div>
+                        </div>
+                        <div id="odometerLiText" class="tips"></div>
+                    </li>
+                    <li id="engineHourLi">
+                        <div class="flex">
+                            <div class="subtitle">引擎持续时间（小时）</div>
+                            <div class="input"><input placeholder="引擎持续时间（小时）" id="duration"></div>
+                        </div>
+                        <div id="engineHourLiText" class="tips"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div class="button" id="saveBtn"><em>保存</em></div><!-- btnloading 加载样式--><!-- disabled 不可用状态 -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+
+<script src="../../js/pages/ddl-profile-edit.js"></script>

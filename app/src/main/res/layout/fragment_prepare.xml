@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_emoji_awkward" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -29,7 +29,7 @@
             android:textSize="26sp"
             eld:fontType="bold" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -38,7 +38,7 @@
             android:textColor="@color/theme"
             android:textSize="20sp" />
 
-        <com.unitedbustech.eld.view.FontButton
+        <com.interest.calculator.view.FontButton
             android:id="@+id/try_btn"
             style="@style/prepare_try"
             android:layout_marginTop="80dp"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             tools:src="@drawable/bg_login_logo" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:textColor="@color/theme"
             android:textSize="18sp" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/driver_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             eld:fontType="bold"
             tools:text="TOM Green" />
 
-        <com.unitedbustech.eld.view.FontTextView
+        <com.interest.calculator.view.FontTextView
             android:id="@+id/carrier_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
 
         <ScrollView style="@style/prepare_text_container">
 
-            <com.unitedbustech.eld.view.FontTextView style="@style/prepare_text" />
+            <com.interest.calculator.view.FontTextView style="@style/prepare_text" />
 
         </ScrollView>
 

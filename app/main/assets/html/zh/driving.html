@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div class="pages">
+    <div id="page" class="page">
+        <div class="navbar">
+            <div id="vehicleStateView" class="flex inmotion">IN MOTION</div>
+        </div>
+        <div class="driveCon">
+            <div id="cycleAndBtnBox" class="DRemaining">
+                <svg width="220px" height="220px" class="bigcircle" viewBox="0 0 220 220" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" fill="none">
+                        <circle class="bgstroke" transform-origin="50% 50%" cx="50%" cy="50%" r="87" stroke="#2A435D"
+                                stroke-width="6"></circle>
+                        <circle id="cycleView" class="remain" cx="50%" cy="50%" r="87" stroke-width="6"></circle>
+                    </g>
+                    <text x="50%" y="50%" id="personalUseView" class="text-title dn">Personal Use</text>
+                    <text x="50%" y="50%" id="yardMoveView" class="text-title yardmove dn">Yard Move</text>
+                    <text x="50%" y="32%" id="remainTipView" class="time-t1">剩余开车时间</text>
+                    <text x="50%" y="48%" id="remainView" class="remain-v">--:--</text>
+                    <text x="50%" y="67%" id="pastTipView" class="time-t2">已开车时间</text>
+                    <text x="50%" y="76%" id="pastView" class="past-v">--:--</text>
+                </svg>
+            </div>
+            <div class="driveOpt">
+                <div id="adverseBtn" class="roundbtn adverse">特殊<br>情况</div>
+                <div id="breakBtn" class="roundbtn startbreak">开始<br>休息</div>
+            </div>
+            <div class="con">
+                <div class="driver_vehicle">
+                    <div class="driver">
+                        <div id="teamWorkIcon" class="icodriver dn"></div>
+                        <span id="driverName"></span>
+                    </div>
+                    <div id="vehicleCodeView" class="vehicle"></div>
+                </div>
+                <div class="opt">
+                    <div id="movingBtnGroup" class="status">
+                        <i class="ilocked mgr13"></i>
+                        <em id="driverStatusMView">DRIVING</em>
+                    </div>
+                    <div id="stationaryBtnGroup" class="dn">
+                        <div id="driverStatusSView" class="button"><em>DRIVING</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/utils/jquery.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/click-proxy.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/dailylog-interface.js"></script>
+<script src="../../js/interface/vehicle-interface.js"></script>
+<script src="../../js/interface/driving-interface.js"></script>
+<script src="../../js/interface/dashboard-interface.js"></script>
+<script src="../../js/interface/user-interface.js"></script>
+
+<script src="../../js/pages/driving.js"></script>
+
+</body>
+</html>

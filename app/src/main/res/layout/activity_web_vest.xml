@@ -8,20 +8,20 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.unitedbustech.eld.view.TitleBar
+        <com.interest.calculator.view.TitleBar
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone" />
 
-        <com.unitedbustech.eld.view.VestUIWebView
+        <com.interest.calculator.view.VestUIWebView
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </LinearLayout>
 
-    <com.unitedbustech.eld.view.AdView
+    <com.interest.calculator.view.AdView
         android:id="@+id/ad_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

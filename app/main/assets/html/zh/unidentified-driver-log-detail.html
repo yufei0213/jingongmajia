@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>SHIELD</title>
+    <link rel="stylesheet" href="../../css/style-zh.css">
+</head>
+<body>
+<div id="page" class="pages">
+    <div class="page">
+        <div class="container">
+            <div class="chartBox">
+                <canvas id="grid"></canvas>
+            </div>
+            <div class="bgh20"></div>
+            <div class="list noac mgb20">
+                <ul>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">车号</div>
+                            <div sid="vehicleNoLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">状态修改为</div>
+                            <div sid="stateLabel" class="text">Driving</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">开始时间</div>
+                            <div sid="startTimeLabel" class="text"></div>
+                        </div>
+                        <div class="flex">
+                            <div class="subtitle">结束时间</div>
+                            <div sid="endTimeLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">引擎持续时间</div>
+                            <div sid="intervalLabel" class="text"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">开始结束里程 (英里)</div>
+                            <div sid="odometerLabel" class="text"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">开始结束引擎时间 (小时)</div>
+                            <div sid="engineHourLabel" class="text"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex">
+                            <div class="subtitle">开始位置</div>
+                            <div sid="startLocationLabel" class="text"></div>
+                        </div>
+                        <div class="flex">
+                            <div class="subtitle">结束位置</div>
+                            <div sid="endLocationLabel" class="text"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnBar">
+            <div sid="rejectBtn" class="button"><em>拒绝</em></div><!-- btnloading 加载样式--><!-- disabled 不可用状态 -->
+            <div sid="acceptBtn" class="button"><em>接受</em></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../js/utils/jquery.js"></script>
+<script src="../../js/utils/signature_pad.min.js"></script>
+
+<script src="../../js/values/string-zh.js"></script>
+
+<script src="../../js/utils/expands.js"></script>
+<script src="../../js/utils/time-util.js"></script>
+
+<script src="../../js/interface/constants.js"></script>
+<script src="../../js/interface/native.js"></script>
+<script src="../../js/interface/sdk-interface.js"></script>
+<script src="../../js/interface/alerts-interface.js"></script>
+
+<script src="../../js/widgets/driver-grid.js"></script>
+
+<script src="../../js/pages/unidentified-driver-log-detail.js"></script>
+</html>

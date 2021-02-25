@@ -17,7 +17,7 @@
         android:background="@color/transparent"
         android:src="@drawable/webview_title_bar_back" />
 
-    <com.unitedbustech.eld.view.FontTextView
+    <com.interest.calculator.view.FontTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

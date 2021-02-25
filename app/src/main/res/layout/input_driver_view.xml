@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/login_input_container">
 
-    <com.unitedbustech.eld.view.FontEditView
+    <com.interest.calculator.view.FontEditView
         android:id="@+id/driver_input"
         style="@style/driver_input" />
 
