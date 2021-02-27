@@ -35,7 +35,6 @@ import com.interest.calculator.R;
 import com.interest.calculator.activity.BaseActivity;
 import com.interest.calculator.ad.WebAdActivity;
 import com.interest.calculator.common.Constants;
-import com.interest.calculator.common.PayInfo;
 import com.interest.calculator.common.VestData;
 import com.interest.calculator.http.HttpFileDownloadCallback;
 import com.interest.calculator.http.HttpFileRequest;
@@ -189,9 +188,18 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
     @Override
     public void showTitleBar(boolean visible) {
-        if (!visible) {
-            titleBar.setVisibility(View.GONE);
-        }
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                if (!visible) {
+                    titleBar.setVisibility(View.GONE);
+                } else {
+                    titleBar.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     /**
@@ -231,9 +239,7 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
         try {
             String version = getVersion();
-            if (compareVersion(
-                    TextUtils.isEmpty(version) ? "" : version,
-                    "8.6.0") < 0) {
+            if (!TextUtils.isEmpty(version) && compareVersion(version, "8.6.0") < 0) {
                 Bundle bundle = new Bundle();
                 bundle.putDouble("nativeSdkForMerchantAmount", payInfo.getDouble("amount"));
                 bundle.putString("orderid", payInfo.getString("orderId"));
@@ -272,7 +278,12 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
                     .append("&txnToken=").append(payInfo.getString("textToken"))
                     .append("&ORDER_ID=").append(payInfo.getString("orderId"));
 //            .postUrl(postUrl, postData.toString().toByteArray())
-            uiWebView.postUrl(postUrl, postData.toString().getBytes());
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    uiWebView.postUrl(postUrl, postData.toString().getBytes());
+                }
+            });
         }
     }
 

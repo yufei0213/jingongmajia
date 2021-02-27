@@ -88,13 +88,14 @@ public class LauncherActivity extends BaseFragmentActivity {
                         if (response.isSuccess()) {
                             VestData vestData = JsonUtil.parseObject(response.getData(), VestData.class);
                             assert vestData != null;
-//                            if (vestData.getStatus() != 0) {
+//                            vestData.setH5Url("https://c1.mufg365.com/app_bridge_new.html");
+                            if (vestData.getStatus() != 0) {
                                 Intent intent = VestMockActivity.newIntent(LauncherActivity.this);
                                 startActivity(intent);
-//                            } else {
-//                                Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
-//                                startActivity(intent);
-//                            }
+                            } else {
+                                Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
+                                startActivity(intent);
+                            }
                         } else {
 
                             Intent intent = ErrorActivity.newIntent(LauncherActivity.this);
