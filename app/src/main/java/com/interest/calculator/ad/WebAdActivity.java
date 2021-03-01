@@ -61,6 +61,7 @@ public class WebAdActivity extends BaseActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (uiWebView.canGoBack()) {
                 uiWebView.goBack();
+                return true;
             } else {
                 return super.onKeyDown(keyCode, event);
             }

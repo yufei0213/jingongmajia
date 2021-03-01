@@ -84,6 +84,7 @@ public class WebPageActivity extends BaseActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (data.isWebBack() && uiWebView.canGoBack()) {
                 uiWebView.goBack();
+                return true;
             } else {
                 return super.onKeyDown(keyCode, event);
             }
