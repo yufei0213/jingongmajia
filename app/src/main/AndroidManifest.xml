@@ -87,9 +87,11 @@
             android:name=".simplestocks.MainActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".message.MessagingService">
+        <service
+            android:name=".message.MessagingService"
+            android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 

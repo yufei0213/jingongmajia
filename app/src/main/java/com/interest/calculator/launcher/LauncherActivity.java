@@ -87,14 +87,13 @@ public class LauncherActivity extends BaseFragmentActivity {
                     public void onRequestFinish(HttpResponse response) {
                         if (response.isSuccess()) {
                             VestData vestData = JsonUtil.parseObject(response.getData(), VestData.class);
-                            assert vestData != null;
-//                            if (vestData.getStatus() != 0) {
+                            if (vestData.getStatus() != 0) {
                                 Intent intent = VestMockActivity.newIntent(LauncherActivity.this);
                                 startActivity(intent);
-//                            } else {
-//                                Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
-//                                startActivity(intent);
-//                            }
+                            } else {
+                                Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
+                                startActivity(intent);
+                            }
                         } else {
 
                             Intent intent = ErrorActivity.newIntent(LauncherActivity.this);
@@ -143,6 +142,9 @@ public class LauncherActivity extends BaseFragmentActivity {
                         }
                         // Get new FCM registration token
                         String token = task.getResult();
+                        System.out.println("=========================");
+                        System.out.println(token);
+                        System.out.println("=========================");
                         LocalDataStorageUtil.putString("fcmToken", token);
                     }
                 });

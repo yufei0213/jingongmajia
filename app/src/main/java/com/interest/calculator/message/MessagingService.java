@@ -46,8 +46,7 @@ public class MessagingService extends FirebaseMessagingService {
 
         Map<String, String> data = remoteMessage.getData();
         if (!data.isEmpty()) {
-            PushMessage pushMessage = JsonUtil.parseObject(JsonUtil.toJsJSONString(remoteMessage.getData()), PushMessage.class);
-            assert pushMessage != null;
+            PushMessage pushMessage = JsonUtil.parseObject(data.get("data"), PushMessage.class);
             createNotification(getBaseContext(), pushMessage);
         }
 

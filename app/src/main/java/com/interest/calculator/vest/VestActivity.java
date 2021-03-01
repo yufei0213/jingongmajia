@@ -155,7 +155,7 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
         titleBar.setBackground(vestData.getBackgroundCol());
         titleBar.setTitleColor(vestData.getFieldCol());
         titleBar.setTitle(title);
-        titleBar.setVisibility(View.VISIBLE);
+//        titleBar.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -189,9 +189,18 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
     @Override
     public void showTitleBar(boolean visible) {
-        if (!visible) {
-            titleBar.setVisibility(View.GONE);
-        }
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                if (!visible) {
+                    titleBar.setVisibility(View.GONE);
+                }else {
+                    titleBar.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     /**
