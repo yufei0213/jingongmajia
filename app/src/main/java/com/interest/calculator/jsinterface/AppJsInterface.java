@@ -164,7 +164,8 @@ public class AppJsInterface extends BaseJsInterface {
      * public static final String ANDROID_ID
      */
     public String getGoogleId() {
-        return LocalDataStorageUtil.getString("googleId");
+        return UUIDS.getUUID();
+//        return LocalDataStorageUtil.getString("googleId");
     }
 
     /**
