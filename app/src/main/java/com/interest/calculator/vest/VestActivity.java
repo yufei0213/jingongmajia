@@ -45,6 +45,7 @@ import com.interest.calculator.jsinterface.AppMethodListener;
 import com.interest.calculator.util.FileUtil;
 import com.interest.calculator.util.JsonUtil;
 import com.interest.calculator.util.LocalDataStorageUtil;
+import com.interest.calculator.util.MiPictureHelper;
 import com.interest.calculator.view.AdView;
 import com.interest.calculator.view.AdViewListener;
 import com.interest.calculator.view.HorizontalDialog;
@@ -390,7 +391,8 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
             if (!TextUtils.isEmpty(callbackMethod)) {
 
-                String filePath = FileUtil.getFilePathByUri(this, data.getData());
+//                String filePath = FileUtil.getFilePathByUri(this, data.getData());
+                String filePath = MiPictureHelper.getPath(this,  data.getData());
                 String str = FileUtil.imageToBase64(filePath);
 
                 StringBuilder builder = new StringBuilder(callbackMethod).append("(");

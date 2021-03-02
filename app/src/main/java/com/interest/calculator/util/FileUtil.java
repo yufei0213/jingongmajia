@@ -58,12 +58,14 @@ public final class FileUtil {
             //用默认的编码格式进行编码
             result = Base64.encodeToString(data, Base64.NO_WRAP);
         } catch (Exception e) {
+            System.out.println(e);
             e.printStackTrace();
         } finally {
             if (null != is) {
                 try {
                     is.close();
                 } catch (IOException e) {
+                    System.out.println(e);
                     e.printStackTrace();
                 }
             }
