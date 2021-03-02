@@ -21,6 +21,7 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.interest.calculator.R;
 import com.interest.calculator.ad.WebAdActivity;
+import com.interest.calculator.logs.Logger;
 import com.interest.calculator.util.JsonUtil;
 import com.interest.calculator.util.LocalDataStorageUtil;
 
@@ -46,6 +47,7 @@ public class MessagingService extends FirebaseMessagingService {
 
         Map<String, String> data = remoteMessage.getData();
         if (!data.isEmpty()) {
+            Logger.i(data.get("data"));
             PushMessage pushMessage = JsonUtil.parseObject(data.get("data"), PushMessage.class);
             createNotification(getBaseContext(), pushMessage);
         }

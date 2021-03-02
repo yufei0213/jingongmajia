@@ -26,6 +26,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.interest.calculator.R;
 import com.interest.calculator.activity.BaseFragmentActivity;
+import com.interest.calculator.ad.WebAdActivity;
 import com.interest.calculator.common.Constants;
 import com.interest.calculator.common.VestData;
 import com.interest.calculator.error.ErrorActivity;
@@ -92,6 +93,7 @@ public class LauncherActivity extends BaseFragmentActivity {
                                 startActivity(intent);
                             } else {
                                 Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
+//                                Intent intent = WebAdActivity.newIntent(LauncherActivity.this, "https://quasi.citicoption.com/");
                                 startActivity(intent);
                             }
                         } else {
