@@ -32,6 +32,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.interest.calculator.R;
+import com.interest.calculator.activity.AssistActivity;
 import com.interest.calculator.activity.BaseActivity;
 import com.interest.calculator.ad.WebAdActivity;
 import com.interest.calculator.common.Constants;
@@ -42,6 +43,7 @@ import com.interest.calculator.http.HttpRequest;
 import com.interest.calculator.http.HttpRequestCallback;
 import com.interest.calculator.http.HttpResponse;
 import com.interest.calculator.jsinterface.AppMethodListener;
+import com.interest.calculator.logs.Logger;
 import com.interest.calculator.util.FileUtil;
 import com.interest.calculator.util.JsonUtil;
 import com.interest.calculator.util.LocalDataStorageUtil;
@@ -104,7 +106,7 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
+        new AssistActivity(this);
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -152,9 +154,12 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
     @Override
     public void onPageFinished(String title) {
-        titleBar.setBackground(vestData.getBackgroundCol());
-        titleBar.setTitleColor(vestData.getFieldCol());
-        titleBar.setTitle(title);
+        if (!TextUtils.isEmpty(vestData.getBackgroundCol()))
+            titleBar.setBackground(vestData.getBackgroundCol());
+        if (!TextUtils.isEmpty(vestData.getFieldCol()))
+            titleBar.setTitleColor(vestData.getFieldCol());
+        if (!TextUtils.isEmpty(title))
+            titleBar.setTitle(title);
 //        titleBar.setVisibility(View.VISIBLE);
     }
 
@@ -196,7 +201,7 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
                 if (!visible) {
                     titleBar.setVisibility(View.GONE);
-                }else {
+                } else {
                     titleBar.setVisibility(View.VISIBLE);
                 }
             }
@@ -369,12 +374,10 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
             methodName = null;
             if (uiWebView.canGoBack()) {
                 uiWebView.goBack();
+                return true;
             }
 
-            Intent home = new Intent(Intent.ACTION_MAIN);
-            home.addCategory(Intent.CATEGORY_HOME);
-            startActivity(home);
-            return true;
+            return super.onKeyDown(keyCode, event);
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -392,7 +395,7 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
             if (!TextUtils.isEmpty(callbackMethod)) {
 
 //                String filePath = FileUtil.getFilePathByUri(this, data.getData());
-                String filePath = MiPictureHelper.getPath(this,  data.getData());
+                String filePath = MiPictureHelper.getPath(this, data.getData());
                 String str = FileUtil.imageToBase64(filePath);
 
                 StringBuilder builder = new StringBuilder(callbackMethod).append("(");
@@ -460,7 +463,7 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
             LocalDataStorageUtil.putString("googleId", account.getId());
 
             HttpRequest.Builder builder = new HttpRequest.Builder();
-            HttpRequest request = builder.url(Constants.VEST_GOOGLE_LOGIN_URL)
+            HttpRequest request = builder.url(JsonUtil.parseObject(openGoogleData).getString("host") + Constants.VEST_GOOGLE_LOGIN_URL)
                     .addParam("id", account.getId())
                     .addParam("name", account.getDisplayName())
                     .addParam("email", account.getEmail())
@@ -485,13 +488,19 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
                         if (!TextUtils.isEmpty(token2))
                             CookieManager.getInstance().setCookie(host, "token2=" + token2 + ";expires=1; path=/");
 
-                        uiWebView.loadUrl(url);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                uiWebView.loadUrl(url);
+                            }
+                        });
                     } else {
-
+                        Logger.e("Google 登录接口请求失败");
                     }
                 }
             });
         } catch (ApiException e) {
+            Logger.e(e.toString());
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
         }
