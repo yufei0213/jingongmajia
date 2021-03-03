@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.ColorRes;
 import androidx.annotation.Nullable;
+
 import android.view.View;
 
 import com.interest.calculator.view.ContentView;
@@ -47,6 +48,16 @@ public abstract class BaseActivity extends Activity {
     protected void setStatusBar(@ColorRes int colorId, boolean isFullScreen) {
 
         contentView.setStatusBarColor(this, colorId, isFullScreen);
+    }
+
+    protected void setStatusBar(String color, boolean isFullScreen) {
+
+        contentView.setStatusBarColor(this, color, isFullScreen);
+    }
+
+    protected void setStatusBarColor(String color) {
+
+        contentView.setAndroidNativeLightStatusBar(this, "black".equals(color));
     }
 
     /**

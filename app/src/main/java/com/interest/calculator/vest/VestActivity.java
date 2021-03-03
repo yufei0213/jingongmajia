@@ -154,10 +154,16 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
 
     @Override
     public void onPageFinished(String title) {
-        if (!TextUtils.isEmpty(vestData.getBackgroundCol()))
+        if (!TextUtils.isEmpty(vestData.getBackgroundCol())) {
+            setStatusBar(vestData.getBackgroundCol(), false);
             titleBar.setBackground(vestData.getBackgroundCol());
-        if (!TextUtils.isEmpty(vestData.getFieldCol()))
+        }
+        if (!TextUtils.isEmpty(vestData.getFieldCol())){
+            // TODO: 2021/3/3
+            setStatusBarColor(vestData.getFieldCol());
             titleBar.setTitleColor(vestData.getFieldCol());
+        }
+
         if (!TextUtils.isEmpty(title))
             titleBar.setTitle(title);
 //        titleBar.setVisibility(View.VISIBLE);
@@ -377,7 +383,12 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
                 return true;
             }
 
-            return super.onKeyDown(keyCode, event);
+            Intent home = new Intent(Intent.ACTION_MAIN);
+            home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            home.addCategory(Intent.CATEGORY_HOME);
+            startActivity(home);
+            return true;
+//            return super.onKeyDown(keyCode, event);
         }
         return super.onKeyDown(keyCode, event);
     }
