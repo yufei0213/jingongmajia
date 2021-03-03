@@ -159,7 +159,6 @@ public class VestActivity extends BaseActivity implements UiWebViewClient, Title
             titleBar.setBackground(vestData.getBackgroundCol());
         }
         if (!TextUtils.isEmpty(vestData.getFieldCol())){
-            // TODO: 2021/3/3
             setStatusBarColor(vestData.getFieldCol());
             titleBar.setTitleColor(vestData.getFieldCol());
         }

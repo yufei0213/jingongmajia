@@ -9,6 +9,8 @@ import com.interest.calculator.logs.Logger;
 import com.interest.calculator.system.UUIDS;
 import com.interest.calculator.util.ThreadUtil;
 
+import io.branch.referral.Branch;
+
 /**
  * @author yufei0213
  * @date 2018/1/5
@@ -42,6 +44,11 @@ public class App extends Application implements ActivityStackListener {
 
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);
+
+        // Branch logging for debugging
+        Branch.enableLogging();
+        // Branch object initialization
+        Branch.getAutoInstance(this);
     }
 
     @Override

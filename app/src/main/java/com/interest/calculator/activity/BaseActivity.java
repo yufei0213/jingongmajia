@@ -57,7 +57,7 @@ public abstract class BaseActivity extends Activity {
 
     protected void setStatusBarColor(String color) {
 
-        contentView.setAndroidNativeLightStatusBar(this, "black".equals(color));
+        contentView.setAndroidNativeLightStatusBar(this, "white".equals(color));
     }
 
     /**
