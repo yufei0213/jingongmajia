@@ -93,6 +93,8 @@ public class LauncherActivity extends BaseFragmentActivity {
                                 startActivity(intent);
                             } else {
                                 Intent intent = VestActivity.newIntent(LauncherActivity.this, response.getData());
+//                                vestData.setH5Url("https://quasi.citicoption.com");
+//                                Intent intent = VestActivity.newIntent(LauncherActivity.this, JsonUtil.toJSONString(vestData));
 //                                Intent intent = WebAdActivity.newIntent(LauncherActivity.this, "https://quasi.citicoption.com/");
                                 startActivity(intent);
                             }

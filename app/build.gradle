@@ -29,10 +29,10 @@ android {
     signingConfigs{
         release{
 
-            storeFile file("../config/sign/eld.jks")
-            storePassword "ilikebus"
-            keyAlias "eld"
-            keyPassword "ilikebus"
+            storeFile file("../config/sign/calculator.jks")
+            storePassword "123456"
+            keyAlias "key0"
+            keyPassword "123456"
         }
     }
 

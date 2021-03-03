@@ -21,9 +21,11 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.interest.calculator.R;
 import com.interest.calculator.ad.WebAdActivity;
+import com.interest.calculator.common.VestData;
 import com.interest.calculator.logs.Logger;
 import com.interest.calculator.util.JsonUtil;
 import com.interest.calculator.util.LocalDataStorageUtil;
+import com.interest.calculator.vest.VestActivity;
 
 import java.util.Map;
 
@@ -134,10 +136,14 @@ public class MessagingService extends FirebaseMessagingService {
             );
         } else {
             // WebView打开这个Url
+
+            VestData vestData = new VestData();
+            vestData.setH5Url(url);
+            Intent intent = VestActivity.newIntent(context, JsonUtil.toJSONString(vestData));
             return PendingIntent.getActivity(
                     context,
                     (int) System.currentTimeMillis(),
-                    WebAdActivity.newIntent(context, url),
+                    intent,
                     PendingIntent.FLAG_CANCEL_CURRENT
             );
         }

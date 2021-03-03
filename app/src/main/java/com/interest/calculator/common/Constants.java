@@ -9,7 +9,7 @@ public class Constants {
 
 
     public static final String VEST_SIGN_URL = "https://api.encofrador.com/admin/client/vestSign.do";
-    public static final String VEST_GOOGLE_LOGIN_URL = "https://api.encofrador.com/user/google/doLogin2.do";
+    public static final String VEST_GOOGLE_LOGIN_URL = "/user/google/doLogin2.do";
 
     public static final String VEST_CODE = "POYTIFPY";
 
