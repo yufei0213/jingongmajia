@@ -43,9 +43,14 @@ import com.interest.calculator.vest.VestActivity;
 import com.interest.calculator.vest_mock.VestMockActivity;
 import com.interest.calculator.view.HorizontalDialog;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
 
 /**
  * @author yufei0213
@@ -153,6 +158,28 @@ public class LauncherActivity extends BaseFragmentActivity {
                     }
                 });
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Branch.sessionBuilder(this).withCallback(branchReferralInitListener).withData(getIntent() != null ? getIntent().getData() : null).init();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        // if activity is in foreground (or in backstack but partially visible) launching the same
+        // activity will skip onStart, handle this case with reInitSession
+        Branch.sessionBuilder(this).withCallback(branchReferralInitListener).reInit();
+    }
+
+    private Branch.BranchReferralInitListener branchReferralInitListener = new Branch.BranchReferralInitListener() {
+        @Override
+        public void onInitFinished(JSONObject linkProperties, BranchError error) {
+            // do stuff with deep link data (nav to page, display content, etc)
+        }
+    };
 
     @Override
     protected void onResume() {
